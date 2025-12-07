@@ -1,0 +1,25 @@
+# James' Recipes!
+
+These recipes are formatted as cooklang recipes.
+
+If you'd like to view them, check out how to do that on their webpage.
+
+### How to import a new recipe
+
+`cook import https://cooking.nytimes.com/recipes/1013511-potato-leek-gratin > potato-leek-gratin.cook`
+`curl https://static01.nyt.com/images/2025/11/17/multimedia/17Potato-Leek-Gratin-ltck/17Potato-Leek-Gratin-ltck-threeByTwoMediumAt2X-v2.jpg?quality=75&auto=webp > potato-leek-gratin.jpg`
+
+
+If that doesn't work because it can't parse the recipe:
+
+### Search for a recipe
+
+`cook search potato`
+
+### Ingredients
+
+`cook shopping-list potato-leek-gratin.cook`
+
+### Run a server showing all of the recipes
+
+`cook server`
