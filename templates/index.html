@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Collection</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50">
+    <div class="viewport">
+      <header class="text-center mb-12">
+        <h1
+          class="text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent"
+        >
+          🍳 Recipe Collection
+        </h1>
+        <p class="text-xl text-gray-600">A delicious collection of recipes</p>
+      </header>
+
+      <main>
+        <div class="recipe-collection-grid">
+          {% for recipe_info in recipes %}
+          <article class="recipe-collection-card">
+            <a href="recipes/{{ recipe_info.filename }}.html" class="card-link">
+              {% if recipe_info.image %}
+              <div class="card-image-container">
+                <img
+                  src="{{ recipe_info.image }}"
+                  alt="{{ recipe_info.title }}"
+                  class="card-image"
+                />
+              </div>
+              {% else %}
+              <div class="card-placeholder">
+                <span class="placeholder-icon">🍽️</span>
+              </div>
+              {% endif %}
+
+              <div class="card-content">
+                <h2 class="card-title">{{ recipe_info.title }}</h2>
+
+                {% if recipe_info.author %}
+                <p class="card-author">by {{ recipe_info.author }}</p>
+                {% endif %}
+
+                <div class="card-meta">
+                  {% if recipe_info.servings %}
+                  <span class="meta-badge"
+                    >👥 {{ recipe_info.servings }} servings</span
+                  >
+                  {% endif %} {% if recipe_info.total_time %}
+                  <span class="meta-badge"
+                    >⏱️ {{ recipe_info.total_time }}</span
+                  >
+                  {% endif %}
+                </div>
+
+                {% if recipe_info.tags %}
+                <div class="card-tags">
+                  {% for tag in recipe_info.tags %}
+                  <span class="tag-badge">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+      </main>
+
+      <footer class="text-center py-8 mt-12 text-gray-600">
+        <p>
+          Generated with
+          <a
+            href="https://cooklang.org"
+            target="_blank"
+            class="text-orange-600 hover:text-orange-700 font-medium"
+            >Cooklang</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
