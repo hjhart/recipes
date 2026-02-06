@@ -21,7 +21,7 @@
         <div class="recipe-collection-grid">
           {% for recipe_info in recipes %}
           <article class="recipe-collection-card">
-            <a href="recipes/{{ recipe_info.filename }}.html" class="card-link">
+            <a href="{{ recipe_info.filename }}.html" class="card-link">
               {% if recipe_info.image %}
               <div class="card-image-container">
                 <img
