@@ -8,11 +8,10 @@ require 'fileutils'
 RECIPES_DIR = 'recipes'
 TEMPLATES_DIR = 'templates'
 OUTPUT_DIR = 'docs'
-RECIPES_OUTPUT_DIR = File.join(OUTPUT_DIR, 'recipes')
 
 # Clean and create output directories
 FileUtils.rm_rf(OUTPUT_DIR)
-FileUtils.mkdir_p(RECIPES_OUTPUT_DIR)
+FileUtils.mkdir_p(OUTPUT_DIR)
 
 # Copy CSS
 FileUtils.cp(File.join(TEMPLATES_DIR, 'styles.css'), File.join(OUTPUT_DIR, 'styles.css'))
@@ -25,15 +24,16 @@ recipes_data = []
 
 recipe_files.each do |recipe_file|
   filename = File.basename(recipe_file, '.cook')
-  output_file = File.join(RECIPES_OUTPUT_DIR, "#{filename}.html")
+  output_file = File.join(OUTPUT_DIR, "#{filename}.html")
   template = File.join(TEMPLATES_DIR, 'recipe.html')
   
   puts "Generating #{filename}.html..."
   
   # Use cook report to generate HTML
   raw_output = `cook report --template #{template} #{recipe_file} 2>&1`
-  # Extract only the HTML content (everything from <!DOCTYPE onwards)
-  html_output = raw_output[raw_output.index('<!DOCTYPE')..] if raw_output.include?('<!DOCTYPE')
+  # Extract only the HTML content (everything from <!DOCTYPE onwards, case-insensitive)
+  doctype_index = raw_output =~ /<!DOCTYPE/i
+  html_output = raw_output[doctype_index..] if doctype_index
   File.write(output_file, html_output || '')
   
   # Get recipe metadata for index page
@@ -91,7 +91,7 @@ recipe_cards = recipes_data.map do |recipe|
   
   <<~HTML
     <article class="recipe-collection-card">
-        <a href="recipes/#{recipe['filename']}.html" class="card-link">
+        <a href="#{recipe['filename']}.html" class="card-link">
             #{image_html.strip}
             <div class="card-content">
                 <h2 class="card-title">#{recipe['title']}</h2>
