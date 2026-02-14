@@ -115,7 +115,7 @@ recipe_cards = recipes_data.map do |recipe|
 end.join("\n")
 
 # Replace the template variables
-index_html = index_template.gsub(/{% for recipe_info in recipes %}.*?{% endfor %}/m, recipe_cards)
+index_html = index_template.gsub(/{% for recipe_info in recipes %}.*{% endfor %}/m, recipe_cards)
 
 # Write index.html
 File.write(File.join(OUTPUT_DIR, 'index.html'), index_html)
