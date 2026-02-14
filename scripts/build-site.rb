@@ -16,6 +16,11 @@ FileUtils.mkdir_p(OUTPUT_DIR)
 # Copy CSS
 FileUtils.cp(File.join(TEMPLATES_DIR, 'styles.css'), File.join(OUTPUT_DIR, 'styles.css'))
 
+# Copy local recipe images
+Dir.glob(File.join(RECIPES_DIR, '*.{jpg,jpeg,png,webp}')).each do |img|
+  FileUtils.cp(img, File.join(OUTPUT_DIR, File.basename(img)))
+end
+
 # Find all .cook files
 recipe_files = Dir.glob(File.join(RECIPES_DIR, '*.cook'))
 
@@ -42,11 +47,16 @@ recipe_files.each do |recipe_file|
   
   metadata = recipe_data['metadata']['map']
   
+  # Use frontmatter image, or fall back to a local image file
+  local_image = %w[jpg jpeg png webp].map { |ext| "#{filename}.#{ext}" }
+                                     .find { |f| File.exist?(File.join(RECIPES_DIR, f)) }
+  image = metadata['image'] || local_image
+
   recipes_data << {
     'filename' => filename,
     'title' => metadata['title'] || filename.split('-').map(&:capitalize).join(' '),
     'author' => metadata['author'],
-    'image' => metadata['image'],
+    'image' => image,
     'servings' => metadata['servings'],
     'total_time' => metadata['cook time'] || metadata['time required'],
     'tags' => (metadata['tags'] || '').split(',').map(&:strip)

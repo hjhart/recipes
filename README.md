@@ -2,6 +2,8 @@
 
 These recipes are formatted as cooklang recipes.
 
+They are hosted on [github pages](https://hjhart.github.io/recipes/)
+
 If you'd like to view them, check out how to do that on their webpage.
 
 ### Simple form: How to import a recipe
