@@ -189,7 +189,7 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Hurricane Chips (maybe Popcorn)
 - [o] In-N-Out Double Double Burger Recipe
 - [ ] Instant Pot Chicken Juk
-- [ ] Instant Pot Hard Boiled Eggs
+- [x] Instant Pot Hard Boiled Eggs
 - [o] Italian Penicillin (Pastina Soup)
 - [ ] Italian Wonderpot
 - [ ] Jalapeños & Cheddar Biscuits
