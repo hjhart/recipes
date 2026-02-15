@@ -44,46 +44,46 @@ https://cook.md/cookifies/new
 Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook` files.
 
 - [o] 10 Minute Peanut Noodles
-- [ ] 20 Minute Creamy Red Pesto Beef Pasta
+- [x] 20 Minute Creamy Red Pesto Beef Pasta
 - [o] Air-Fryer Broccoli
 - [o] Air-Fryer Tofu
 - [ ] All-American Beef Stew Recipe
 - [o] Apple Fritter Cake
 - [o] Asian Slaw with Ginger Peanut Dressing
-- [ ] Asparagus and Goat Cheese Frittata
-- [ ] Backpacking Beans and Rice
-- [ ] Backpacking Southwestern Burrito
-- [ ] Bacon Egg & Cheese Croissant Bake
-- [ ] Bacon, Scallion, and Caramelized Onion Dip
-- [ ] Baked Potato Soup
-- [ ] Baked Skillet Pasta With Cheddar and Spiced Onions
-- [ ] Bar Del Corso's Gin and Tonic
-- [ ] Basic Challah
-- [ ] Bean and Sausage Soup with Pesto
+- [x] Asparagus and Goat Cheese Frittata
+- [x] Backpacking Beans and Rice
+- [x] Backpacking Southwestern Burrito
+- [x] Bacon Egg & Cheese Croissant Bake
+- [x] Bacon, Scallion, and Caramelized Onion Dip
+- [x] Baked Potato Soup
+- [x] Baked Skillet Pasta With Cheddar and Spiced Onions
+- [x] Bar Del Corso's Gin and Tonic
+- [x] Basic Challah
+- [x] Bean and Sausage Soup with Pesto
 - [o] Beef Pot Pie with Gorgonzola Recipe
-- [ ] Berry Crush (Geraldine's Cocktail)
+- [x] Berry Crush (Geraldine's Cocktail)
 - [o] Big Mac Sauce
-- [ ] Biscuit and Gravy Casserole
-- [ ] Boat Breakfast Burritos
-- [ ] Breakfast Casserole
-- [ ] Breakfast Hot Pocket
-- [ ] Breakfast Hot Pocket #2
+- [x] Biscuit and Gravy Casserole
+- [x] Boat Breakfast Burritos
+- [x] Breakfast Casserole
+- [x] Breakfast Hot Pocket
+- [x] Breakfast Hot Pocket #2
 - [o] Breakfast Taquitos
 - [o] Broccoli Cheddar Casserole
 - [o] Brodo di Pollo con Pastina (Chicken Soup With Pastina)
 - [o] Brown Sugar-Banana Topping
 - [o] Buckeye Balls
-- [ ] Buttered Noodles With Jammy Eggs
-- [ ] Buttery Breakfast Casserole
-- [ ] Cacio e Pepe
-- [ ] Cajun Pasta
-- [ ] Camping Breakfast Sandwiches
-- [ ] Caramelised Onion Pasta Recipe
+- [x] Buttered Noodles With Jammy Eggs
+- [x] Buttery Breakfast Casserole
+- [x] Cacio e Pepe
+- [x] Cajun Pasta
+- [x] Camping Breakfast Sandwiches
+- [x] Caramelised Onion Pasta Recipe
 - [o] Caramelized Gochujang Tomato Soup
 - [o] Caramelized Zucchini Pasta
 - [o] Charleston Red Rice
 - [o] Cheeseburger Garbage Bread
-- [ ] Cheeseburger Mac Copy Cat Hamburger Helper
+- [x] Cheeseburger Mac Copy Cat Hamburger Helper
 - [ ] Cheesy Broccoli Orzo
 - [o] Cheesy Crispy Vegan Black Bean Tacos
 - [o] Cheesy Onion Tart
