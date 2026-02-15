@@ -16,9 +16,14 @@ FileUtils.mkdir_p(OUTPUT_DIR)
 # Copy CSS
 FileUtils.cp(File.join(TEMPLATES_DIR, 'styles.css'), File.join(OUTPUT_DIR, 'styles.css'))
 
-# Copy local recipe images
+# Resize and copy local recipe images
 Dir.glob(File.join(RECIPES_DIR, '*.{jpg,jpeg,png,webp}')).each do |img|
-  FileUtils.cp(img, File.join(OUTPUT_DIR, File.basename(img)))
+  ext = File.extname(img).downcase
+  basename = File.basename(img, ext)
+  # Convert everything to JPEG except WebP (keep as-is)
+  out_ext = ext == '.webp' ? '.webp' : '.jpg'
+  out_file = File.join(OUTPUT_DIR, "#{basename}#{out_ext}")
+  system('magick', img, '-resize', '1200x1200>', '-strip', '-quality', '82', out_file)
 end
 
 # Find all .cook files
@@ -55,8 +60,14 @@ recipe_files.each do |recipe_file|
   File.write(output_file, html_output || '')
   
   # Use frontmatter image, or fall back to a local image file
-  local_image = %w[jpg jpeg png webp].map { |ext| "#{filename}.#{ext}" }
-                                     .find { |f| File.exist?(File.join(RECIPES_DIR, f)) }
+  # Note: build converts png/jpeg → jpg, so normalize the output extension
+  local_image_src = %w[jpg jpeg png webp].map { |ext| "#{filename}.#{ext}" }
+                                         .find { |f| File.exist?(File.join(RECIPES_DIR, f)) }
+  local_image = if local_image_src
+    ext = File.extname(local_image_src).downcase
+    out_ext = ext == '.webp' ? '.webp' : '.jpg'
+    "#{filename}#{out_ext}"
+  end
   image = metadata['image'] || local_image
 
   recipes_data << {
