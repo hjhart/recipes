@@ -79,16 +79,7 @@
               <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
                 <span class="font-medium">{{ ingredient.name }}</span>
                 <span class="text-orange-700 font-semibold ml-2 text-sm">
-                  {% if ingredient.quantity %}
-                    {% if ingredient.quantity.value.type == "number" %}
-                      {% if ingredient.quantity.value.value.type == "regular" %}{{ ingredient.quantity.value.value.value }}
-                      {% elif ingredient.quantity.value.value.type == "fraction" %}
-                        {% if ingredient.quantity.value.value.value.whole > 0 %}{{ ingredient.quantity.value.value.value.whole }}{% endif %}{% if ingredient.quantity.value.value.value.num > 0 %} {{ ingredient.quantity.value.value.value.num }}/{{ ingredient.quantity.value.value.value.den }}{% endif %}
-                      {% endif %}
-                    {% elif ingredient.quantity.value.type == "text" %}{{ ingredient.quantity.value.value }}
-                    {% endif %}
-                    {% if ingredient.quantity.unit %} {{ ingredient.quantity.unit }}{% endif %}
-                  {% endif %}
+                  {% if ingredient.quantity %}{{ ingredient.quantity.value }}{% if ingredient.quantity.unit %} {{ ingredient.quantity.unit }}{% endif %}{% endif %}
                 </span>
               </li>
               {% endfor %}
