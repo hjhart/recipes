@@ -87,67 +87,67 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Cheesy Broccoli Orzo
 - [o] Cheesy Crispy Vegan Black Bean Tacos
 - [o] Cheesy Onion Tart
-- [x] Cheesy Saturday Bread
+- [ ] Cheesy Saturday Bread
 - [x] Cheesy White Bean-Tomato Bake
-- [x] Chicken Alfredo Bake
-- [x] Chicken and Broccoli Baked Ziti
+- [ ] Chicken Alfredo Bake
+- [ ] Chicken and Broccoli Baked Ziti
 - [x] Chicken and Dumplings
-- [x] Chicken and Rice Soup
+- [ ] Chicken and Rice Soup
 - [x] Chicken Bake
-- [x] Chicken Chile Verde Instant Pot
-- [x] Chicken Pot Pie with Puff Pastry
+- [ ] Chicken Chile Verde Instant Pot
+- [ ] Chicken Pot Pie with Puff Pastry
 - [x] Chicken Ranch Salad
 - [o] Chicken Teriyaki
-- [x] Chilaquiles Breakfast Casserole
+- [ ] Chilaquiles Breakfast Casserole
 - [x] Chilaquiles Verdes
-- [x] Chile Verde With Pork Recipe
+- [ ] Chile Verde With Pork Recipe
 - [o] Chili Cheese Pasta
 - [o] Chinese Sausage Fried Rice
 - [o] Chip Shop Curry Sauce
-- [x] Chipotle's Queso Blanco Recipe
+- [ ] Chipotle's Queso Blanco Recipe
 - [o] Chopped Broccoli Salad
 - [x] Chorizo and Sweet Potato Quesadillas for Two
-- [x] Cilantro Lime Pasta Salad
-- [x] Cilantro Lime Rice
+- [ ] Cilantro Lime Pasta Salad
+- [ ] Cilantro Lime Rice
 - [o] Cinnamon Crunch Banana Bread
 - [o] Cinnamon Syrup
 - [o] Classic Okonomiyaki (Japanese Cabbage and Pork Pancakes)
-- [x] Classic Sage and Sausage Stuffing
+- [ ] Classic Sage and Sausage Stuffing
 - [o] Coconut-Gochujang Glazed Chicken With Broccoli
-- [x] Cold Cure Soup
-- [x] Cold Rice Salad
-- [x] Cooks Illustrated Chicken Salad
+- [ ] Cold Cure Soup
+- [ ] Cold Rice Salad
+- [ ] Cooks Illustrated Chicken Salad
 - [x] Corn and Avocado Salad
-- [x] Corn and Ramen Noodle Bowl Recipe
+- [ ] Corn and Ramen Noodle Bowl Recipe
 - [o] Corn Pudding Recipe
-- [x] Creamy Chicken Soup
+- [ ] Creamy Chicken Soup
 - [o] Creamy Corn Charred Beans
 - [x] Creamy Corn Pasta with Basil
 - [o] Creamy Irish-Style Oatmeal With Brown Sugar Recipe
-- [x] Creamy Macaroni Salad
+- [ ] Creamy Macaroni Salad
 - [x] Creamy One-Pot Orzo With Corn and Bacon
-- [x] Creamy Peanut Ramen
-- [x] Creamy Red Curry Pasta
-- [x] Creamy Shells and Beef
-- [x] Creamy Tortellini, Spinach, and Chicken Soup
+- [ ] Creamy Peanut Ramen
+- [ ] Creamy Red Curry Pasta
+- [ ] Creamy Shells and Beef
+- [ ] Creamy Tortellini, Spinach, and Chicken Soup
 - [o] Crispy Baked Boursin
 - [o] Crispy Herbed Crab Cakes Recipe
 - [x] Crispy Oven Fried Bacon
 - [o] Crispy Potato and Sour Cream Tart
 - [o] Crispy Potato, Egg & Cheese Taco
-- [x] Crispy Rice Salad
-- [x] Crock Pot Loaded Baked Potato Soup
+- [ ] Crispy Rice Salad
+- [ ] Crock Pot Loaded Baked Potato Soup
 - [o] Crockpot Chicken Spaghetti
 - [x] Cuba Libre
-- [x] Cucumber Salad With Soy, Ginger and Garlic
+- [ ] Cucumber Salad With Soy, Ginger and Garlic
 - [x] Cucumber Sesame Salad
 - [o] Curried Chicken and Broccoli Casserole
-- [x] Deviled Egg Salad
+- [ ] Deviled Egg Salad
 - [o] Dill Pickle Salad
 - [o] Easiest Chicken Noodle Soup
-- [x] Easy Blackberry Cobbler
-- [x] Easy Crab Cakes
-- [x] Easy Meatloaf
+- [ ] Easy Blackberry Cobbler
+- [ ] Easy Crab Cakes
+- [ ] Easy Meatloaf
 - [ ] Easy One-Pot Chicken Tinga (Spicy Mexican Shredded Chicken) Recipe
 - [o] Easy Pull-Apart Pepperoni Garlic Knots
 - [o] Easy Skillet Tamale Pie With Cornbread Crust
@@ -156,45 +156,45 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Egg and Onion
 - [x] Egg Salad
 - [x] Emily's Chocolate Chip Cookies
-- [x] Erin's Breakfast Casserole
+- [ ] Erin's Breakfast Casserole
 - [x] Everything Sausage Rolls
-- [x] Extra Tangy Tartar Sauce Recipe
+- [ ] Extra Tangy Tartar Sauce Recipe
 - [o] Feta and Zucchini Muffins
 - [x] Feta Pasta with Cherry Tomatoes
 - [x] Flour Bakery's Egg Sandwich
 - [o] Flower Eggs
 - [ ] Foolproof Pan Pizza
-- [x] French Onion Meatballs
+- [ ] French Onion Meatballs
 - [x] Garlic Butter Pesto Caprese Croissants
-- [x] Garlic Herb Pull-Apart Bread
+- [ ] Garlic Herb Pull-Apart Bread
 - [x] Gochuchang Mac & Cheese
-- [x] Gochujang Buttered Noodles
+- [ ] Gochujang Buttered Noodles
 - [x] Gochujang Garlic Bread
 - [o] Gooey Butter Cake
 - [x] Gooey Cheeseburger Dip Recipe
 - [ ] Great Grandma's Banana Bread
-- [x] Green Chicken Enchilada Casserole
+- [ ] Green Chicken Enchilada Casserole
 - [x] Green Chile Rice Bake
-- [x] Grilled Chicken for Tacos, Burritos, or Salads
+- [ ] Grilled Chicken for Tacos, Burritos, or Salads
 - [x] Grilled Corn and Avocado Salad With Feta Dressing
 - [o] Grilled Orange Old-Fashioned
-- [x] Guinness Beef Stew
+- [ ] Guinness Beef Stew
 - [o] Halal Cart Chicken
 - [x] Half a Box of Kraft
 - [x] Ham and Cheese Sliders
 - [o] Ham and Swiss Football Sandwiches
-- [x] Hard Boiled Eggs
-- [x] Harissa Aioli
-- [x] Honey Chili Lime Chicken
+- [ ] Hard Boiled Eggs
+- [ ] Harissa Aioli
+- [ ] Honey Chili Lime Chicken
 - [o] Hurricane Chips (maybe Popcorn)
 - [o] In-N-Out Double Double Burger Recipe
-- [x] Instant Pot Chicken Juk
-- [x] Instant Pot Hard Boiled Eggs
+- [ ] Instant Pot Chicken Juk
+- [ ] Instant Pot Hard Boiled Eggs
 - [o] Italian Penicillin (Pastina Soup)
-- [x] Italian Wonderpot
-- [x] Jalapeños & Cheddar Biscuits
-- [x] Japanese Beef Skewers (Kushiyaki)
-- [x] Jim Hart's Salmon
+- [ ] Italian Wonderpot
+- [ ] Jalapeños & Cheddar Biscuits
+- [ ] Japanese Beef Skewers (Kushiyaki)
+- [ ] Jim Hart's Salmon
 - [x] John's Breakfast Casserole
 - [x] Jollof Rice
 - [ ] Kenji's Chicago Thin-Crust Pizza
