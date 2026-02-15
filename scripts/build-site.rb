@@ -23,7 +23,7 @@ Dir.glob(File.join(RECIPES_DIR, '*.{jpg,jpeg,png,webp}')).each do |img|
   # Convert everything to JPEG except WebP (keep as-is)
   out_ext = ext == '.webp' ? '.webp' : '.jpg'
   out_file = File.join(OUTPUT_DIR, "#{basename}#{out_ext}")
-  system('magick', img, '-resize', '1200x1200>', '-strip', '-quality', '82', out_file)
+  system('convert', img, '-resize', '1200x1200>', '-strip', '-quality', '82', out_file)
 end
 
 # Find all .cook files
