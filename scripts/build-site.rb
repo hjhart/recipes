@@ -64,6 +64,7 @@ recipe_files.each do |recipe_file|
     'title' => metadata['title'] || filename.split('-').map(&:capitalize).join(' '),
     'author' => metadata['author'],
     'image' => image,
+    'ai_image' => metadata['ai_image'],
     'servings' => metadata['servings'],
     'total_time' => metadata['cook time'] || metadata['time required'],
     'tags' => (metadata['tags'] || '').split(',').map(&:strip)
@@ -82,10 +83,13 @@ index_template = File.read(File.join(TEMPLATES_DIR, 'index.html'))
 # Simple template replacement (since we don't have Jinja2 in Ruby)
 # We'll build the recipe cards HTML
 recipe_cards = recipes_data.map do |recipe|
+  ai_badge_html = recipe['ai_image'] ? '<span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>' : ''
+
   image_html = if recipe['image']
     <<~IMG
-      <div class="h-48 bg-gray-100 overflow-hidden">
+      <div class="h-48 bg-gray-100 overflow-hidden relative">
           <img src="#{recipe['image']}" alt="#{recipe['title']}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+          #{ai_badge_html}
       </div>
       <div class="p-5 flex-1">
     IMG

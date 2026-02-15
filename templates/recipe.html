@@ -19,9 +19,14 @@
 
       <div class="mb-8">
         {% if metadata.image %}
-        <div class="mb-6 flex justify-center">
-          <img src="{{ metadata.image }}" alt="{{ metadata.title | default("__TITLE__") }}"
-               class="rounded-xl shadow-lg max-w-full h-auto max-h-[500px]">
+        <div class="mb-6 flex justify-center relative inline-block">
+          <div class="relative">
+            <img src="{{ metadata.image }}" alt="{{ metadata.title | default("__TITLE__") }}"
+                 class="rounded-xl shadow-lg max-w-full h-auto max-h-[500px]">
+            {% if metadata.ai_image %}
+            <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+            {% endif %}
+          </div>
         </div>
         {% endif %}
 
