@@ -65,7 +65,7 @@ Pushing to `main` triggers a GitHub Actions workflow (`.github/workflows/deploy.
 Recipes are stored in Notion and can be bulk-exported. The export lives at `notion-export/` (gitignored).
 
 ### Export format
-Each recipe is a Markdown file at `notion-export/Recipes/<Recipe Title> <uuid>.md`. Images may be in a matching subdirectory `notion-export/Recipes/<Recipe Title>/`.
+Each recipe is a Markdown file at `notion-export/Recipes/<Recipe Title> <uuid>.md`. Images are often in a matching subdirectory `notion-export/Recipes/<Recipe Title>/` (same title, no UUID). The .md will reference them as relative paths like `![](Recipe%20Title/image.jpg)`. Always check this subdirectory first when looking for a recipe photo.
 
 The Markdown frontmatter properties to map to `.cook` frontmatter:
 | Notion field | `.cook` frontmatter key |
@@ -88,9 +88,9 @@ The Markdown frontmatter properties to map to `.cook` frontmatter:
    - Timers as `~{duration%unit}`
 4. Write frontmatter using the field mapping above. Always include `title`. Use `tags` as a comma-separated lowercase string.
 5. If the recipe has an image:
-   - Prefer the local image from the Notion export subdirectory (copy it to `recipes/<slug>.jpg` or `.png`)
-   - Otherwise, download the image URL found in the Notion Markdown (`![](url)`) and save to `recipes/<slug>.jpg`
-   - Do NOT add an `image` field to the frontmatter (the build script does not yet copy local images to `docs/`)
+   - **First, check for a local image in the Notion export subdirectory.** Each recipe may have a matching folder at `notion-export/Recipes/<Recipe Title>/` containing one or more image files (jpg, png, webp). The .md file will reference it with `![...](RecipeTitle/filename.ext)` — a relative path, not an http URL. Copy the first image found to `recipes/<slug>.<ext>` (preserving the original extension).
+   - **If no local image exists**, check whether the .md file contains an embedded `![](https://...)` URL and download it to `recipes/<slug>.jpg`.
+   - Do NOT add an `image` field to the frontmatter — the build script auto-detects local images by matching `recipes/<slug>.<ext>` and copies them to `docs/`.
 6. Always include `servings` when it can be determined — check the Notion page, and if not listed there, fetch the source URL to find yield/servings.
 7. Name the output file `recipes/<kebab-case-title>.cook`.
 7. Show the user the result and ask for review before finalizing.
