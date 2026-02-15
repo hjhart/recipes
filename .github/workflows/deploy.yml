@@ -35,9 +35,6 @@ jobs:
           sudo mv cook /usr/local/bin/
           cook --version
 
-      - name: Install ImageMagick
-        run: sudo apt-get install -y imagemagick
-
       - name: Build site
         run: ./scripts/build-site.rb
 
