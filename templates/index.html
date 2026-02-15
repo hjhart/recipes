@@ -4,81 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-gray-50">
-    <div class="viewport">
-      <header class="text-center mb-12">
-        <h1
-          class="text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent"
-        >
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+
+      <header class="mb-10 text-center">
+        <h1 class="text-5xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
           🍳 Recipe Collection
         </h1>
-        <p class="text-xl text-gray-600">A delicious collection of recipes</p>
+        <p class="text-gray-500 text-lg">A delicious collection of recipes</p>
       </header>
 
       <main>
-        <div class="recipe-collection-grid">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {% for recipe_info in recipes %}
-          <article class="recipe-collection-card">
-            <a href="{{ recipe_info.filename }}.html" class="card-link">
-              {% if recipe_info.image %}
-              <div class="card-image-container">
-                <img
-                  src="{{ recipe_info.image }}"
-                  alt="{{ recipe_info.title }}"
-                  class="card-image"
-                />
+          <a href="{{ recipe_info.filename }}.html"
+             class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+            {% if recipe_info.image %}
+            <div class="h-48 bg-gray-100 overflow-hidden">
+              <img src="{{ recipe_info.image }}" alt="{{ recipe_info.title }}"
+                   class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+            </div>
+            <div class="p-5 flex-1">
+            {% else %}
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full mb-4">
+                <span class="text-2xl">🍽️</span>
               </div>
-              {% else %}
-              <div class="card-placeholder">
-                <span class="placeholder-icon">🍽️</span>
+            {% endif %}
+              <h2 class="font-bold text-lg text-gray-800 mb-1">{{ recipe_info.title }}</h2>
+              {% if recipe_info.author %}
+              <p class="text-gray-500 text-sm italic mb-2">by {{ recipe_info.author }}</p>
+              {% endif %}
+              {% if recipe_info.servings or recipe_info.total_time %}
+              <div class="flex flex-wrap gap-2 mb-3">
+                {% if recipe_info.servings %}
+                <span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">
+                  👥 {{ recipe_info.servings }}
+                </span>
+                {% endif %}
+                {% if recipe_info.total_time %}
+                <span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">
+                  ⏱️ {{ recipe_info.total_time }}
+                </span>
+                {% endif %}
               </div>
               {% endif %}
-
-              <div class="card-content">
-                <h2 class="card-title">{{ recipe_info.title }}</h2>
-
-                {% if recipe_info.author %}
-                <p class="card-author">by {{ recipe_info.author }}</p>
-                {% endif %}
-
-                <div class="card-meta">
-                  {% if recipe_info.servings %}
-                  <span class="meta-badge"
-                    >👥 {{ recipe_info.servings }} servings</span
-                  >
-                  {% endif %} {% if recipe_info.total_time %}
-                  <span class="meta-badge"
-                    >⏱️ {{ recipe_info.total_time }}</span
-                  >
-                  {% endif %}
-                </div>
-
-                {% if recipe_info.tags %}
-                <div class="card-tags">
-                  {% for tag in recipe_info.tags %}
-                  <span class="tag-badge">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-                {% endif %}
+              {% if recipe_info.tags %}
+              <div class="flex flex-wrap gap-1.5">
+                {% for tag in recipe_info.tags %}
+                <span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
+                  {{ tag }}
+                </span>
+                {% endfor %}
               </div>
-            </a>
-          </article>
+              {% endif %}
+            </div>
+          </a>
           {% endfor %}
         </div>
       </main>
 
-      <footer class="text-center py-8 mt-12 text-gray-600">
-        <p>
-          Generated with
-          <a
-            href="https://cooklang.org"
-            target="_blank"
-            class="text-orange-600 hover:text-orange-700 font-medium"
-            >Cooklang</a
-          >
-        </p>
+      <footer class="text-center py-8 mt-12 text-gray-400 text-sm">
+        Generated with <a href="https://cooklang.org" target="_blank"
+          class="text-orange-600 hover:text-orange-700">Cooklang</a>
       </footer>
     </div>
   </body>

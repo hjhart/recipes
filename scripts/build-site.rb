@@ -39,13 +39,20 @@ recipe_files.each do |recipe_file|
   # Extract only the HTML content (everything from <!DOCTYPE onwards, case-insensitive)
   doctype_index = raw_output =~ /<!DOCTYPE/i
   html_output = raw_output[doctype_index..] if doctype_index
-  File.write(output_file, html_output || '')
-  
+
   # Get recipe metadata for index page
   json_output = `cook recipe #{recipe_file} --format json`
   recipe_data = JSON.parse(json_output)
-  
+
   metadata = recipe_data['metadata']['map']
+
+  # Derive the display title (metadata may not have a title field)
+  display_title = metadata['title'] || filename.split('-').map(&:capitalize).join(' ')
+
+  # Inject the correct title (template uses __TITLE__ placeholder when metadata.title is missing)
+  html_output = html_output.gsub('__TITLE__', display_title) if html_output
+
+  File.write(output_file, html_output || '')
   
   # Use frontmatter image, or fall back to a local image file
   local_image = %w[jpg jpeg png webp].map { |ext| "#{filename}.#{ext}" }
@@ -77,40 +84,39 @@ index_template = File.read(File.join(TEMPLATES_DIR, 'index.html'))
 recipe_cards = recipes_data.map do |recipe|
   image_html = if recipe['image']
     <<~IMG
-      <div class="card-image-container">
-          <img src="#{recipe['image']}" alt="#{recipe['title']}" class="card-image">
+      <div class="h-48 bg-gray-100 overflow-hidden">
+          <img src="#{recipe['image']}" alt="#{recipe['title']}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
       </div>
+      <div class="p-5 flex-1">
     IMG
   else
     <<~PLACEHOLDER
-      <div class="card-placeholder">
-          <span class="placeholder-icon">🍽️</span>
-      </div>
+      <div class="p-5 flex-1">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full mb-4">
+              <span class="text-2xl">🍽️</span>
+          </div>
     PLACEHOLDER
   end
-  
-  author_html = recipe['author'] ? "<p class=\"card-author\">by #{recipe['author']}</p>" : ""
-  
+
+  author_html = recipe['author'] ? "<p class=\"text-gray-500 text-sm italic mb-2\">by #{recipe['author']}</p>" : ""
+
   meta_parts = []
-  meta_parts << "👥 #{recipe['servings']} servings" if recipe['servings']
-  meta_parts << "⏱️ #{recipe['total_time']}" if recipe['total_time']
-  meta_html = meta_parts.empty? ? "" : "<div class=\"card-meta\">#{meta_parts.map { |part| "<span class=\"meta-badge\">#{part}</span>" }.join}</div>"
-  
+  meta_parts << "<span class=\"text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium\">👥 #{recipe['servings']}</span>" if recipe['servings']
+  meta_parts << "<span class=\"text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium\">⏱️ #{recipe['total_time']}</span>" if recipe['total_time']
+  meta_html = meta_parts.empty? ? "" : "<div class=\"flex flex-wrap gap-2 mb-3\">#{meta_parts.join}</div>"
+
   tags = recipe['tags'].reject(&:empty?)
-  tags_html = tags.empty? ? "" : "<div class=\"card-tags\">#{tags.map { |tag| "<span class=\"tag-badge\">#{tag}</span>" }.join}</div>"
-  
+  tags_html = tags.empty? ? "" : "<div class=\"flex flex-wrap gap-1.5\">#{tags.map { |tag| "<span class=\"text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium\">#{tag}</span>" }.join}</div>"
+
   <<~HTML
-    <article class="recipe-collection-card">
-        <a href="#{recipe['filename']}.html" class="card-link">
-            #{image_html.strip}
-            <div class="card-content">
-                <h2 class="card-title">#{recipe['title']}</h2>
-                #{author_html}
-                #{meta_html}
-                #{tags_html}
-            </div>
-        </a>
-    </article>
+    <a href="#{recipe['filename']}.html" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+        #{image_html.strip}
+            <h2 class="font-bold text-lg text-gray-800 mb-1">#{recipe['title']}</h2>
+            #{author_html}
+            #{meta_html}
+            #{tags_html}
+        </div>
+    </a>
   HTML
 end.join("\n")
 
