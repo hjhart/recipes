@@ -84,29 +84,29 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Charleston Red Rice
 - [o] Cheeseburger Garbage Bread
 - [x] Cheeseburger Mac Copy Cat Hamburger Helper
-- [x] Cheesy Broccoli Orzo
+- [ ] Cheesy Broccoli Orzo
 - [o] Cheesy Crispy Vegan Black Bean Tacos
 - [o] Cheesy Onion Tart
 - [ ] Cheesy Saturday Bread
-- [x] Cheesy White Bean-Tomato Bake
+- [ ] Cheesy White Bean-Tomato Bake
 - [ ] Chicken Alfredo Bake
 - [ ] Chicken and Broccoli Baked Ziti
-- [x] Chicken and Dumplings
+- [ ] Chicken and Dumplings
 - [ ] Chicken and Rice Soup
-- [x] Chicken Bake
+- [ ] Chicken Bake
 - [ ] Chicken Chile Verde Instant Pot
 - [ ] Chicken Pot Pie with Puff Pastry
-- [x] Chicken Ranch Salad
+- [ ] Chicken Ranch Salad
 - [o] Chicken Teriyaki
 - [ ] Chilaquiles Breakfast Casserole
-- [x] Chilaquiles Verdes
+- [ ] Chilaquiles Verdes
 - [ ] Chile Verde With Pork Recipe
 - [o] Chili Cheese Pasta
 - [o] Chinese Sausage Fried Rice
 - [o] Chip Shop Curry Sauce
 - [ ] Chipotle's Queso Blanco Recipe
 - [o] Chopped Broccoli Salad
-- [x] Chorizo and Sweet Potato Quesadillas for Two
+- [ ] Chorizo and Sweet Potato Quesadillas for Two
 - [ ] Cilantro Lime Pasta Salad
 - [ ] Cilantro Lime Rice
 - [o] Cinnamon Crunch Banana Bread
@@ -117,15 +117,15 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Cold Cure Soup
 - [ ] Cold Rice Salad
 - [ ] Cooks Illustrated Chicken Salad
-- [x] Corn and Avocado Salad
+- [ ] Corn and Avocado Salad
 - [ ] Corn and Ramen Noodle Bowl Recipe
 - [o] Corn Pudding Recipe
 - [ ] Creamy Chicken Soup
 - [o] Creamy Corn Charred Beans
-- [x] Creamy Corn Pasta with Basil
+- [ ] Creamy Corn Pasta with Basil
 - [o] Creamy Irish-Style Oatmeal With Brown Sugar Recipe
 - [ ] Creamy Macaroni Salad
-- [x] Creamy One-Pot Orzo With Corn and Bacon
+- [ ] Creamy One-Pot Orzo With Corn and Bacon
 - [ ] Creamy Peanut Ramen
 - [ ] Creamy Red Curry Pasta
 - [ ] Creamy Shells and Beef
@@ -138,9 +138,9 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Crispy Rice Salad
 - [ ] Crock Pot Loaded Baked Potato Soup
 - [o] Crockpot Chicken Spaghetti
-- [x] Cuba Libre
+- [ ] Cuba Libre
 - [ ] Cucumber Salad With Soy, Ginger and Garlic
-- [x] Cucumber Sesame Salad
+- [ ] Cucumber Sesame Salad
 - [o] Curried Chicken and Broccoli Casserole
 - [ ] Deviled Egg Salad
 - [o] Dill Pickle Salad
@@ -154,34 +154,34 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Easy Spinach Garlic Rolls
 - [o] Easy Trader Joe's Chicken Shawarma Bowls
 - [x] Egg and Onion
-- [x] Egg Salad
+- [ ] Egg Salad
 - [x] Emily's Chocolate Chip Cookies
 - [ ] Erin's Breakfast Casserole
-- [x] Everything Sausage Rolls
+- [ ] Everything Sausage Rolls
 - [ ] Extra Tangy Tartar Sauce Recipe
 - [o] Feta and Zucchini Muffins
-- [x] Feta Pasta with Cherry Tomatoes
+- [ ] Feta Pasta with Cherry Tomatoes
 - [x] Flour Bakery's Egg Sandwich
 - [o] Flower Eggs
 - [ ] Foolproof Pan Pizza
 - [ ] French Onion Meatballs
-- [x] Garlic Butter Pesto Caprese Croissants
+- [ ] Garlic Butter Pesto Caprese Croissants
 - [ ] Garlic Herb Pull-Apart Bread
-- [x] Gochuchang Mac & Cheese
+- [ ] Gochuchang Mac & Cheese
 - [ ] Gochujang Buttered Noodles
-- [x] Gochujang Garlic Bread
+- [ ] Gochujang Garlic Bread
 - [o] Gooey Butter Cake
 - [x] Gooey Cheeseburger Dip Recipe
 - [ ] Great Grandma's Banana Bread
 - [ ] Green Chicken Enchilada Casserole
-- [x] Green Chile Rice Bake
+- [ ] Green Chile Rice Bake
 - [ ] Grilled Chicken for Tacos, Burritos, or Salads
-- [x] Grilled Corn and Avocado Salad With Feta Dressing
+- [ ] Grilled Corn and Avocado Salad With Feta Dressing
 - [o] Grilled Orange Old-Fashioned
 - [ ] Guinness Beef Stew
 - [o] Halal Cart Chicken
-- [x] Half a Box of Kraft
-- [x] Ham and Cheese Sliders
+- [ ] Half a Box of Kraft
+- [ ] Ham and Cheese Sliders
 - [o] Ham and Swiss Football Sandwiches
 - [ ] Hard Boiled Eggs
 - [ ] Harissa Aioli
@@ -195,8 +195,8 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Jalapeños & Cheddar Biscuits
 - [ ] Japanese Beef Skewers (Kushiyaki)
 - [ ] Jim Hart's Salmon
-- [x] John's Breakfast Casserole
-- [x] Jollof Rice
+- [ ] John's Breakfast Casserole
+- [ ] Jollof Rice
 - [ ] Kenji's Chicago Thin-Crust Pizza
 - [ ] Kenji's Simple Chili 20 Minute
 - [ ] King Ranch Chicken Casserole
