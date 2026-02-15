@@ -88,7 +88,7 @@ recipe_cards = recipes_data.map do |recipe|
   image_html = if recipe['image']
     <<~IMG
       <div class="h-48 bg-gray-100 overflow-hidden relative">
-          <img src="#{recipe['image']}" alt="#{recipe['title']}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+          <img src="#{recipe['image']}" alt="#{recipe['title']}" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
           #{ai_badge_html}
       </div>
       <div class="p-5 flex-1">
