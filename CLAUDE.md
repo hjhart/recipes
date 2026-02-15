@@ -82,10 +82,7 @@ The Markdown frontmatter properties to map to `.cook` frontmatter:
 
 1. Find the `.md` file in `notion-export/Recipes/` by recipe name.
 2. Read the Notion Markdown to extract: title, source URL, tags, time, servings, author, notes, ingredients, and steps.
-3. Convert ingredients and steps to Cooklang format:
-   - Inline ingredients as `@name{quantity%unit}` — e.g. `@sushi rice{1.5%cups}`
-   - Cookware as `#item{}`
-   - Timers as `~{duration%unit}`
+3. Copy the ingredients and steps text **word for word** from the Notion Markdown — do not modify, reformat, or convert to Cooklang syntax. Preserve the original wording exactly.
 4. Write frontmatter using the field mapping above. Always include `title`. Use `tags` as a comma-separated lowercase string.
 5. Find or generate an image:
    - **First, check for a local image in the Notion export subdirectory.** Each recipe may have a matching folder at `notion-export/Recipes/<Recipe Title>/` containing one or more image files (jpg, png, webp). The .md file will reference it with `![...](RecipeTitle/filename.ext)` — a relative path, not an http URL. Copy the first image found to `recipes/<slug>.<ext>` (preserving the original extension).
