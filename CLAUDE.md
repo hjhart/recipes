@@ -87,10 +87,12 @@ The Markdown frontmatter properties to map to `.cook` frontmatter:
    - Cookware as `#item{}`
    - Timers as `~{duration%unit}`
 4. Write frontmatter using the field mapping above. Always include `title`. Use `tags` as a comma-separated lowercase string.
-5. If the recipe has an image:
+5. Find or generate an image:
    - **First, check for a local image in the Notion export subdirectory.** Each recipe may have a matching folder at `notion-export/Recipes/<Recipe Title>/` containing one or more image files (jpg, png, webp). The .md file will reference it with `![...](RecipeTitle/filename.ext)` — a relative path, not an http URL. Copy the first image found to `recipes/<slug>.<ext>` (preserving the original extension).
    - **If no local image exists**, check whether the .md file contains an embedded `![](https://...)` URL and download it to `recipes/<slug>.jpg`.
+   - **If no image can be found at all**, generate one using DALL-E 3 via the `scripts/generate-images.rb` script pattern: call the OpenAI images API (key is in `.env` as `OPENAI_API_KEY`) with a prompt like `"Professional food photography. [dish description]. Appetizing, high quality, natural lighting."`, save the result to `recipes/<slug>.jpg`, and add `ai_image: true` to the recipe's frontmatter.
    - Do NOT add an `image` field to the frontmatter — the build script auto-detects local images by matching `recipes/<slug>.<ext>` and copies them to `docs/`.
+   - The `ai_image: true` frontmatter flag causes a "✨ AI image" badge to appear on the card and recipe page.
 6. Always include `servings` when it can be determined — check the Notion page, and if not listed there, fetch the source URL to find yield/servings.
 7. Name the output file `recipes/<kebab-case-title>.cook`.
 7. Show the user the result and ask for review before finalizing.
