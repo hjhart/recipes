@@ -59,10 +59,7 @@
           <span class="metadata-pill">👤 {{ metadata.author }}</span>
           {% endif %}
           {% if metadata.source %}
-          <a href="{{ metadata.source }}" target="_blank"
-             class="metadata-pill hover:bg-orange-50 hover:border-orange-300 hover:text-orange-700 transition-colors">
-            📖 Source ↗
-          </a>
+          <span id="source-pill" data-source="{{ metadata.source }}" class="metadata-pill"></span>
           {% endif %}
         </div>
       </div>
@@ -119,6 +116,17 @@
 
     <script>
     (function () {
+      // Render source as link or plain text depending on whether it's a URL
+      const sourcePill = document.getElementById('source-pill');
+      if (sourcePill) {
+        const src = sourcePill.getAttribute('data-source') || '';
+        if (src.startsWith('http://') || src.startsWith('https://')) {
+          sourcePill.outerHTML = '<a href="' + src + '" target="_blank" class="metadata-pill hover:bg-orange-50 hover:border-orange-300 hover:text-orange-700 transition-colors">📖 Source ↗</a>';
+        } else {
+          sourcePill.textContent = '📖 ' + src;
+        }
+      }
+
       // Render tags from comma-separated string
       const tagsContainer = document.getElementById('tags-container');
       if (tagsContainer) {
