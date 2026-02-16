@@ -196,15 +196,15 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Japanese Beef Skewers (Kushiyaki)
 - [x] Jim Hart's Salmon
 - [x] John's Breakfast Casserole
-- [x] Jollof Rice
-- [x] Kenji's Chicago Thin-Crust Pizza
+- [ ] Jollof Rice
+- [ ] Kenji's Chicago Thin-Crust Pizza
 - [x] Kenji's Simple Chili 20 Minute
 - [x] King Ranch Chicken Casserole
 - [x] Kodiak Pancakes
 - [x] Kodiak Waffles
 - [x] La Scala Chopped Salad
 - [x] Lasagna Soup
-- [x] Leek and Chicken Skillet
+- [ ] Leek and Chicken Skillet
 - [x] Leek and Goat Cheese Quiche
 - [x] Lefse
 - [x] Lentil Soup with Cumin & Coriander Yoghurt, Lemon & Chilli
