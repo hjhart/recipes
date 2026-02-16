@@ -312,7 +312,7 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] The Best Caesar Salad Recipe
 - [x] The Food Lab's Chocolate Chip Cookies Recipe
 - [x] Tomato Rice With Crispy Cheddar
-- [o] Tortillas
+- [x] Tortillas
 - [o] Trader Joe's Asian-Inspired Salad
 - [x] Trader Joe's Curried Chicken Salad
 - [o] Treat Trees
