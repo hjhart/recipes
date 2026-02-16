@@ -115,40 +115,40 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Classic Sage and Sausage Stuffing
 - [o] Coconut-Gochujang Glazed Chicken With Broccoli
 - [x] Cold Cure Soup
-- [ ] Cold Rice Salad
+- [x] Cold Rice Salad
 - [ ] Cooks Illustrated Chicken Salad
-- [ ] Corn and Avocado Salad
-- [ ] Corn and Ramen Noodle Bowl Recipe
+- [x] Corn and Avocado Salad
+- [x] Corn and Ramen Noodle Bowl Recipe
 - [o] Corn Pudding Recipe
-- [ ] Creamy Chicken Soup
+- [x] Creamy Chicken Soup
 - [o] Creamy Corn Charred Beans
 - [ ] Creamy Corn Pasta with Basil
 - [o] Creamy Irish-Style Oatmeal With Brown Sugar Recipe
-- [ ] Creamy Macaroni Salad
-- [ ] Creamy One-Pot Orzo With Corn and Bacon
-- [ ] Creamy Peanut Ramen
-- [ ] Creamy Red Curry Pasta
-- [ ] Creamy Shells and Beef
-- [ ] Creamy Tortellini, Spinach, and Chicken Soup
+- [x] Creamy Macaroni Salad
+- [x] Creamy One-Pot Orzo With Corn and Bacon
+- [x] Creamy Peanut Ramen
+- [x] Creamy Red Curry Pasta
+- [x] Creamy Shells and Beef
+- [x] Creamy Tortellini, Spinach, and Chicken Soup
 - [o] Crispy Baked Boursin
 - [o] Crispy Herbed Crab Cakes Recipe
 - [x] Crispy Oven Fried Bacon
 - [o] Crispy Potato and Sour Cream Tart
 - [o] Crispy Potato, Egg & Cheese Taco
-- [ ] Crispy Rice Salad
-- [ ] Crock Pot Loaded Baked Potato Soup
+- [x] Crispy Rice Salad
+- [x] Crock Pot Loaded Baked Potato Soup
 - [o] Crockpot Chicken Spaghetti
-- [ ] Cuba Libre
-- [ ] Cucumber Salad With Soy, Ginger and Garlic
-- [ ] Cucumber Sesame Salad
+- [x] Cuba Libre
+- [x] Cucumber Salad With Soy, Ginger and Garlic
+- [x] Cucumber Sesame Salad
 - [o] Curried Chicken and Broccoli Casserole
-- [ ] Deviled Egg Salad
+- [x] Deviled Egg Salad
 - [o] Dill Pickle Salad
 - [o] Easiest Chicken Noodle Soup
-- [ ] Easy Blackberry Cobbler
+- [x] Easy Blackberry Cobbler
 - [ ] Easy Crab Cakes
 - [ ] Easy Meatloaf
-- [ ] Easy One-Pot Chicken Tinga (Spicy Mexican Shredded Chicken) Recipe
+- [x] Easy One-Pot Chicken Tinga (Spicy Mexican Shredded Chicken) Recipe
 - [o] Easy Pull-Apart Pepperoni Garlic Knots
 - [o] Easy Skillet Tamale Pie With Cornbread Crust
 - [o] Easy Spinach Garlic Rolls
@@ -156,45 +156,45 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Egg and Onion
 - [ ] Egg Salad
 - [x] Emily's Chocolate Chip Cookies
-- [ ] Erin's Breakfast Casserole
-- [ ] Everything Sausage Rolls
-- [ ] Extra Tangy Tartar Sauce Recipe
+- [x] Erin's Breakfast Casserole
+- [x] Everything Sausage Rolls
+- [x] Extra Tangy Tartar Sauce Recipe
 - [o] Feta and Zucchini Muffins
 - [ ] Feta Pasta with Cherry Tomatoes
 - [x] Flour Bakery's Egg Sandwich
 - [o] Flower Eggs
-- [ ] Foolproof Pan Pizza
-- [ ] French Onion Meatballs
+- [x] Foolproof Pan Pizza
+- [x] French Onion Meatballs
 - [ ] Garlic Butter Pesto Caprese Croissants
 - [ ] Garlic Herb Pull-Apart Bread
-- [ ] Gochuchang Mac & Cheese
-- [ ] Gochujang Buttered Noodles
-- [ ] Gochujang Garlic Bread
+- [x] Gochuchang Mac & Cheese
+- [x] Gochujang Buttered Noodles
+- [x] Gochujang Garlic Bread
 - [o] Gooey Butter Cake
 - [x] Gooey Cheeseburger Dip Recipe
 - [ ] Great Grandma's Banana Bread
-- [ ] Green Chicken Enchilada Casserole
-- [ ] Green Chile Rice Bake
-- [ ] Grilled Chicken for Tacos, Burritos, or Salads
-- [ ] Grilled Corn and Avocado Salad With Feta Dressing
+- [x] Green Chicken Enchilada Casserole
+- [x] Green Chile Rice Bake
+- [x] Grilled Chicken for Tacos, Burritos, or Salads
+- [x] Grilled Corn and Avocado Salad With Feta Dressing
 - [o] Grilled Orange Old-Fashioned
-- [ ] Guinness Beef Stew
+- [x] Guinness Beef Stew
 - [o] Halal Cart Chicken
 - [ ] Half a Box of Kraft
 - [ ] Ham and Cheese Sliders
 - [o] Ham and Swiss Football Sandwiches
 - [ ] Hard Boiled Eggs
-- [ ] Harissa Aioli
-- [ ] Honey Chili Lime Chicken
+- [x] Harissa Aioli
+- [x] Honey Chili Lime Chicken
 - [o] Hurricane Chips (maybe Popcorn)
 - [o] In-N-Out Double Double Burger Recipe
-- [ ] Instant Pot Chicken Juk
+- [x] Instant Pot Chicken Juk
 - [x] Instant Pot Hard Boiled Eggs
 - [o] Italian Penicillin (Pastina Soup)
 - [ ] Italian Wonderpot
 - [ ] Jalapeños & Cheddar Biscuits
-- [ ] Japanese Beef Skewers (Kushiyaki)
-- [ ] Jim Hart's Salmon
+- [x] Japanese Beef Skewers (Kushiyaki)
+- [x] Jim Hart's Salmon
 - [ ] John's Breakfast Casserole
 - [ ] Jollof Rice
 - [ ] Kenji's Chicago Thin-Crust Pizza
