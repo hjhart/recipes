@@ -116,13 +116,13 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Coconut-Gochujang Glazed Chicken With Broccoli
 - [x] Cold Cure Soup
 - [x] Cold Rice Salad
-- [ ] Cooks Illustrated Chicken Salad
+- [x] Cooks Illustrated Chicken Salad
 - [x] Corn and Avocado Salad
 - [x] Corn and Ramen Noodle Bowl Recipe
 - [o] Corn Pudding Recipe
 - [x] Creamy Chicken Soup
 - [o] Creamy Corn Charred Beans
-- [ ] Creamy Corn Pasta with Basil
+- [x] Creamy Corn Pasta with Basil
 - [o] Creamy Irish-Style Oatmeal With Brown Sugar Recipe
 - [x] Creamy Macaroni Salad
 - [x] Creamy One-Pot Orzo With Corn and Bacon
@@ -146,33 +146,33 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Dill Pickle Salad
 - [o] Easiest Chicken Noodle Soup
 - [x] Easy Blackberry Cobbler
-- [ ] Easy Crab Cakes
-- [ ] Easy Meatloaf
+- [x] Easy Crab Cakes
+- [x] Easy Meatloaf
 - [x] Easy One-Pot Chicken Tinga (Spicy Mexican Shredded Chicken) Recipe
 - [o] Easy Pull-Apart Pepperoni Garlic Knots
 - [o] Easy Skillet Tamale Pie With Cornbread Crust
 - [o] Easy Spinach Garlic Rolls
 - [o] Easy Trader Joe's Chicken Shawarma Bowls
 - [x] Egg and Onion
-- [ ] Egg Salad
+- [o] Egg Salad
 - [x] Emily's Chocolate Chip Cookies
 - [x] Erin's Breakfast Casserole
 - [x] Everything Sausage Rolls
 - [x] Extra Tangy Tartar Sauce Recipe
 - [o] Feta and Zucchini Muffins
-- [ ] Feta Pasta with Cherry Tomatoes
+- [x] Feta Pasta with Cherry Tomatoes
 - [x] Flour Bakery's Egg Sandwich
 - [o] Flower Eggs
 - [x] Foolproof Pan Pizza
 - [x] French Onion Meatballs
-- [ ] Garlic Butter Pesto Caprese Croissants
-- [ ] Garlic Herb Pull-Apart Bread
+- [x] Garlic Butter Pesto Caprese Croissants
+- [x] Garlic Herb Pull-Apart Bread
 - [x] Gochuchang Mac & Cheese
 - [x] Gochujang Buttered Noodles
 - [x] Gochujang Garlic Bread
 - [o] Gooey Butter Cake
 - [x] Gooey Cheeseburger Dip Recipe
-- [ ] Great Grandma's Banana Bread
+- [x] Great Grandma's Banana Bread
 - [x] Green Chicken Enchilada Casserole
 - [x] Green Chile Rice Bake
 - [x] Grilled Chicken for Tacos, Burritos, or Salads
@@ -180,10 +180,10 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Grilled Orange Old-Fashioned
 - [x] Guinness Beef Stew
 - [o] Halal Cart Chicken
-- [ ] Half a Box of Kraft
-- [ ] Ham and Cheese Sliders
+- [o] Half a Box of Kraft
+- [x] Ham and Cheese Sliders
 - [o] Ham and Swiss Football Sandwiches
-- [ ] Hard Boiled Eggs
+- [x] Hard Boiled Eggs
 - [x] Harissa Aioli
 - [x] Honey Chili Lime Chicken
 - [o] Hurricane Chips (maybe Popcorn)
@@ -191,20 +191,20 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Instant Pot Chicken Juk
 - [x] Instant Pot Hard Boiled Eggs
 - [o] Italian Penicillin (Pastina Soup)
-- [ ] Italian Wonderpot
-- [ ] Jalapeños & Cheddar Biscuits
+- [o] Italian Wonderpot
+- [x] Jalapeños & Cheddar Biscuits
 - [x] Japanese Beef Skewers (Kushiyaki)
 - [x] Jim Hart's Salmon
 - [x] John's Breakfast Casserole
-- [ ] Jollof Rice
-- [ ] Kenji's Chicago Thin-Crust Pizza
+- [o] Jollof Rice
+- [o] Kenji's Chicago Thin-Crust Pizza
 - [x] Kenji's Simple Chili 20 Minute
 - [x] King Ranch Chicken Casserole
 - [x] Kodiak Pancakes
 - [x] Kodiak Waffles
 - [x] La Scala Chopped Salad
 - [x] Lasagna Soup
-- [ ] Leek and Chicken Skillet
+- [o] Leek and Chicken Skillet
 - [x] Leek and Goat Cheese Quiche
 - [x] Lefse
 - [x] Lentil Soup with Cumin & Coriander Yoghurt, Lemon & Chilli
@@ -230,7 +230,7 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Mujadara
 - [x] Mutter Butters
 - [x] Neely's BBQ Pasta Salad
-- [ ] New Orleans-Style Red Beans and Rice Recipe
+- [o] New Orleans-Style Red Beans and Rice Recipe
 - [x] No-Boil Pasta Bake
 - [x] No-Cook Blender Tomato Soup
 - [x] NYTimes Roquefort Sauce
@@ -243,45 +243,45 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] One-Bowl Crispies
 - [x] One-Pan Zucchini-Pesto Orzo
 - [x] One-Pot Spaghetti Dinner
-- [ ] Orange Chicken and Rice
-- [ ] Orzo Pasta Bake
-- [ ] Orzotto Alla Carbonara
+- [o] Orange Chicken and Rice
+- [x] Orzo Pasta Bake
+- [x] Orzotto Alla Carbonara
 - [x] Oyakodon (Japanese Chicken and Egg Rice Bowl) Recipe
-- [ ] Pagliacci Salad
-- [ ] Pan de Muerto (Day of the Dead Bread)
-- [ ] Pancake Sausage Balls
-- [ ] Pão de Queijo
-- [ ] Papa Tea's Chicken Fried Wontons
-- [ ] Party Salsa
-- [ ] Pastel Azteca (Rachel Cooks with Love)
-- [ ] Peanut Butter Noodles
-- [ ] Peanut Spicy Noodles
-- [ ] Pear and Blue Cheese Salad
-- [ ] Pesto Pasta Salad
-- [ ] Pickle Schmear
-- [ ] Pickled Red Onions
-- [ ] Pigs in a Blanket
-- [ ] Piña Colada
-- [ ] Pink 75
-- [ ] Popcorn #1
-- [ ] Potato Salad
-- [ ] Pressure Cooker Japanese Curry
-- [ ] Pudgie Pie Pizza
-- [ ] Queso Sauce
-- [ ] Quick and Easy Pressure Cooker Chicken, Lentil, and Bacon Stew With Carrots
-- [ ] Quick Chicken Adobo and Black Bean Tacos
-- [ ] Ranch-Roasted Broccoli
-- [ ] Really Good Oven-Fried Chicken Wings
-- [ ] Rice
-- [ ] Rice Frittata
-- [ ] Salmon Patties
-- [ ] Salmon Rillette
-- [ ] Saltine Cracker Toffee
-- [ ] San Francisco-Style Vietnamese American Garlic Noodles
-- [ ] Sanshoku-don (Three-Color Rice Bowls)
-- [ ] Sausage Balls
-- [ ] Sautéed Chicken Cutlets for Two
-- [ ] Sesame Chicken Chili Noodles
+- [x] Pagliacci Salad
+- [o] Pan de Muerto (Day of the Dead Bread)
+- [x] Pancake Sausage Balls
+- [o] Pão de Queijo
+- [o] Papa Tea's Chicken Fried Wontons
+- [o] Party Salsa
+- [o] Pastel Azteca (Rachel Cooks with Love)
+- [x] Peanut Butter Noodles
+- [x] Peanut Spicy Noodles
+- [x] Pear and Blue Cheese Salad
+- [x] Pesto Pasta Salad
+- [o] Pickle Schmear
+- [x] Pickled Red Onions
+- [x] Pigs in a Blanket
+- [o] Piña Colada
+- [o] Pink 75
+- [o] Popcorn #1
+- [x] Potato Salad
+- [o] Pressure Cooker Japanese Curry
+- [x] Pudgie Pie Pizza
+- [o] Queso Sauce
+- [o] Quick and Easy Pressure Cooker Chicken, Lentil, and Bacon Stew With Carrots
+- [o] Quick Chicken Adobo and Black Bean Tacos
+- [x] Ranch-Roasted Broccoli
+- [x] Really Good Oven-Fried Chicken Wings
+- [o] Rice
+- [o] Rice Frittata
+- [o] Salmon Patties
+- [o] Salmon Rillette
+- [x] Saltine Cracker Toffee
+- [o] San Francisco-Style Vietnamese American Garlic Noodles
+- [o] Sanshoku-don (Three-Color Rice Bowls)
+- [x] Sausage Balls
+- [x] Sautéed Chicken Cutlets for Two
+- [x] Sesame Chicken Chili Noodles
 - [ ] Sesame Chicken Salad
 - [ ] Sheet Pan Eggs
 - [ ] Shepherd's Pie Twice Baked Potatoes
@@ -299,15 +299,15 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Spinach and Tomato Dahl
 - [ ] Spring Onion Pancakes
 - [ ] Stewed Lentils with Sausage
-- [ ] Strawberry Jam Cookies
+- [o] Strawberry Jam Cookies
 - [ ] Street Corn Chicken Enchilada
 - [ ] Tagliatelle al Ragù
 - [ ] Takeout-Style Sesame Noodles
-- [ ] Tangerine Sour
+- [o] Tangerine Sour
 - [ ] Tennessee Onions
-- [ ] Thai-Inspired Chicken & Rice Noodle Soup
+- [o] Thai-Inspired Chicken & Rice Noodle Soup
 - [ ] Thai-Inspired Chicken Meatball Soup (NYT)
-- [ ] Thai-Inspired Chicken Meatball Soup (Flavorful Life)
+- [o] Thai-Inspired Chicken Meatball Soup (Flavorful Life)
 - [ ] Thanksgiving Stuffing Focaccia
 - [ ] The Best Caesar Salad Recipe
 - [ ] The Food Lab's Chocolate Chip Cookies Recipe
@@ -316,21 +316,21 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Trader Joe's Asian-Inspired Salad
 - [ ] Trader Joe's Curried Chicken Salad
 - [ ] Treat Trees
-- [ ] Tuna Chickpea, Cucumber and Parsley Salad
+- [o] Tuna Chickpea, Cucumber and Parsley Salad
 - [ ] Tuna Mayo Rice Bowl
 - [ ] Tuna Salad
-- [ ] Turkey & Dumplings Soup
+- [o] Turkey & Dumplings Soup
 - [ ] Turkey Enchilada Skillet
 - [ ] Twice Baked Potatoes
 - [ ] Twice-Baked Potato
 - [ ] Ultra-Fluffy Mashed Potatoes Recipe
 - [ ] Untitled
-- [ ] Vegan Quinoa Salad
+- [o] Vegan Quinoa Salad
 - [ ] Vegetable Packs with Goat Cheese
-- [ ] Waffled Savory Sticky Rice
-- [ ] Walla Walla Onion Dip
+- [o] Waffled Savory Sticky Rice
+- [o] Walla Walla Onion Dip
 - [ ] White Bean, Rice and Dill Soup
 - [ ] White Chicken Chili
-- [ ] Woodburner Baba Ganoush
+- [o] Woodburner Baba Ganoush
 - [ ] Yakamein
-- [ ] Yum Yum Sauce
+- [o] Yum Yum Sauce
