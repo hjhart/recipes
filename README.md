@@ -226,7 +226,7 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Mongolian Ground Beef and Noodles
 - [x] Monster Cookies
 - [x] Mountain Man Casserole
-- [ ] Mrs Reed's Chocolate Chip Cookies
+- [x] Mrs Reed's Chocolate Chip Cookies
 - [x] Mujadara
 - [x] Mutter Butters
 - [x] Neely's BBQ Pasta Salad
