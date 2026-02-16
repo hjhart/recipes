@@ -112,6 +112,14 @@
         </div>
 
       </div>
+
+      {% if metadata.notes %}
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12">
+        <h2 class="text-lg font-bold mb-2 text-amber-800">📌 Notes</h2>
+        <p class="text-amber-900 leading-7">{{ metadata.notes }}</p>
+      </div>
+      {% endif %}
+
     </div>
 
     <footer class="text-center py-6 text-gray-500 text-sm print:hidden">
