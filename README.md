@@ -282,29 +282,29 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Sausage Balls
 - [x] Sautéed Chicken Cutlets for Two
 - [x] Sesame Chicken Chili Noodles
-- [ ] Sesame Chicken Salad
-- [ ] Sheet Pan Eggs
-- [ ] Shepherd's Pie Twice Baked Potatoes
-- [ ] Sidecar
-- [ ] Skillet Chocolate Chip Cookie
-- [ ] Skillet Flatbread
-- [ ] Slow-Roasted Beef Tenderloin
-- [ ] Slutty Dip
-- [ ] Soft and Chewy Rolo Cookies
-- [ ] Soft Sandwich Bread
-- [ ] Sour Cream Biscuits
-- [ ] Southern Broccoli Salad
-- [ ] Spaghetti and Meatballs
+- [o] Sesame Chicken Salad
+- [x] Sheet Pan Eggs
+- [x] Shepherd's Pie Twice Baked Potatoes
+- [x] Sidecar
+- [x] Skillet Chocolate Chip Cookie
+- [x] Skillet Flatbread
+- [x] Slow-Roasted Beef Tenderloin
+- [x] Slutty Dip
+- [x] Soft and Chewy Rolo Cookies
+- [x] Soft Sandwich Bread
+- [x] Sour Cream Biscuits
+- [x] Southern Broccoli Salad
+- [x] Spaghetti and Meatballs
 - [x] Spicy Tuna Salad With Crispy Rice
-- [ ] Spinach and Tomato Dahl
-- [ ] Spring Onion Pancakes
-- [ ] Stewed Lentils with Sausage
+- [x] Spinach and Tomato Dahl
+- [x] Spring Onion Pancakes
+- [x] Stewed Lentils with Sausage
 - [o] Strawberry Jam Cookies
-- [ ] Street Corn Chicken Enchilada
-- [ ] Tagliatelle al Ragù
-- [ ] Takeout-Style Sesame Noodles
+- [x] Street Corn Chicken Enchilada
+- [x] Tagliatelle al Ragù
+- [x] Takeout-Style Sesame Noodles
 - [o] Tangerine Sour
-- [ ] Tennessee Onions
+- [x] Tennessee Onions
 - [o] Thai-Inspired Chicken & Rice Noodle Soup
 - [ ] Thai-Inspired Chicken Meatball Soup (NYT)
 - [o] Thai-Inspired Chicken Meatball Soup (Flavorful Life)
