@@ -80,8 +80,10 @@ The Markdown frontmatter properties to map to `.cook` frontmatter:
 
 ### Steps to import a recipe from Notion export
 
+**Important:** Never invent or reconstruct recipe content from memory. All ingredients and steps must come directly from the Notion export or the source URL. If a Notion file exists but contains no recipe steps (e.g. only a title, URL, and image — tagged "incomplete"), and the source URL cannot be fetched, **skip the recipe entirely** and leave it unchecked in the README.
+
 1. Find the `.md` file in `notion-export/Recipes/` by recipe name.
-2. Read the Notion Markdown to extract: title, source URL, tags, time, servings, author, notes, ingredients, and steps.
+2. Read the Notion Markdown to extract: title, source URL, tags, time, servings, author, notes, ingredients, and steps. If the Notion file has no ingredients or steps, fetch the source URL. If the source URL is also unreachable, skip this recipe.
 3. Convert the recipe body to **Cooklang format**:
    - Keep all ingredient names, quantities, and step wording exactly as written — do not paraphrase or change any wording.
    - Write each step as a prose paragraph (not a numbered list).
