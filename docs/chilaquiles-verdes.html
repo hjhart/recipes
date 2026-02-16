@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chilaquiles Verdes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+
+      <nav class="mb-6 print:hidden">
+        <a href="index.html"
+           class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow text-orange-600 hover:text-orange-700 hover:shadow-md transition-all font-medium text-sm">
+          ← All Recipes
+        </a>
+      </nav>
+
+      <div class="mb-8">
+        
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+          <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
+            Chilaquiles Verdes
+          </h1>
+          <button onclick="window.print()"
+                  class="print:hidden self-start px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all shadow-md flex items-center gap-2 text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+            </svg>
+            Print
+          </button>
+        </div>
+
+        <!-- Tags (split and rendered by JS below) -->
+        
+
+        <!-- Metadata pills -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          
+          <span class="metadata-pill">👥 4 servings</span>
+          
+          
+          
+          
+          
+        </div>
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+        <!-- Ingredients + Cookware sidebar -->
+        <div class="md:col-span-1">
+          <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
+            <h2 class="text-xl font-bold mb-4 text-orange-600">🥘 Ingredients</h2>
+            <ul class="space-y-3">
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">tomatillos</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  4 medium
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">onion</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.5 small
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">garlic cloves</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  2
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">serrano chiles</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1-2 small
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">cilantro</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 sprig
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">salt</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">neutral oil</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  5 tbsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">corn tortillas</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  8
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">salt</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">chili powder</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.25 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">neutral oil</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  2 tbsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">onion</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 small
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">queso fresco</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.75 cup
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">neutral oil</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 tbsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">eggs</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  8 large
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">crema</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.5 cup
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">cilantro leaves</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.5 cup
+                </span>
+              </li>
+              
+            </ul>
+
+            
+            <h2 class="text-xl font-bold mt-6 mb-4 text-green-600">🍳 Cookware</h2>
+            <ul class="space-y-2">
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">medium cast-iron skillet</span>
+              </li>
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">large skillet</span>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="md:col-span-2">
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold mb-6 text-gray-800">📝 Instructions</h2>
+            
+            <div class="instructions-raw hidden">= Recipe
+
+1. Prepare the salsa verde (optional): Arrange a rack 6 inches from the broiler and set to high. Heat a foil-lined half-sheet pan for 5 minutes. Carefully add 4 medium tomatillos, husks removed, 0.5 small onion, 2 garlic cloves, peeled, and 1-2 small serrano chiles, stems removed, to the pan. Broil until blistered and charred, 10-14 minutes, turning once halfway through. Transfer to a blender, add 1 sprig cilantro, and purée until almost smooth, about 1 minute. Season with salt to taste.
+
+2. Prepare the tortilla chips (optional): Heat a medium cast-iron skillet over medium and add 5 tbsp neutral oil. Cook 8 corn tortillas, each sliced into 6 wedges, in batches until golden and crisp, 3-4 minutes per batch. Transfer to a wire rack to drain, then season with salt and 0.25 tsp chili powder and toss.
+
+3. Prepare the chilaquiles: In a large skillet, heat 2 tbsp neutral oil over medium, then add the salsa verde. Simmer for 2 minutes and season with salt. Stir in 1 small onion, sliced into rings, then add half the tortilla chips and half of 0.75 cup queso fresco, crumbled, and toss to combine. Season, add the remaining chips, and toss again. Lower heat and cook until heated through.
+
+4. In the reserved skillet, heat 1 tbsp neutral oil over medium. Working in batches, fry 8 large eggs to preferred doneness.
+
+5. Divide chilaquiles among plates. Top each with remaining queso fresco, 2 fried eggs, 2 dollops of 0.5 cup crema or sour cream, and 0.5 cup cilantro leaves.
+
+</div>
+            
+            <div id="steps-output"></div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12">
+        <h2 class="text-lg font-bold mb-2 text-amber-800">📌 Notes</h2>
+        <p class="text-amber-900 leading-7">If short on time, use 1 cup store-bought salsa verde and 6 oz sturdy thick-cut tortilla chips instead of making your own.</p>
+      </div>
+      
+
+    </div>
+
+    <footer class="text-center py-6 text-gray-500 text-sm print:hidden">
+      Generated with <a href="https://cooklang.org" target="_blank"
+        class="text-orange-600 hover:text-orange-700">Cooklang</a>
+    </footer>
+
+    <script>
+    (function () {
+      // Render source as link or plain text depending on whether it's a URL
+      const sourcePill = document.getElementById('source-pill');
+      if (sourcePill) {
+        const src = sourcePill.getAttribute('data-source') || '';
+        if (src.startsWith('http://') || src.startsWith('https://')) {
+          sourcePill.outerHTML = '<a href="' + src + '" target="_blank" class="metadata-pill hover:bg-orange-50 hover:border-orange-300 hover:text-orange-700 transition-colors">📖 Source ↗</a>';
+        } else {
+          sourcePill.textContent = '📖 ' + src;
+        }
+      }
+
+      // Render tags from comma-separated string
+      const tagsContainer = document.getElementById('tags-container');
+      if (tagsContainer) {
+        const raw = tagsContainer.getAttribute('data-tags') || '';
+        tagsContainer.innerHTML = raw.split(',').map(function (t) {
+          const tag = t.trim();
+          return tag ? '<span class="tag">#' + tag + '</span>' : '';
+        }).join('');
+      }
+    })();
+
+    (function () {
+      const container = document.getElementById('steps-output');
+      const rawDivs = document.querySelectorAll('.instructions-raw');
+      let html = '';
+
+      rawDivs.forEach(function (div) {
+        const text = div.textContent || '';
+        // Split into paragraphs
+        const paragraphs = text.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
+
+        let sectionName = null;
+        let steps = [];
+
+        paragraphs.forEach(function (para) {
+          if (para.startsWith('= ')) {
+            sectionName = para.slice(2).trim();
+          } else if (/^\d+\.\s/.test(para)) {
+            steps.push(para.replace(/^\d+\.\s*/, ''));
+          }
+        });
+
+        if (sectionName) {
+          html += '<h3 class="text-lg font-semibold mt-6 mb-4 text-orange-700 border-b-2 border-orange-100 pb-2">' +
+            escapeHtml(sectionName) + '</h3>';
+        }
+
+        if (steps.length > 0) {
+          html += '<ol class="space-y-4">';
+          steps.forEach(function (step, i) {
+            html += '<li class="bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl p-4">' +
+              '<div class="flex gap-4">' +
+              '<div class="step-number">' + (i + 1) + '</div>' +
+              '<div class="flex-1 text-gray-700 leading-8">' + escapeHtml(step) + '</div>' +
+              '</div>' +
+              '</li>';
+          });
+          html += '</ol>';
+        } else if (!sectionName) {
+          // Fallback: plain text block
+          html += '<p class="text-gray-700 leading-8 whitespace-pre-wrap">' + escapeHtml(text.trim()) + '</p>';
+        }
+      });
+
+      container.innerHTML = html;
+
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+    })();
+    </script>
+  </body>
+</html>

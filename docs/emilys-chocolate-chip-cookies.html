@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emily's Chocolate Chip Cookies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+
+      <nav class="mb-6 print:hidden">
+        <a href="index.html"
+           class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow text-orange-600 hover:text-orange-700 hover:shadow-md transition-all font-medium text-sm">
+          ← All Recipes
+        </a>
+      </nav>
+
+      <div class="mb-8">
+        
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+          <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
+            Emily's Chocolate Chip Cookies
+          </h1>
+          <button onclick="window.print()"
+                  class="print:hidden self-start px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all shadow-md flex items-center gap-2 text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+            </svg>
+            Print
+          </button>
+        </div>
+
+        <!-- Tags (split and rendered by JS below) -->
+        
+        <div id="tags-container" class="flex flex-wrap gap-2 mb-4" data-tags="sweets"></div>
+        
+
+        <!-- Metadata pills -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          
+          <span class="metadata-pill">👥 32 large cookies servings</span>
+          
+          
+          
+          
+          
+          <span id="source-pill" data-source="https://sugarspunrun.com/worst-chocolate-chip-cookies/" class="metadata-pill"></span>
+          
+        </div>
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+        <!-- Ingredients + Cookware sidebar -->
+        <div class="md:col-span-1">
+          <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
+            <h2 class="text-xl font-bold mb-4 text-orange-600">🥘 Ingredients</h2>
+            <ul class="space-y-3">
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">unsalted butter</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 cup
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">light brown sugar</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1.5 cups
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">granulated sugar</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.5 cup
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">eggs</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  2
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">vanilla extract</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">maple syrup</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.25 cup
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">all-purpose flour</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  3.25 cups
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">cornstarch</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  2 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">baking powder</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">baking soda</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">salt</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">chocolate chips</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  2 cups
+                </span>
+              </li>
+              
+            </ul>
+
+            
+            <h2 class="text-xl font-bold mt-6 mb-4 text-green-600">🍳 Cookware</h2>
+            <ul class="space-y-2">
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">large bowl</span>
+              </li>
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">bowl</span>
+              </li>
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">oven</span>
+              </li>
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">cookie sheets</span>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="md:col-span-2">
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold mb-6 text-gray-800">📝 Instructions</h2>
+            
+            <div class="instructions-raw hidden">= Recipe
+
+1. In a large bowl, stir together 1 cup unsalted butter (melted, cooled at least 5 minutes), 1.5 cups light brown sugar (packed), and 0.5 cup granulated sugar.
+
+2. Add 2 eggs (room temperature), one at a time, stirring until combined.
+
+3. Stir in 1 tsp vanilla extract and 0.25 cup maple syrup.
+
+4. In a separate bowl, whisk together 3.25 cups all-purpose flour, 2 tsp cornstarch, 1 tsp baking powder, 1 tsp baking soda, and 1 tsp salt.
+
+5. Gradually add the flour mixture to the wet ingredients, stirring until completely combined.
+
+6. Stir in 2 cups chocolate chips.
+
+7. Cover bowl and chill for at least 30 minutes.
+
+8. While dough is chilling, preheat oven to 350°F (175°C) and line cookie sheets with parchment paper.
+
+9. Scoop about 1 tablespoon of dough, roll into balls, and press down slightly. Place at least 2 inches apart on prepared cookie sheet, six per half sheet.
+
+10. Bake for 13 minutes until edges are just beginning to turn golden brown (cookies will look slightly underdone). No convection fan.
+
+11. Allow cookies to cool completely on the cookie sheet. If desired, gently press a few extra chocolate chips on top while still warm.
+
+12. Keep unbaked dough refrigerated between batches. Do not place dough on a hot cookie sheet.
+
+</div>
+            
+            <div id="steps-output"></div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12">
+        <h2 class="text-lg font-bold mb-2 text-amber-800">📌 Notes</h2>
+        <p class="text-amber-900 leading-7">Variant - replace chocolate chips with white chocolate chips and add macadamia nuts. To freeze, dough temp should be 65°F when brought back out; if higher, reduce bake time.</p>
+      </div>
+      
+
+    </div>
+
+    <footer class="text-center py-6 text-gray-500 text-sm print:hidden">
+      Generated with <a href="https://cooklang.org" target="_blank"
+        class="text-orange-600 hover:text-orange-700">Cooklang</a>
+    </footer>
+
+    <script>
+    (function () {
+      // Render source as link or plain text depending on whether it's a URL
+      const sourcePill = document.getElementById('source-pill');
+      if (sourcePill) {
+        const src = sourcePill.getAttribute('data-source') || '';
+        if (src.startsWith('http://') || src.startsWith('https://')) {
+          sourcePill.outerHTML = '<a href="' + src + '" target="_blank" class="metadata-pill hover:bg-orange-50 hover:border-orange-300 hover:text-orange-700 transition-colors">📖 Source ↗</a>';
+        } else {
+          sourcePill.textContent = '📖 ' + src;
+        }
+      }
+
+      // Render tags from comma-separated string
+      const tagsContainer = document.getElementById('tags-container');
+      if (tagsContainer) {
+        const raw = tagsContainer.getAttribute('data-tags') || '';
+        tagsContainer.innerHTML = raw.split(',').map(function (t) {
+          const tag = t.trim();
+          return tag ? '<span class="tag">#' + tag + '</span>' : '';
+        }).join('');
+      }
+    })();
+
+    (function () {
+      const container = document.getElementById('steps-output');
+      const rawDivs = document.querySelectorAll('.instructions-raw');
+      let html = '';
+
+      rawDivs.forEach(function (div) {
+        const text = div.textContent || '';
+        // Split into paragraphs
+        const paragraphs = text.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
+
+        let sectionName = null;
+        let steps = [];
+
+        paragraphs.forEach(function (para) {
+          if (para.startsWith('= ')) {
+            sectionName = para.slice(2).trim();
+          } else if (/^\d+\.\s/.test(para)) {
+            steps.push(para.replace(/^\d+\.\s*/, ''));
+          }
+        });
+
+        if (sectionName) {
+          html += '<h3 class="text-lg font-semibold mt-6 mb-4 text-orange-700 border-b-2 border-orange-100 pb-2">' +
+            escapeHtml(sectionName) + '</h3>';
+        }
+
+        if (steps.length > 0) {
+          html += '<ol class="space-y-4">';
+          steps.forEach(function (step, i) {
+            html += '<li class="bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl p-4">' +
+              '<div class="flex gap-4">' +
+              '<div class="step-number">' + (i + 1) + '</div>' +
+              '<div class="flex-1 text-gray-700 leading-8">' + escapeHtml(step) + '</div>' +
+              '</div>' +
+              '</li>';
+          });
+          html += '</ol>';
+        } else if (!sectionName) {
+          // Fallback: plain text block
+          html += '<p class="text-gray-700 leading-8 whitespace-pre-wrap">' + escapeHtml(text.trim()) + '</p>';
+        }
+      });
+
+      container.innerHTML = html;
+
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+    })();
+    </script>
+  </body>
+</html>

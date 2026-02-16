@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicken and Broccoli Baked Ziti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+
+      <nav class="mb-6 print:hidden">
+        <a href="index.html"
+           class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow text-orange-600 hover:text-orange-700 hover:shadow-md transition-all font-medium text-sm">
+          ← All Recipes
+        </a>
+      </nav>
+
+      <div class="mb-8">
+        
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+          <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
+            Chicken and Broccoli Baked Ziti
+          </h1>
+          <button onclick="window.print()"
+                  class="print:hidden self-start px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all shadow-md flex items-center gap-2 text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+            </svg>
+            Print
+          </button>
+        </div>
+
+        <!-- Tags (split and rendered by JS below) -->
+        
+
+        <!-- Metadata pills -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          
+          
+          <span class="metadata-pill">🔥 55 minutes</span>
+          
+          
+          
+          
+          <span id="source-pill" data-source="https://www.instagram.com/p/C4NA4HlLAV7" class="metadata-pill"></span>
+          
+        </div>
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+        <!-- Ingredients + Cookware sidebar -->
+        <div class="md:col-span-1">
+          <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
+            <h2 class="text-xl font-bold mb-4 text-orange-600">🥘 Ingredients</h2>
+            <ul class="space-y-3">
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">chicken breasts</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  2 boneless skinless
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">kosher salt</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">pepper</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">butter</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 tbsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">avocado oil</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 tbsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">ziti pasta</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  16 oz
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">leek</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1 medium
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">butter</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  4 tbsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">garlic</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  2 cloves
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">broccoli</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  4 cups
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">flour</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.25 cup
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">milk</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  4 cups
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">parmesan cheese</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.5 cup
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">kosher salt</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1.5 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">pepper</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.5 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">ground nutmeg</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.25 tsp
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">cayenne pepper</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">mozzarella cheese</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  1.5 cups
+                </span>
+              </li>
+              
+              <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
+                <span class="font-medium">parmesan cheese</span>
+                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                  0.25 cup
+                </span>
+              </li>
+              
+            </ul>
+
+            
+            <h2 class="text-xl font-bold mt-6 mb-4 text-green-600">🍳 Cookware</h2>
+            <ul class="space-y-2">
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">large skillet</span>
+              </li>
+              
+              <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
+                <span class="font-medium">9x13-inch baking dish</span>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="md:col-span-2">
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold mb-6 text-gray-800">📝 Instructions</h2>
+            
+            <div class="instructions-raw hidden">= Recipe
+
+1. Preheat oven to 375°F and bring a large pot of salted water to a boil for the pasta.
+
+2. Pound 2 boneless skinless chicken breasts (1-1½ lbs.) until approximately ½" thick; season with kosher salt and pepper on both sides. Preheat a large skillet over medium heat and melt 1 tbsp butter with 1 tbsp avocado oil; place the chicken in the skillet and cook until golden brown on both sides and the internal temperature reaches 165°F (5-6 minutes per side), then remove from the pan. Let rest for 5 minutes then slice into bite-size cubes.
+
+3. Boil 16 oz ziti pasta until al dente (1-2 mins less than package directions), then drain and set aside.
+
+4. In a large pot over medium heat, sauté 1 medium leek, cut in half and sliced thin, in 4 tbsp butter for 1 minute, then add 2 cloves garlic, minced, and sauté for 1 minute more. Add 4 cups broccoli, finely chopped, and sauté for 2-3 minutes until tender.
+
+5. Stir in 0.25 cup flour then add 4 cups milk (2%) ¾ cup at a time, stirring to incorporate before adding more. Once all the milk is added, turn heat to medium-high until the mixture bubbles and thickens slightly, then reduce to medium and add 0.5 cup parmesan cheese, grated, 1.5 tsp kosher salt, 0.5 tsp pepper, 0.25 tsp ground nutmeg, and a dash of cayenne pepper.
+
+6. Turn off the heat and stir in the pasta and chicken, then transfer into a greased 9x13-inch baking dish. Top with 1.5 cups mozzarella cheese, grated, and 0.25 cup parmesan cheese, grated. Bake uncovered for 20-25 minutes until the top is deep golden brown in spots.
+
+</div>
+            
+            <div id="steps-output"></div>
+          </div>
+        </div>
+
+      </div>
+
+      
+
+    </div>
+
+    <footer class="text-center py-6 text-gray-500 text-sm print:hidden">
+      Generated with <a href="https://cooklang.org" target="_blank"
+        class="text-orange-600 hover:text-orange-700">Cooklang</a>
+    </footer>
+
+    <script>
+    (function () {
+      // Render source as link or plain text depending on whether it's a URL
+      const sourcePill = document.getElementById('source-pill');
+      if (sourcePill) {
+        const src = sourcePill.getAttribute('data-source') || '';
+        if (src.startsWith('http://') || src.startsWith('https://')) {
+          sourcePill.outerHTML = '<a href="' + src + '" target="_blank" class="metadata-pill hover:bg-orange-50 hover:border-orange-300 hover:text-orange-700 transition-colors">📖 Source ↗</a>';
+        } else {
+          sourcePill.textContent = '📖 ' + src;
+        }
+      }
+
+      // Render tags from comma-separated string
+      const tagsContainer = document.getElementById('tags-container');
+      if (tagsContainer) {
+        const raw = tagsContainer.getAttribute('data-tags') || '';
+        tagsContainer.innerHTML = raw.split(',').map(function (t) {
+          const tag = t.trim();
+          return tag ? '<span class="tag">#' + tag + '</span>' : '';
+        }).join('');
+      }
+    })();
+
+    (function () {
+      const container = document.getElementById('steps-output');
+      const rawDivs = document.querySelectorAll('.instructions-raw');
+      let html = '';
+
+      rawDivs.forEach(function (div) {
+        const text = div.textContent || '';
+        // Split into paragraphs
+        const paragraphs = text.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
+
+        let sectionName = null;
+        let steps = [];
+
+        paragraphs.forEach(function (para) {
+          if (para.startsWith('= ')) {
+            sectionName = para.slice(2).trim();
+          } else if (/^\d+\.\s/.test(para)) {
+            steps.push(para.replace(/^\d+\.\s*/, ''));
+          }
+        });
+
+        if (sectionName) {
+          html += '<h3 class="text-lg font-semibold mt-6 mb-4 text-orange-700 border-b-2 border-orange-100 pb-2">' +
+            escapeHtml(sectionName) + '</h3>';
+        }
+
+        if (steps.length > 0) {
+          html += '<ol class="space-y-4">';
+          steps.forEach(function (step, i) {
+            html += '<li class="bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl p-4">' +
+              '<div class="flex gap-4">' +
+              '<div class="step-number">' + (i + 1) + '</div>' +
+              '<div class="flex-1 text-gray-700 leading-8">' + escapeHtml(step) + '</div>' +
+              '</div>' +
+              '</li>';
+          });
+          html += '</ol>';
+        } else if (!sectionName) {
+          // Fallback: plain text block
+          html += '<p class="text-gray-700 leading-8 whitespace-pre-wrap">' + escapeHtml(text.trim()) + '</p>';
+        }
+      });
+
+      container.innerHTML = html;
+
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+    })();
+    </script>
+  </body>
+</html>

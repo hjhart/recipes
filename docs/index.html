@@ -1,0 +1,1562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+
+      <header class="mb-8 text-center">
+        <h1 class="text-5xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
+          🍳 Recipe Collection
+        </h1>
+        <p class="text-gray-500 text-lg mb-6">A delicious collection of recipes</p>
+        <div class="max-w-md mx-auto relative">
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">🔍</span>
+          <input id="search" type="search" placeholder="Search recipes, tags, ingredients…"
+                 class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-gray-700">
+        </div>
+      </header>
+
+      <main>
+        <p id="no-results" class="hidden text-center text-gray-400 py-16 text-lg">No recipes match your search.</p>
+        <div id="recipe-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="20-minute-creamy-red-pesto-beef-pasta.html" data-search="20 minute creamy red pesto beef pasta " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="20-minute-creamy-red-pesto-beef-pasta.jpg" alt="20 Minute Creamy Red Pesto Beef Pasta" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">20 Minute Creamy Red Pesto Beef Pasta</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="all-american-beef-stew-recipe.html" data-search="all-american beef stew recipe incomplete" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="all-american-beef-stew-recipe.webp" alt="All-American Beef Stew Recipe" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">All-American Beef Stew Recipe</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">incomplete</span></div>
+    </div>
+</a>
+
+<a href="asparagus-and-goat-cheese-frittata.html" data-search="asparagus and goat cheese frittata breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="asparagus-and-goat-cheese-frittata.jpg" alt="Asparagus and Goat Cheese Frittata" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Asparagus and Goat Cheese Frittata</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="backpacking-beans-and-rice.html" data-search="backpacking beans and rice backpacking" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="backpacking-beans-and-rice.jpg" alt="Backpacking Beans and Rice" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Backpacking Beans and Rice</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">backpacking</span></div>
+    </div>
+</a>
+
+<a href="backpacking-southwestern-burrito.html" data-search="backpacking southwestern burrito backpacking" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="backpacking-southwestern-burrito.jpg" alt="Backpacking Southwestern Burrito" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Backpacking Southwestern Burrito</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">backpacking</span></div>
+    </div>
+</a>
+
+<a href="bacon-egg-and-cheese-croissant-bake.html" data-search="bacon egg & cheese croissant bake " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="bacon-egg-and-cheese-croissant-bake.jpg" alt="Bacon Egg & Cheese Croissant Bake" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Bacon Egg & Cheese Croissant Bake</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="bacon-scallion-and-caramelized-onion-dip.html" data-search="bacon, scallion, and caramelized onion dip appetizer" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="bacon-scallion-and-caramelized-onion-dip.jpg" alt="Bacon, Scallion, and Caramelized Onion Dip" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Bacon, Scallion, and Caramelized Onion Dip</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">appetizer</span></div>
+    </div>
+</a>
+
+<a href="baked-potato-soup.html" data-search="baked potato soup " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="baked-potato-soup.jpg" alt="Baked Potato Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Baked Potato Soup</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="baked-skillet-pasta-with-cheddar-and-spiced-onions.html" data-search="baked skillet pasta with cheddar and spiced onions " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="baked-skillet-pasta-with-cheddar-and-spiced-onions.jpg" alt="Baked Skillet Pasta With Cheddar and Spiced Onions" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Baked Skillet Pasta With Cheddar and Spiced Onions</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4-6</span></div>
+        
+    </div>
+</a>
+
+<a href="bar-del-corso-gin-and-tonic.html" data-search="bar del corso's gin and tonic cocktails" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="bar-del-corso-gin-and-tonic.jpg" alt="Bar Del Corso's Gin and Tonic" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Bar Del Corso's Gin and Tonic</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">cocktails</span></div>
+    </div>
+</a>
+
+<a href="basic-challah.html" data-search="basic challah bread" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="basic-challah.jpg" alt="Basic Challah" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Basic Challah</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 3 loaves</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">bread</span></div>
+    </div>
+</a>
+
+<a href="bean-and-sausage-soup-with-pesto.html" data-search="bean and sausage soup with pesto soup" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="bean-and-sausage-soup-with-pesto.jpg" alt="Bean and Sausage Soup with Pesto" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Bean and Sausage Soup with Pesto</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">soup</span></div>
+    </div>
+</a>
+
+<a href="berry-crush-geraldines-cocktail.html" data-search="berry crush (geraldine's cocktail) cocktails" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="berry-crush-geraldines-cocktail.jpg" alt="Berry Crush (Geraldine's Cocktail)" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Berry Crush (Geraldine's Cocktail)</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">cocktails</span></div>
+    </div>
+</a>
+
+<a href="biscuit-and-gravy-casserole.html" data-search="biscuit and gravy casserole " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="biscuit-and-gravy-casserole.jpg" alt="Biscuit and Gravy Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Biscuit and Gravy Casserole</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6-9</span></div>
+        
+    </div>
+</a>
+
+<a href="boat-breakfast-burritos.html" data-search="boat breakfast burritos " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="boat-breakfast-burritos.jpg" alt="Boat Breakfast Burritos" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Boat Breakfast Burritos</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 16</span></div>
+        
+    </div>
+</a>
+
+<a href="breakfast-casserole.html" data-search="breakfast casserole " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="breakfast-casserole.jpg" alt="Breakfast Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Breakfast Casserole</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 8</span></div>
+        
+    </div>
+</a>
+
+<a href="breakfast-hot-pocket-2.html" data-search="breakfast hot pocket " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="breakfast-hot-pocket-2.jpg" alt="Breakfast Hot Pocket" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Breakfast Hot Pocket</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="breakfast-hot-pocket.html" data-search="breakfast hot pocket breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="breakfast-hot-pocket.jpg" alt="Breakfast Hot Pocket" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Breakfast Hot Pocket</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="buttered-noodles-with-jammy-eggs.html" data-search="buttered noodles with jammy eggs " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="buttered-noodles-with-jammy-eggs.jpg" alt="Buttered Noodles With Jammy Eggs" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Buttered Noodles With Jammy Eggs</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4-6</span></div>
+        
+    </div>
+</a>
+
+<a href="buttery-breakfast-casserole.html" data-search="buttery breakfast casserole " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="buttery-breakfast-casserole.jpg" alt="Buttery Breakfast Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Buttery Breakfast Casserole</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 8-10</span></div>
+        
+    </div>
+</a>
+
+<a href="cacio-e-pepe.html" data-search="cacio e pepe kenji pasta" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cacio-e-pepe.webp" alt="Cacio e Pepe" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cacio e Pepe</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Kenji</p>
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 2-3</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 25 minutes</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">pasta</span></div>
+    </div>
+</a>
+
+<a href="cajun-pasta.html" data-search="cajun pasta pasta" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cajun-pasta.jpg" alt="Cajun Pasta" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cajun Pasta</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">pasta</span></div>
+    </div>
+</a>
+
+<a href="camping-breakfast-sandwiches.html" data-search="camping breakfast sandwiches " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="camping-breakfast-sandwiches.jpg" alt="Camping Breakfast Sandwiches" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Camping Breakfast Sandwiches</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span></div>
+        
+    </div>
+</a>
+
+<a href="caramelised-onion-pasta.html" data-search="caramelised onion pasta " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="caramelised-onion-pasta.jpg" alt="Caramelised Onion Pasta" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Caramelised Onion Pasta</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="cheeseburger-mac-hamburger-helper.html" data-search="cheeseburger mac / copy cat hamburger helper dinner instant pot" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cheeseburger-mac-hamburger-helper.jpg" alt="Cheeseburger Mac / Copy Cat Hamburger Helper" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cheeseburger Mac / Copy Cat Hamburger Helper</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">dinner</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">instant pot</span></div>
+    </div>
+</a>
+
+<a href="cheesy-broccoli-orzo.html" data-search="cheesy broccoli orzo " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cheesy-broccoli-orzo.jpg" alt="Cheesy Broccoli Orzo" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cheesy Broccoli Orzo</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="cheesy-saturday-bread.html" data-search="cheesy saturday bread bread" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cheesy-saturday-bread.jpg" alt="Cheesy Saturday Bread" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cheesy Saturday Bread</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">bread</span></div>
+    </div>
+</a>
+
+<a href="cheesy-white-bean-tomato-bake.html" data-search="cheesy white bean-tomato bake " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cheesy-white-bean-tomato-bake.jpg" alt="Cheesy White Bean-Tomato Bake" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cheesy White Bean-Tomato Bake</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="chicken-alfredo-bake.html" data-search="chicken alfredo bake " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-alfredo-bake.jpg" alt="Chicken Alfredo Bake" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken Alfredo Bake</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="chicken-bake.html" data-search="chicken bake " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-bake.jpg" alt="Chicken Bake" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken Bake</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="chicken-chile-verde-instant-pot.html" data-search="chicken chile verde instant pot " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-chile-verde-instant-pot.jpg" alt="Chicken Chile Verde Instant Pot" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken Chile Verde Instant Pot</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="chicken-pot-pie-with-puff-pastry.html" data-search="chicken pot pie with puff pastry " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-pot-pie-with-puff-pastry.jpg" alt="Chicken Pot Pie with Puff Pastry" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken Pot Pie with Puff Pastry</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="chicken-ranch-salad.html" data-search="chicken ranch salad salad high protein" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-ranch-salad.jpg" alt="Chicken Ranch Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken Ranch Salad</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 1</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">salad</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">high protein</span></div>
+    </div>
+</a>
+
+<a href="chicken-and-broccoli-baked-ziti.html" data-search="chicken and broccoli baked ziti " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-and-broccoli-baked-ziti.jpg" alt="Chicken and Broccoli Baked Ziti" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken and Broccoli Baked Ziti</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 55 minutes</span></div>
+        
+    </div>
+</a>
+
+<a href="chicken-and-dumplings.html" data-search="chicken and dumplings " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-and-dumplings.jpg" alt="Chicken and Dumplings" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken and Dumplings</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4-6</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 70 minutes</span></div>
+        
+    </div>
+</a>
+
+<a href="chicken-and-rice-soup.html" data-search="chicken and rice soup easy soup" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chicken-and-rice-soup.jpg" alt="Chicken and Rice Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chicken and Rice Soup</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">easy</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">soup</span></div>
+    </div>
+</a>
+
+<a href="chilaquiles-breakfast-casserole.html" data-search="chilaquiles breakfast casserole " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chilaquiles-breakfast-casserole.jpg" alt="Chilaquiles Breakfast Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chilaquiles Breakfast Casserole</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span></div>
+        
+    </div>
+</a>
+
+<a href="chilaquiles-verdes.html" data-search="chilaquiles verdes " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chilaquiles-verdes.jpg" alt="Chilaquiles Verdes" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chilaquiles Verdes</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="chile-verde-with-pork-recipe.html" data-search="chile verde with pork recipe " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chile-verde-with-pork-recipe.jpg" alt="Chile Verde With Pork Recipe" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chile Verde With Pork Recipe</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 8-10</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 3 hrs 30 mins</span></div>
+        
+    </div>
+</a>
+
+<a href="chipotles-queso-blanco-recipe.html" data-search="chipotle's queso blanco recipe appetizer dip" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chipotles-queso-blanco-recipe.jpg" alt="Chipotle's Queso Blanco Recipe" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chipotle's Queso Blanco Recipe</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">appetizer</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">dip</span></div>
+    </div>
+</a>
+
+<a href="chorizo-and-sweet-potato-quesadillas-for-two.html" data-search="chorizo and sweet potato quesadillas for two " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="chorizo-and-sweet-potato-quesadillas-for-two.jpg" alt="Chorizo and Sweet Potato Quesadillas for Two" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Chorizo and Sweet Potato Quesadillas for Two</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 2</span></div>
+        
+    </div>
+</a>
+
+<a href="cilantro-lime-pasta-salad.html" data-search="cilantro lime pasta salad " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cilantro-lime-pasta-salad.jpg" alt="Cilantro Lime Pasta Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cilantro Lime Pasta Salad</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 25 minutes</span></div>
+        
+    </div>
+</a>
+
+<a href="cilantro-lime-rice.html" data-search="cilantro lime rice rice" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cilantro-lime-rice.jpg" alt="Cilantro Lime Rice" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cilantro Lime Rice</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">rice</span></div>
+    </div>
+</a>
+
+<a href="classic-sage-and-sausage-stuffing.html" data-search="classic sage and sausage stuffing " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="classic-sage-and-sausage-stuffing.jpg" alt="Classic Sage and Sausage Stuffing" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Classic Sage and Sausage Stuffing</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="cold-cure-soup.html" data-search="cold cure soup " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cold-cure-soup.jpg" alt="Cold Cure Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cold Cure Soup</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="cold-rice-salad.html" data-search="cold rice salad salads side" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cold-rice-salad.jpg" alt="Cold Rice Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cold Rice Salad</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">salads</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">side</span></div>
+    </div>
+</a>
+
+<a href="corn-and-avocado-salad.html" data-search="corn and avocado salad salads side" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="corn-and-avocado-salad.jpg" alt="Corn and Avocado Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Corn and Avocado Salad</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">salads</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">side</span></div>
+    </div>
+</a>
+
+<a href="corn-and-ramen-noodle-bowl.html" data-search="corn and ramen noodle bowl " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="corn-and-ramen-noodle-bowl.jpg" alt="Corn and Ramen Noodle Bowl" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Corn and Ramen Noodle Bowl</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 2</span></div>
+        
+    </div>
+</a>
+
+<a href="creamy-chicken-soup.html" data-search="creamy chicken soup " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="creamy-chicken-soup.jpg" alt="Creamy Chicken Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Creamy Chicken Soup</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="creamy-macaroni-salad.html" data-search="creamy macaroni salad " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="creamy-macaroni-salad.jpg" alt="Creamy Macaroni Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Creamy Macaroni Salad</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="creamy-one-pot-orzo-with-corn-and-bacon.html" data-search="creamy one-pot orzo with corn and bacon " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="creamy-one-pot-orzo-with-corn-and-bacon.jpg" alt="Creamy One-Pot Orzo With Corn and Bacon" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Creamy One-Pot Orzo With Corn and Bacon</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="creamy-peanut-ramen.html" data-search="creamy peanut ramen " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="creamy-peanut-ramen.jpg" alt="Creamy Peanut Ramen" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Creamy Peanut Ramen</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="creamy-red-curry-pasta.html" data-search="creamy red curry pasta " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="creamy-red-curry-pasta.jpg" alt="Creamy Red Curry Pasta" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Creamy Red Curry Pasta</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="creamy-shells-and-beef.html" data-search="creamy shells and beef " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="creamy-shells-and-beef.jpg" alt="Creamy Shells and Beef" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Creamy Shells and Beef</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="creamy-tortellini-spinach-and-chicken-soup.html" data-search="creamy tortellini, spinach, and chicken soup instant pot soup" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="creamy-tortellini-spinach-and-chicken-soup.jpg" alt="Creamy Tortellini, Spinach, and Chicken Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Creamy Tortellini, Spinach, and Chicken Soup</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">instant pot</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">soup</span></div>
+    </div>
+</a>
+
+<a href="crispy-oven-fried-bacon.html" data-search="crispy oven-fried bacon " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="crispy-oven-fried-bacon.jpg" alt="Crispy Oven-Fried Bacon" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Crispy Oven-Fried Bacon</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6-10</span></div>
+        
+    </div>
+</a>
+
+<a href="crispy-rice-salad.html" data-search="crispy rice salad " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="crispy-rice-salad.jpg" alt="Crispy Rice Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Crispy Rice Salad</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 3</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 50 min</span></div>
+        
+    </div>
+</a>
+
+<a href="crock-pot-loaded-baked-potato-soup.html" data-search="crock pot loaded baked potato soup soup" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="crock-pot-loaded-baked-potato-soup.jpg" alt="Crock Pot Loaded Baked Potato Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Crock Pot Loaded Baked Potato Soup</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">soup</span></div>
+    </div>
+</a>
+
+<a href="cuba-libre.html" data-search="cuba libre cocktails" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cuba-libre.jpg" alt="Cuba Libre" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cuba Libre</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">cocktails</span></div>
+    </div>
+</a>
+
+<a href="cucumber-salad-with-soy-ginger-and-garlic.html" data-search="cucumber salad with soy, ginger and garlic " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cucumber-salad-with-soy-ginger-and-garlic.jpg" alt="Cucumber Salad With Soy, Ginger and Garlic" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cucumber Salad With Soy, Ginger and Garlic</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 20 min</span></div>
+        
+    </div>
+</a>
+
+<a href="cucumber-sesame-salad.html" data-search="cucumber sesame salad appetizer" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="cucumber-sesame-salad.jpg" alt="Cucumber Sesame Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Cucumber Sesame Salad</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">appetizer</span></div>
+    </div>
+</a>
+
+<a href="deviled-egg-salad.html" data-search="deviled egg salad " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="deviled-egg-salad.jpg" alt="Deviled Egg Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Deviled Egg Salad</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="easy-blackberry-cobbler.html" data-search="easy blackberry cobbler sweets" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="easy-blackberry-cobbler.jpg" alt="Easy Blackberry Cobbler" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Easy Blackberry Cobbler</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">sweets</span></div>
+    </div>
+</a>
+
+<a href="easy-one-pot-chicken-tinga.html" data-search="easy one-pot chicken tinga (spicy mexican shredded chicken) mexican" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="easy-one-pot-chicken-tinga.webp" alt="Easy One-Pot Chicken Tinga (Spicy Mexican Shredded Chicken)" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Easy One-Pot Chicken Tinga (Spicy Mexican Shredded Chicken)</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">mexican</span></div>
+    </div>
+</a>
+
+<a href="egg-and-onion.html" data-search="egg and onion breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="egg-and-onion.jpg" alt="Egg and Onion" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Egg and Onion</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="emilys-chocolate-chip-cookies.html" data-search="emily's chocolate chip cookies sweets" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="emilys-chocolate-chip-cookies.jpg" alt="Emily's Chocolate Chip Cookies" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Emily's Chocolate Chip Cookies</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 32 large cookies</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">sweets</span></div>
+    </div>
+</a>
+
+<a href="erins-breakfast-casserole.html" data-search="erin's breakfast casserole breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="erins-breakfast-casserole.jpg" alt="Erin's Breakfast Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Erin's Breakfast Casserole</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="everything-sausage-rolls.html" data-search="everything sausage rolls " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="everything-sausage-rolls.jpg" alt="Everything Sausage Rolls" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Everything Sausage Rolls</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="extra-tangy-tartar-sauce.html" data-search="extra tangy tartar sauce serious eats " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="extra-tangy-tartar-sauce.jpg" alt="Extra Tangy Tartar Sauce" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Extra Tangy Tartar Sauce</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Serious Eats</p>
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 24</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 15 min</span></div>
+        
+    </div>
+</a>
+
+<a href="flour-bakerys-egg-sandwich.html" data-search="flour bakery's egg sandwich breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="flour-bakerys-egg-sandwich.jpg" alt="Flour Bakery's Egg Sandwich" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Flour Bakery's Egg Sandwich</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="foolproof-pan-pizza.html" data-search="foolproof pan pizza kenji " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="foolproof-pan-pizza.webp" alt="Foolproof Pan Pizza" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Foolproof Pan Pizza</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Kenji</p>
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 2</span></div>
+        
+    </div>
+</a>
+
+<a href="french-onion-meatballs.html" data-search="french onion meatballs " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="french-onion-meatballs.jpg" alt="French Onion Meatballs" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">French Onion Meatballs</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 1 hr 30 min</span></div>
+        
+    </div>
+</a>
+
+<a href="gochuchang-mac-and-cheese.html" data-search="gochuchang mac & cheese " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="gochuchang-mac-and-cheese.jpg" alt="Gochuchang Mac & Cheese" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Gochuchang Mac & Cheese</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="gochujang-buttered-noodles.html" data-search="gochujang buttered noodles " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="gochujang-buttered-noodles.jpg" alt="Gochujang Buttered Noodles" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Gochujang Buttered Noodles</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="gochujang-garlic-bread.html" data-search="gochujang garlic bread side" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="gochujang-garlic-bread.jpg" alt="Gochujang Garlic Bread" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Gochujang Garlic Bread</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">side</span></div>
+    </div>
+</a>
+
+<a href="gooey-cheeseburger-dip-recipe.html" data-search="gooey cheeseburger dip recipe appetizer incomplete party" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="gooey-cheeseburger-dip-recipe.webp" alt="Gooey Cheeseburger Dip Recipe" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Gooey Cheeseburger Dip Recipe</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">appetizer</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">incomplete</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">party</span></div>
+    </div>
+</a>
+
+<a href="green-chicken-enchilada-casserole.html" data-search="green chicken enchilada casserole casserole mexican rotisserie" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="green-chicken-enchilada-casserole.jpg" alt="Green Chicken Enchilada Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Green Chicken Enchilada Casserole</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">casserole</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">mexican</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">rotisserie</span></div>
+    </div>
+</a>
+
+<a href="green-chile-rice-bake.html" data-search="green chile rice bake " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="green-chile-rice-bake.jpg" alt="Green Chile Rice Bake" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Green Chile Rice Bake</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="grilled-chicken-for-tacos-burritos-or-salads.html" data-search="grilled chicken for tacos, burritos, or salads " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="grilled-chicken-for-tacos-burritos-or-salads.jpg" alt="Grilled Chicken for Tacos, Burritos, or Salads" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Grilled Chicken for Tacos, Burritos, or Salads</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="grilled-corn-and-avocado-salad-with-feta-dressing.html" data-search="grilled corn and avocado salad with feta dressing " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="grilled-corn-and-avocado-salad-with-feta-dressing.jpg" alt="Grilled Corn and Avocado Salad With Feta Dressing" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Grilled Corn and Avocado Salad With Feta Dressing</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="guinness-beef-stew.html" data-search="guinness beef stew camping" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="guinness-beef-stew.jpg" alt="Guinness Beef Stew" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Guinness Beef Stew</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">camping</span></div>
+    </div>
+</a>
+
+<a href="harissa-aioli.html" data-search="harissa aioli " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="harissa-aioli.jpg" alt="Harissa Aioli" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Harissa Aioli</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="honey-chili-lime-chicken.html" data-search="honey chili lime chicken " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="honey-chili-lime-chicken.jpg" alt="Honey Chili Lime Chicken" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Honey Chili Lime Chicken</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="instant-pot-chicken-juk.html" data-search="instant pot chicken juk nytimes instant pot" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="instant-pot-chicken-juk.jpg" alt="Instant Pot Chicken Juk" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Instant Pot Chicken Juk</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by nytimes</p>
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">instant pot</span></div>
+    </div>
+</a>
+
+<a href="instant-pot-hard-boiled-eggs.html" data-search="instant pot hard boiled eggs " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="instant-pot-hard-boiled-eggs.jpg" alt="Instant Pot Hard Boiled Eggs" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Instant Pot Hard Boiled Eggs</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 8</span></div>
+        
+    </div>
+</a>
+
+<a href="japanese-beef-skewers.html" data-search="japanese beef skewers (kushiyaki) " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="japanese-beef-skewers.jpg" alt="Japanese Beef Skewers (Kushiyaki)" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Japanese Beef Skewers (Kushiyaki)</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="jim-harts-salmon.html" data-search="jim hart's salmon jim hart " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="jim-harts-salmon.jpg" alt="Jim Hart's Salmon" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Jim Hart's Salmon</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Jim Hart</p>
+        
+        
+    </div>
+</a>
+
+<a href="johns-breakfast-casserole.html" data-search="john's breakfast casserole breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="johns-breakfast-casserole.jpg" alt="John's Breakfast Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">John's Breakfast Casserole</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 9</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="kenjis-simple-chili-20-minute.html" data-search="kenji's simple chili 20 minute kenji" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="kenjis-simple-chili-20-minute.jpg" alt="Kenji's Simple Chili 20 Minute" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Kenji's Simple Chili 20 Minute</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">kenji</span></div>
+    </div>
+</a>
+
+<a href="king-ranch-chicken-casserole.html" data-search="king ranch chicken casserole " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="king-ranch-chicken-casserole.jpg" alt="King Ranch Chicken Casserole" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">King Ranch Chicken Casserole</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="kodiak-pancakes.html" data-search="kodiak pancakes breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="kodiak-pancakes.jpg" alt="Kodiak Pancakes" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Kodiak Pancakes</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="kodiak-waffles.html" data-search="kodiak waffles breakfast" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="kodiak-waffles.jpg" alt="Kodiak Waffles" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Kodiak Waffles</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 2</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">breakfast</span></div>
+    </div>
+</a>
+
+<a href="la-scala-chopped-salad.html" data-search="la scala chopped salad " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="la-scala-chopped-salad.jpg" alt="La Scala Chopped Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">La Scala Chopped Salad</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 1</span></div>
+        
+    </div>
+</a>
+
+<a href="lasagna-soup.html" data-search="lasagna soup " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="lasagna-soup.jpg" alt="Lasagna Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Lasagna Soup</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 45 min</span></div>
+        
+    </div>
+</a>
+
+<a href="leek-and-goat-cheese-quiche.html" data-search="leek and goat cheese quiche " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="leek-and-goat-cheese-quiche.jpg" alt="Leek and Goat Cheese Quiche" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Leek and Goat Cheese Quiche</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 8</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 1 hour</span></div>
+        
+    </div>
+</a>
+
+<a href="lefse.html" data-search="lefse (norwegian potato flatbread) " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="lefse.jpg" alt="Lefse (Norwegian Potato Flatbread)" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Lefse (Norwegian Potato Flatbread)</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 12</span></div>
+        
+    </div>
+</a>
+
+<a href="lentil-soup-with-cumin-and-coriander-yoghurt.html" data-search="lentil soup with cumin & coriander yoghurt, lemon & chilli " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="lentil-soup-with-cumin-and-coriander-yoghurt.jpg" alt="Lentil Soup with Cumin & Coriander Yoghurt, Lemon & Chilli" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Lentil Soup with Cumin & Coriander Yoghurt, Lemon & Chilli</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="life-saver-soup.html" data-search="life saver soup " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="life-saver-soup.jpg" alt="Life Saver Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Life Saver Soup</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="mac-and-cheese.html" data-search="mac and cheese " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="mac-and-cheese.jpg" alt="Mac and Cheese" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Mac and Cheese</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span></div>
+        
+    </div>
+</a>
+
+<a href="make-ahead-egg-and-cheese-sandwiches.html" data-search="make ahead egg and cheese sandwiches " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="make-ahead-egg-and-cheese-sandwiches.jpg" alt="Make Ahead Egg and Cheese Sandwiches" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Make Ahead Egg and Cheese Sandwiches</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 8</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 1 hr 15 min</span></div>
+        
+    </div>
+</a>
+
+<a href="maple-milk-bread.html" data-search="maple milk bread " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="maple-milk-bread.jpg" alt="Maple Milk Bread" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Maple Milk Bread</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 1 loaf</span></div>
+        
+    </div>
+</a>
+
+<a href="maroulosalata.html" data-search="maroulosalata (greek lettuce salad) " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="maroulosalata.jpg" alt="Maroulosalata (Greek Lettuce Salad)" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Maroulosalata (Greek Lettuce Salad)</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="marry-me-chicken.html" data-search="marry me chicken " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="marry-me-chicken.jpg" alt="Marry Me Chicken" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Marry Me Chicken</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span></div>
+        
+    </div>
+</a>
+
+<a href="marry-me-chicken-soup.html" data-search="marry me chicken soup tricia manzanero " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="marry-me-chicken-soup.jpg" alt="Marry Me Chicken Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Marry Me Chicken Soup</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Tricia Manzanero</p>
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 40 minutes</span></div>
+        
+    </div>
+</a>
+
+<a href="meatless-buffalo-dip.html" data-search="meatless buffalo dip appetizer" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="meatless-buffalo-dip.jpg" alt="Meatless Buffalo Dip" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Meatless Buffalo Dip</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">appetizer</span></div>
+    </div>
+</a>
+
+<a href="meatloaf.html" data-search="meatloaf " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="meatloaf.jpg" alt="Meatloaf" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Meatloaf</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="mexican-hot-chocolate-cookies.html" data-search="mexican hot chocolate cookies sweets" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="mexican-hot-chocolate-cookies.jpg" alt="Mexican Hot Chocolate Cookies" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Mexican Hot Chocolate Cookies</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 22</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">sweets</span></div>
+    </div>
+</a>
+
+<a href="mexican-spanish-rice.html" data-search="mexican spanish rice rice" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="mexican-spanish-rice.jpg" alt="Mexican Spanish Rice" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Mexican Spanish Rice</h2>
+        
+        
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">rice</span></div>
+    </div>
+</a>
+
+<a href="mexican-street-corn-pasta-salad.html" data-search="mexican street corn pasta salad " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="mexican-street-corn-pasta-salad.jpg" alt="Mexican Street Corn Pasta Salad" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Mexican Street Corn Pasta Salad</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="mexican-street-corn-soup.html" data-search="mexican street corn soup " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="mexican-street-corn-soup.jpg" alt="Mexican Street Corn Soup" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Mexican Street Corn Soup</h2>
+        
+        
+        
+    </div>
+</a>
+
+<a href="mexican-white-bean-chili.html" data-search="mexican white bean chili " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="mexican-white-bean-chili.jpg" alt="Mexican White Bean Chili" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Mexican White Bean Chili</h2>
+        
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 3</span></div>
+        
+    </div>
+</a>
+
+<a href="potato-leek-gratin.html" data-search="potato leek gratin melissa clark heavy cream leek potato spring vegetarian" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="potato-leek-gratin.jpg" alt="Potato Leek Gratin" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Potato Leek Gratin</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Melissa Clark</p>
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 6</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 1 hour 30 minutes</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">heavy cream</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">leek</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">potato</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">spring</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">vegetarian</span></div>
+    </div>
+</a>
+
+<a href="salmon-with-honey-mustard.html" data-search="salmon with honey mustard sam sifton brown sugar dijon mustard five ingredient kid-friendly salmon fillet healthy high protein low-carb" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="salmon-with-honey-mustard.jpg" alt="Salmon With Honey Mustard" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Salmon With Honey Mustard</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Sam Sifton</p>
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 Number of servings vary</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 15 minutes</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">brown sugar</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">dijon mustard</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">five ingredient</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">kid-friendly</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">salmon fillet</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">healthy</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">high protein</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">low-carb</span></div>
+    </div>
+</a>
+
+<a href="spicy-tuna-salad-with-crispy-rice.html" data-search="spicy tuna salad with crispy rice ali slagle easy appetizer pantry-friendly" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="spicy-tuna-salad-with-crispy-rice.jpg" alt="Spicy Tuna Salad With Crispy Rice" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Spicy Tuna Salad With Crispy Rice</h2>
+        <p class="text-gray-500 text-sm italic mb-2">by Ali Slagle</p>
+        <div class="flex flex-wrap gap-2 mb-3"><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">👥 4</span><span class="text-xs bg-orange-50 border border-orange-200 text-orange-700 px-2 py-1 rounded-full font-medium">⏱️ 35 minutes</span></div>
+        <div class="flex flex-wrap gap-1.5"><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">easy</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">appetizer</span><span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">pantry-friendly</span></div>
+    </div>
+</a>
+
+<a href="zuppa-toscana.html" data-search="zuppa toscana " class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <div class="h-48 bg-gray-100 overflow-hidden relative">
+    <img src="zuppa-toscana.webp" alt="Zuppa Toscana" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+    
+</div>
+<div class="p-5 flex-1">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">Zuppa Toscana</h2>
+        
+        
+        
+    </div>
+</a>
+
+        </div>
+      </main>
+
+      <footer class="text-center py-8 mt-12 text-gray-400 text-sm">
+        Generated with <a href="https://cooklang.org" target="_blank"
+          class="text-orange-600 hover:text-orange-700">Cooklang</a>
+      </footer>
+    </div>
+
+    <script>
+    (function () {
+      const input = document.getElementById('search');
+      const grid = document.getElementById('recipe-grid');
+      const noResults = document.getElementById('no-results');
+      const cards = Array.from(grid.querySelectorAll('a[data-search]'));
+
+      function filter() {
+        const q = input.value.trim().toLowerCase();
+        let visible = 0;
+        cards.forEach(function (card) {
+          const match = !q || card.getAttribute('data-search').includes(q);
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        noResults.classList.toggle('hidden', visible > 0);
+      }
+
+      input.addEventListener('input', filter);
+
+      window.setTag = function (event, tag) {
+        event.preventDefault();
+        event.stopPropagation();
+        input.value = tag;
+        filter();
+        input.focus();
+      };
+    })();
+    </script>
+  </body>
+</html>

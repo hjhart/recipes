@@ -61,7 +61,8 @@
               {% if recipe_info.tags %}
               <div class="flex flex-wrap gap-1.5">
                 {% for tag in recipe_info.tags %}
-                <span class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
+                <span onclick="setTag(event, '{{ tag }}')"
+                      class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium cursor-pointer hover:from-orange-200 hover:to-yellow-200 transition-colors">
                   {{ tag }}
                 </span>
                 {% endfor %}
@@ -86,7 +87,7 @@
       const noResults = document.getElementById('no-results');
       const cards = Array.from(grid.querySelectorAll('a[data-search]'));
 
-      input.addEventListener('input', function () {
+      function filter() {
         const q = input.value.trim().toLowerCase();
         let visible = 0;
         cards.forEach(function (card) {
@@ -95,7 +96,17 @@
           if (match) visible++;
         });
         noResults.classList.toggle('hidden', visible > 0);
-      });
+      }
+
+      input.addEventListener('input', filter);
+
+      window.setTag = function (event, tag) {
+        event.preventDefault();
+        event.stopPropagation();
+        input.value = tag;
+        filter();
+        input.focus();
+      };
     })();
     </script>
   </body>
