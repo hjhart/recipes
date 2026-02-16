@@ -221,28 +221,28 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Mexican Street Corn Pasta Salad
 - [x] Mexican White Bean Chili
 - [ ] Microwave-Steamed Eggs
-- [ ] Miles Davis's Famous Chili Recipe
-- [ ] Mississippi Pot Roast
-- [ ] Mongolian Ground Beef and Noodles
-- [ ] Monster Cookies
-- [ ] Mountain Man Casserole
+- [x] Miles Davis's Famous Chili Recipe
+- [x] Mississippi Pot Roast
+- [x] Mongolian Ground Beef and Noodles
+- [x] Monster Cookies
+- [x] Mountain Man Casserole
 - [ ] Mrs Reed's Chocolate Chip Cookies
-- [ ] Mujadara
-- [ ] Mutter Butters
+- [x] Mujadara
+- [x] Mutter Butters
 - [ ] Neely's BBQ Pasta Salad
 - [ ] New Orleans-Style Red Beans and Rice Recipe
-- [ ] No-Boil Pasta Bake
-- [ ] No-Cook Blender Tomato Soup
+- [x] No-Boil Pasta Bake
+- [x] No-Cook Blender Tomato Soup
 - [ ] NYTimes Roquefort Sauce
-- [ ] Old Cuban
-- [ ] Old Fashioned
+- [x] Old Cuban
+- [x] Old Fashioned
 - [ ] One Pan Chicken and Gravy
 - [ ] One Pot Lasagna Soup
 - [ ] One Pot Sausage and Mozzarella Pasta
-- [ ] One Pot Spaghetti
-- [ ] One-Bowl Crispies
-- [ ] One-Pan Zucchini-Pesto Orzo
-- [ ] One-Pot Spaghetti Dinner
+- [x] One Pot Spaghetti
+- [x] One-Bowl Crispies
+- [x] One-Pan Zucchini-Pesto Orzo
+- [x] One-Pot Spaghetti Dinner
 - [ ] Orange Chicken and Rice
 - [ ] Orzo Pasta Bake
 - [ ] Orzotto Alla Carbonara
