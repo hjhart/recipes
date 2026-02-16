@@ -82,7 +82,7 @@ index_template = File.read(File.join(TEMPLATES_DIR, 'index.html'))
 
 # Simple template replacement (since we don't have Jinja2 in Ruby)
 # We'll build the recipe cards HTML
-recipe_cards = recipes_data.map do |recipe|
+recipe_cards = recipes_data.each_with_index.map do |recipe, i|
   ai_badge_html = recipe['ai_image'] ? '<span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>' : ''
 
   image_html = if recipe['image']
@@ -112,7 +112,7 @@ recipe_cards = recipes_data.map do |recipe|
   tags = recipe['tags'].reject(&:empty?)
   tags_html = tags.empty? ? "" : "<div class=\"flex flex-wrap gap-1.5\">#{tags.map { |tag| "<span class=\"text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium\">#{tag}</span>" }.join}</div>"
 
-  search_text = [recipe['title'], recipe['author'], tags.join(' ')].compact.join(' ').downcase
+  search_text = [recipe['title'], recipe['author'], tags.join(' '), (i + 1).to_s].compact.join(' ').downcase
 
   <<~HTML
     <a href="#{recipe['filename']}.html" data-search="#{search_text}" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">

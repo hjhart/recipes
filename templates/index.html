@@ -15,10 +15,16 @@
           🍳 Recipe Collection
         </h1>
         <p class="text-gray-500 text-lg mb-6">A delicious collection of recipes</p>
-        <div class="max-w-md mx-auto relative">
-          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">🔍</span>
-          <input id="search" type="search" placeholder="Search recipes, tags, ingredients…"
-                 class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-gray-700">
+        <div class="max-w-md mx-auto flex gap-2">
+          <div class="relative flex-1">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">🔍</span>
+            <input id="search" type="search" placeholder="Search recipes, tags, ingredients…"
+                   class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-gray-700">
+          </div>
+          <button id="random-btn" title="Random recipe"
+                  class="px-4 py-3 rounded-xl bg-white border border-gray-200 shadow-sm text-xl hover:bg-orange-50 hover:border-orange-300 transition-colors">
+            🎲
+          </button>
         </div>
       </header>
 
@@ -99,6 +105,14 @@
       }
 
       input.addEventListener('input', filter);
+
+      document.getElementById('random-btn').addEventListener('click', function () {
+        const n = cards.length;
+        const num = Math.floor(Math.random() * n) + 1;
+        input.value = num;
+        filter();
+        input.focus();
+      });
 
       window.setTag = function (event, tag) {
         event.preventDefault();
