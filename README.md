@@ -220,7 +220,7 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Mexican Spanish Rice
 - [x] Mexican Street Corn Pasta Salad
 - [x] Mexican White Bean Chili
-- [ ] Microwave-Steamed Eggs
+- [x] Microwave-Steamed Eggs
 - [x] Miles Davis's Famous Chili Recipe
 - [x] Mississippi Pot Roast
 - [x] Mongolian Ground Beef and Noodles
@@ -229,16 +229,16 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Mrs Reed's Chocolate Chip Cookies
 - [x] Mujadara
 - [x] Mutter Butters
-- [ ] Neely's BBQ Pasta Salad
+- [x] Neely's BBQ Pasta Salad
 - [ ] New Orleans-Style Red Beans and Rice Recipe
 - [x] No-Boil Pasta Bake
 - [x] No-Cook Blender Tomato Soup
-- [ ] NYTimes Roquefort Sauce
+- [x] NYTimes Roquefort Sauce
 - [x] Old Cuban
 - [x] Old Fashioned
-- [ ] One Pan Chicken and Gravy
-- [ ] One Pot Lasagna Soup
-- [ ] One Pot Sausage and Mozzarella Pasta
+- [x] One Pan Chicken and Gravy
+- [x] One Pot Lasagna Soup
+- [x] One Pot Sausage and Mozzarella Pasta
 - [x] One Pot Spaghetti
 - [x] One-Bowl Crispies
 - [x] One-Pan Zucchini-Pesto Orzo
@@ -246,7 +246,7 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Orange Chicken and Rice
 - [ ] Orzo Pasta Bake
 - [ ] Orzotto Alla Carbonara
-- [ ] Oyakodon (Japanese Chicken and Egg Rice Bowl) Recipe
+- [x] Oyakodon (Japanese Chicken and Egg Rice Bowl) Recipe
 - [ ] Pagliacci Salad
 - [ ] Pan de Muerto (Day of the Dead Bread)
 - [ ] Pancake Sausage Balls
