@@ -96,25 +96,25 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [x] Chicken Bake
 - [x] Chicken Chile Verde Instant Pot
 - [x] Chicken Pot Pie with Puff Pastry
-- [ ] Chicken Ranch Salad
+- [x] Chicken Ranch Salad
 - [o] Chicken Teriyaki
-- [ ] Chilaquiles Breakfast Casserole
-- [ ] Chilaquiles Verdes
-- [ ] Chile Verde With Pork Recipe
+- [x] Chilaquiles Breakfast Casserole
+- [x] Chilaquiles Verdes
+- [x] Chile Verde With Pork Recipe
 - [o] Chili Cheese Pasta
 - [o] Chinese Sausage Fried Rice
 - [o] Chip Shop Curry Sauce
-- [ ] Chipotle's Queso Blanco Recipe
+- [x] Chipotle's Queso Blanco Recipe
 - [o] Chopped Broccoli Salad
-- [ ] Chorizo and Sweet Potato Quesadillas for Two
-- [ ] Cilantro Lime Pasta Salad
-- [ ] Cilantro Lime Rice
+- [x] Chorizo and Sweet Potato Quesadillas for Two
+- [x] Cilantro Lime Pasta Salad
+- [x] Cilantro Lime Rice
 - [o] Cinnamon Crunch Banana Bread
 - [o] Cinnamon Syrup
 - [o] Classic Okonomiyaki (Japanese Cabbage and Pork Pancakes)
-- [ ] Classic Sage and Sausage Stuffing
+- [x] Classic Sage and Sausage Stuffing
 - [o] Coconut-Gochujang Glazed Chicken With Broccoli
-- [ ] Cold Cure Soup
+- [x] Cold Cure Soup
 - [ ] Cold Rice Salad
 - [ ] Cooks Illustrated Chicken Salad
 - [ ] Corn and Avocado Salad
