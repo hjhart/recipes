@@ -84,18 +84,18 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Charleston Red Rice
 - [o] Cheeseburger Garbage Bread
 - [x] Cheeseburger Mac Copy Cat Hamburger Helper
-- [ ] Cheesy Broccoli Orzo
+- [x] Cheesy Broccoli Orzo
 - [o] Cheesy Crispy Vegan Black Bean Tacos
 - [o] Cheesy Onion Tart
-- [ ] Cheesy Saturday Bread
-- [ ] Cheesy White Bean-Tomato Bake
-- [ ] Chicken Alfredo Bake
-- [ ] Chicken and Broccoli Baked Ziti
-- [ ] Chicken and Dumplings
-- [ ] Chicken and Rice Soup
-- [ ] Chicken Bake
-- [ ] Chicken Chile Verde Instant Pot
-- [ ] Chicken Pot Pie with Puff Pastry
+- [x] Cheesy Saturday Bread
+- [x] Cheesy White Bean-Tomato Bake
+- [x] Chicken Alfredo Bake
+- [x] Chicken and Broccoli Baked Ziti
+- [x] Chicken and Dumplings
+- [x] Chicken and Rice Soup
+- [x] Chicken Bake
+- [x] Chicken Chile Verde Instant Pot
+- [x] Chicken Pot Pie with Puff Pastry
 - [ ] Chicken Ranch Salad
 - [o] Chicken Teriyaki
 - [ ] Chilaquiles Breakfast Casserole
