@@ -195,31 +195,31 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [ ] Jalapeños & Cheddar Biscuits
 - [x] Japanese Beef Skewers (Kushiyaki)
 - [x] Jim Hart's Salmon
-- [ ] John's Breakfast Casserole
-- [ ] Jollof Rice
-- [ ] Kenji's Chicago Thin-Crust Pizza
-- [ ] Kenji's Simple Chili 20 Minute
-- [ ] King Ranch Chicken Casserole
-- [ ] Kodiak Pancakes
-- [ ] Kodiak Waffles
-- [ ] La Scala Chopped Salad
-- [ ] Lasagna Soup
-- [ ] Leek and Chicken Skillet
-- [ ] Leek and Goat Cheese Quiche
-- [ ] Lefse
-- [ ] Lentil Soup with Cumin & Coriander Yoghurt, Lemon & Chilli
-- [ ] "Life Saver Soup"
-- [ ] Mac and Cheese
-- [ ] Make Ahead Egg and Cheese Sandwiches
-- [ ] Maple Milk Bread
-- [ ] Maroulosalata (Greek Lettuce Salad)
-- [ ] Marry Me Chicken
-- [ ] Meatless Buffalo Dip
-- [ ] Meatloaf
-- [ ] Mexican Hot Chocolate Cookies
-- [ ] Mexican Spanish Rice
-- [ ] Mexican Street Corn Pasta Salad
-- [ ] Mexican White Bean Chili
+- [x] John's Breakfast Casserole
+- [x] Jollof Rice
+- [x] Kenji's Chicago Thin-Crust Pizza
+- [x] Kenji's Simple Chili 20 Minute
+- [x] King Ranch Chicken Casserole
+- [x] Kodiak Pancakes
+- [x] Kodiak Waffles
+- [x] La Scala Chopped Salad
+- [x] Lasagna Soup
+- [x] Leek and Chicken Skillet
+- [x] Leek and Goat Cheese Quiche
+- [x] Lefse
+- [x] Lentil Soup with Cumin & Coriander Yoghurt, Lemon & Chilli
+- [x] "Life Saver Soup"
+- [x] Mac and Cheese
+- [x] Make Ahead Egg and Cheese Sandwiches
+- [x] Maple Milk Bread
+- [x] Maroulosalata (Greek Lettuce Salad)
+- [x] Marry Me Chicken
+- [x] Meatless Buffalo Dip
+- [x] Meatloaf
+- [x] Mexican Hot Chocolate Cookies
+- [x] Mexican Spanish Rice
+- [x] Mexican Street Corn Pasta Salad
+- [x] Mexican White Bean Chili
 - [ ] Microwave-Steamed Eggs
 - [ ] Miles Davis's Famous Chili Recipe
 - [ ] Mississippi Pot Roast
