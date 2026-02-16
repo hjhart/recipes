@@ -306,31 +306,31 @@ Recipes to transfer from the Notion export (`notion-export/Recipes/`) to `.cook`
 - [o] Tangerine Sour
 - [x] Tennessee Onions
 - [o] Thai-Inspired Chicken & Rice Noodle Soup
-- [ ] Thai-Inspired Chicken Meatball Soup (NYT)
+- [x] Thai-Inspired Chicken Meatball Soup (NYT)
 - [o] Thai-Inspired Chicken Meatball Soup (Flavorful Life)
-- [ ] Thanksgiving Stuffing Focaccia
-- [ ] The Best Caesar Salad Recipe
-- [ ] The Food Lab's Chocolate Chip Cookies Recipe
-- [ ] Tomato Rice With Crispy Cheddar
-- [ ] Tortillas
-- [ ] Trader Joe's Asian-Inspired Salad
-- [ ] Trader Joe's Curried Chicken Salad
-- [ ] Treat Trees
+- [x] Thanksgiving Stuffing Focaccia
+- [x] The Best Caesar Salad Recipe
+- [x] The Food Lab's Chocolate Chip Cookies Recipe
+- [x] Tomato Rice With Crispy Cheddar
+- [o] Tortillas
+- [o] Trader Joe's Asian-Inspired Salad
+- [x] Trader Joe's Curried Chicken Salad
+- [o] Treat Trees
 - [o] Tuna Chickpea, Cucumber and Parsley Salad
-- [ ] Tuna Mayo Rice Bowl
-- [ ] Tuna Salad
+- [x] Tuna Mayo Rice Bowl
+- [x] Tuna Salad
 - [o] Turkey & Dumplings Soup
-- [ ] Turkey Enchilada Skillet
-- [ ] Twice Baked Potatoes
-- [ ] Twice-Baked Potato
-- [ ] Ultra-Fluffy Mashed Potatoes Recipe
-- [ ] Untitled
+- [x] Turkey Enchilada Skillet
+- [o] Twice Baked Potatoes
+- [x] Twice-Baked Potato
+- [x] Ultra-Fluffy Mashed Potatoes Recipe
+- [o] Untitled
 - [o] Vegan Quinoa Salad
-- [ ] Vegetable Packs with Goat Cheese
+- [x] Vegetable Packs with Goat Cheese
 - [o] Waffled Savory Sticky Rice
 - [o] Walla Walla Onion Dip
-- [ ] White Bean, Rice and Dill Soup
-- [ ] White Chicken Chili
+- [x] White Bean, Rice and Dill Soup
+- [o] White Chicken Chili
 - [o] Woodburner Baba Ganoush
-- [ ] Yakamein
+- [x] Yakamein
 - [o] Yum Yum Sauce
