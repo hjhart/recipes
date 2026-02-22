@@ -112,7 +112,7 @@ recipe_cards = recipes_data.each_with_index.map do |recipe, i|
   tags = recipe['tags'].reject(&:empty?)
   tags_html = tags.empty? ? "" : "<div class=\"flex flex-wrap gap-1.5\">#{tags.map { |tag| "<span class=\"text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium\">#{tag}</span>" }.join}</div>"
 
-  search_text = [recipe['title'], recipe['author'], tags.join(' '), (i + 1).to_s].compact.join(' ').downcase
+  search_text = [recipe['title'], recipe['author'], tags.join(' '), (i + 1).to_s.rjust(3, '0')].compact.join(' ').downcase
 
   <<~HTML
     <a href="#{recipe['filename']}.html" data-search="#{search_text}" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
