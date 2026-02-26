@@ -6,26 +6,19 @@ They are hosted on [github pages](https://hjhart.github.io/recipes/)
 
 If you'd like to view them, check out how to do that on their webpage.
 
-### Simple form: How to import a recipe
+### How to import a recipe
+
+Use the `/import-recipe` Claude skill inside Claude Code:
 
 ```
-ruby scripts/import.rb "https://www.allrecipes.com/marry-me-chicken-soup-recipe-8421914" marry-m
-e-chicken-soup
+/import-recipe <url>
+/import-recipe <url> <slug>
+/import-recipe <url> <slug> <image-url>
 ```
 
-### Long form: How to import a new recipe
+Claude will fetch the recipe, convert it to Cooklang format, handle the image, show you the result for review, then offer to commit and push.
 
-`cook import https://cooking.nytimes.com/recipes/1013511-potato-leek-gratin > potato-leek-gratin.cook`
-`curl https://static01.nyt.com/images/2025/11/17/multimedia/17Potato-Leek-Gratin-ltck/17Potato-Leek-Gratin-ltck-threeByTwoMediumAt2X-v2.jpg?quality=75&auto=webp > potato-leek-gratin.jpg`
-
-
-If that doesn't work because it can't parse the recipe:
-
-1. Change the URL to be prefaced by cook.md.
-cook.md/
-
-2. Try the cookifies tool on cook.md.
-https://cook.md/cookifies/new
+If Claude can't parse the site automatically, try prefixing the URL with `cook.md/` or use the cookifies tool at https://cook.md/cookifies/new.
 
 ### Search for a recipe
 
