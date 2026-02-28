@@ -52,7 +52,16 @@
         <!-- Metadata pills -->
         <div class="flex flex-wrap gap-3 mb-6">
           {% if metadata.servings %}
-          <span class="metadata-pill">👥 {{ metadata.servings }} servings</span>
+          <div id="servings-scaler" data-servings="{{ metadata.servings }}"
+               class="metadata-pill flex items-center gap-1 print:hidden">
+            <span>👥</span>
+            <button id="servings-down" aria-label="Fewer servings"
+                    class="w-5 h-5 rounded-full bg-orange-100 hover:bg-orange-200 text-orange-700 font-bold text-sm flex items-center justify-center transition-colors">−</button>
+            <span id="servings-display" class="min-w-max"></span>
+            <button id="servings-up" aria-label="More servings"
+                    class="w-5 h-5 rounded-full bg-orange-100 hover:bg-orange-200 text-orange-700 font-bold text-sm flex items-center justify-center transition-colors">+</button>
+          </div>
+          <span class="metadata-pill hidden print:inline">👥 {{ metadata.servings }}</span>
           {% endif %}
           {% if metadata["cook time"] %}
           <span class="metadata-pill">🔥 {{ metadata["cook time"] }}</span>
@@ -80,7 +89,9 @@
               {% for ingredient in ingredients %}
               <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
                 <span class="font-medium">{{ ingredient.name }}</span>
-                <span class="text-orange-700 font-semibold ml-2 text-sm">
+                <span class="ingredient-qty text-orange-700 font-semibold ml-2 text-sm"
+                      data-qty="{% if ingredient.quantity %}{{ ingredient.quantity.value }}{% endif %}"
+                      data-unit="{% if ingredient.quantity %}{% if ingredient.quantity.unit %}{{ ingredient.quantity.unit }}{% endif %}{% endif %}">
                   {% if ingredient.quantity %}{{ ingredient.quantity.value }}{% if ingredient.quantity.unit %} {{ ingredient.quantity.unit }}{% endif %}{% endif %}
                 </span>
               </li>
@@ -203,6 +214,64 @@
           .replace(/>/g, '&gt;')
           .replace(/"/g, '&quot;');
       }
+    })();
+    </script>
+
+    <script>
+    (function () {
+      const scaler = document.getElementById('servings-scaler');
+      if (!scaler) return;
+
+      const raw = scaler.getAttribute('data-servings') || '';
+      const match = raw.match(/^(\d+(?:\.\d+)?)(.*)/);
+      if (!match) return;
+
+      const originalServings = parseFloat(match[1]);
+      const suffix = match[2].trim(); // e.g. "footlong's" or ""
+      let current = originalServings;
+
+      const display = document.getElementById('servings-display');
+      const downBtn = document.getElementById('servings-down');
+      const upBtn = document.getElementById('servings-up');
+
+      function formatQty(val) {
+        if (val <= 0) return '0';
+        const whole = Math.floor(val);
+        const rem = val - whole;
+        if (rem < 0.01) return String(whole);
+        const fracs = [[1,8],[1,4],[1,3],[3,8],[1,2],[5,8],[2,3],[3,4],[7,8]];
+        for (const [n, d] of fracs) {
+          if (Math.abs(rem - n / d) < 0.025) {
+            const f = n + '/' + d;
+            return whole > 0 ? whole + ' ' + f : f;
+          }
+        }
+        return parseFloat(val.toFixed(2)).toString();
+      }
+
+      function updateDisplay() {
+        display.textContent = current + (suffix ? ' ' + suffix : ' servings');
+      }
+
+      function scaleIngredients() {
+        const factor = current / originalServings;
+        document.querySelectorAll('.ingredient-qty').forEach(function (el) {
+          const qty = parseFloat(el.getAttribute('data-qty'));
+          if (isNaN(qty)) return;
+          const unit = el.getAttribute('data-unit') || '';
+          el.textContent = formatQty(qty * factor) + (unit ? ' ' + unit : '');
+        });
+      }
+
+      downBtn.addEventListener('click', function () {
+        if (current > 1) { current--; updateDisplay(); scaleIngredients(); }
+      });
+      upBtn.addEventListener('click', function () {
+        current++; updateDisplay(); scaleIngredients();
+      });
+
+      updateDisplay();
+      scaleIngredients(); // convert decimals to nice fractions on load
     })();
     </script>
   </body>
