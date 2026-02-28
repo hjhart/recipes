@@ -163,6 +163,53 @@
     })();
 
     (function () {
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      // Build ingredient data from already-rendered sidebar spans
+      var ingredientData = [];
+      document.querySelectorAll('.ingredient-qty').forEach(function (qtySpan) {
+        var li = qtySpan.closest('li');
+        var nameSpan = li && li.querySelector('.font-medium');
+        var qty = parseFloat(qtySpan.getAttribute('data-qty'));
+        var unit = qtySpan.getAttribute('data-unit') || '';
+        var name = nameSpan ? nameSpan.textContent.trim() : '';
+        if (name && !isNaN(qty)) {
+          ingredientData.push({ name: name, qty: qty, unit: unit });
+        }
+      });
+
+      function escRegex(s) {
+        return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      }
+
+      // Wrap ingredient quantities in step text with scalable spans.
+      // Called after escapeHtml so the text is safe; span tags are injected as real HTML.
+      function annotateStep(html) {
+        ingredientData.forEach(function (ing) {
+          var qtyStr = String(ing.qty);
+          var qtyEsc = escRegex(qtyStr);
+          var span, re;
+          if (ing.unit) {
+            re = new RegExp('\\b' + qtyEsc + '\\s+' + escRegex(ing.unit) + '\\b', 'g');
+            span = '<span class="step-qty" data-qty="' + ing.qty + '" data-unit="' + ing.unit + '">' + qtyStr + ' ' + ing.unit + '</span>';
+            html = html.replace(re, span);
+          } else {
+            // No unit: match quantity only when immediately followed by the ingredient name
+            var firstWord = escRegex(ing.name.split(/\s+/)[0]);
+            re = new RegExp('\\b' + qtyEsc + '(?=\\s+' + firstWord + '\\b)', 'g');
+            span = '<span class="step-qty" data-qty="' + ing.qty + '" data-unit="">' + qtyStr + '</span>';
+            html = html.replace(re, span);
+          }
+        });
+        return html;
+      }
+
       const container = document.getElementById('steps-output');
       const rawDivs = document.querySelectorAll('.instructions-raw');
       let html = '';
@@ -194,7 +241,7 @@
             html += '<li class="bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl p-4">' +
               '<div class="flex gap-4">' +
               '<div class="step-number">' + (i + 1) + '</div>' +
-              '<div class="flex-1 text-gray-700 leading-8">' + escapeHtml(step) + '</div>' +
+              '<div class="flex-1 text-gray-700 leading-8">' + annotateStep(escapeHtml(step)) + '</div>' +
               '</div>' +
               '</li>';
           });
@@ -206,14 +253,6 @@
       });
 
       container.innerHTML = html;
-
-      function escapeHtml(str) {
-        return str
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;');
-      }
     })();
     </script>
 
@@ -255,7 +294,7 @@
 
       function scaleIngredients() {
         const factor = current / originalServings;
-        document.querySelectorAll('.ingredient-qty').forEach(function (el) {
+        document.querySelectorAll('.ingredient-qty, .step-qty').forEach(function (el) {
           const qty = parseFloat(el.getAttribute('data-qty'));
           if (isNaN(qty)) return;
           const unit = el.getAttribute('data-unit') || '';
@@ -263,15 +302,31 @@
         });
       }
 
+      function onChange() {
+        updateDisplay();
+        scaleIngredients();
+        const url = new URL(window.location.href);
+        if (current === originalServings) {
+          url.searchParams.delete('servings');
+        } else {
+          url.searchParams.set('servings', current);
+        }
+        history.replaceState(null, '', url.toString());
+      }
+
+      // Restore servings from URL parameter
+      const urlServings = parseInt(new URLSearchParams(window.location.search).get('servings'), 10);
+      if (!isNaN(urlServings) && urlServings > 0) { current = urlServings; }
+
       downBtn.addEventListener('click', function () {
-        if (current > 1) { current--; updateDisplay(); scaleIngredients(); }
+        if (current > 1) { current--; onChange(); }
       });
       upBtn.addEventListener('click', function () {
-        current++; updateDisplay(); scaleIngredients();
+        current++; onChange();
       });
 
       updateDisplay();
-      scaleIngredients(); // convert decimals to nice fractions on load
+      scaleIngredients(); // convert decimals to nice fractions on load (and apply URL param)
     })();
     </script>
   </body>
