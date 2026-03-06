@@ -72,6 +72,19 @@ recipe_files.each do |recipe_file|
   }
 end
 
+# Validate frontmatter
+errors = []
+recipes_data.each do |r|
+  if r['servings'] && r['servings'].to_s =~ /\d+\s*[-–]\s*\d+/
+    errors << "#{r['filename']}: servings \"#{r['servings']}\" is a range — use a single number"
+  end
+end
+unless errors.empty?
+  puts "\n❌ Frontmatter validation errors:"
+  errors.each { |e| puts "   #{e}" }
+  exit 1
+end
+
 # Generate index page
 puts "Generating index.html..."
 
