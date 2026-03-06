@@ -85,7 +85,7 @@
         <div class="md:col-span-1">
           <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
             <h2 class="text-xl font-bold mb-4 text-orange-600">🥘 Ingredients</h2>
-            <ul class="space-y-3">
+            <ul id="ingredients-list" class="space-y-3">
               {% for ingredient in ingredients %}
               <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
                 <span class="font-medium">{{ ingredient.name }}</span>
@@ -160,6 +160,35 @@
           return tag ? '<span class="tag">#' + tag + '</span>' : '';
         }).join('');
       }
+    })();
+
+    // Collapse duplicate ingredients (same name + unit) by summing quantities
+    (function () {
+      var seen = {};
+      var toRemove = [];
+      document.querySelectorAll('#ingredients-list li').forEach(function (li) {
+        var nameEl = li.querySelector('.font-medium');
+        var qtyEl = li.querySelector('.ingredient-qty');
+        if (!nameEl || !qtyEl) return;
+        var name = nameEl.textContent.trim().toLowerCase();
+        var unit = (qtyEl.getAttribute('data-unit') || '').toLowerCase();
+        var qty = parseFloat(qtyEl.getAttribute('data-qty'));
+        var key = name + '\x00' + unit;
+        if (key in seen) {
+          if (!isNaN(qty)) seen[key].total += qty;
+          toRemove.push(li);
+        } else {
+          seen[key] = { qtyEl: qtyEl, total: isNaN(qty) ? null : qty, unit: unit };
+        }
+      });
+      Object.keys(seen).forEach(function (key) {
+        var entry = seen[key];
+        if (entry.total !== null) {
+          entry.qtyEl.setAttribute('data-qty', entry.total);
+          entry.qtyEl.textContent = entry.total + (entry.unit ? ' ' + entry.unit : '');
+        }
+      });
+      toRemove.forEach(function (li) { li.parentNode.removeChild(li); });
     })();
 
     (function () {
