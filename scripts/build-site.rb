@@ -67,15 +67,16 @@ recipe_files.each do |recipe_file|
     'ai_image' => metadata['ai_image'],
     'servings' => metadata['servings'],
     'total_time' => metadata['cook time'] || metadata['time required'],
-    'tags' => (metadata['tags'] || '').split(',').map(&:strip)
+    'tags' => (metadata['tags'] || '').split(',').map(&:strip),
+    'date_added' => metadata['date added']
   }
 end
 
 # Generate index page
 puts "Generating index.html..."
 
-# Sort recipes by title
-recipes_data.sort_by! { |r| r['title'] }
+# Sort recipes by most recently added first
+recipes_data.sort_by! { |r| r['date_added'] || '' }.reverse!
 
 # Read index template
 index_template = File.read(File.join(TEMPLATES_DIR, 'index.html'))
@@ -89,16 +90,17 @@ recipe_cards = recipes_data.each_with_index.map do |recipe, i|
     <<~IMG
       <div class="h-48 bg-gray-100 overflow-hidden relative">
           <img src="#{recipe['image']}" alt="#{recipe['title']}" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-orange-400/40 to-transparent pointer-events-none"></div>
           #{ai_badge_html}
       </div>
       <div class="p-5 flex-1">
     IMG
   else
     <<~PLACEHOLDER
+      <div class="h-48 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center">
+          <span class="text-7xl">🍽️</span>
+      </div>
       <div class="p-5 flex-1">
-          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full mb-4">
-              <span class="text-2xl">🍽️</span>
-          </div>
     PLACEHOLDER
   end
 
