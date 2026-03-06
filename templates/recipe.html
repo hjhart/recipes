@@ -100,7 +100,7 @@
 
             {% if cookware %}
             <h2 class="text-xl font-bold mt-6 mb-4 text-green-600">🍳 Cookware</h2>
-            <ul class="space-y-2">
+            <ul id="cookware-list" class="space-y-2">
               {% for item in cookware %}
               <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
                 <span class="font-medium">{{ item.name }}</span>
@@ -200,42 +200,53 @@
           .replace(/"/g, '&quot;');
       }
 
-      // Build ingredient data from already-rendered sidebar spans
-      var ingredientData = [];
-      document.querySelectorAll('.ingredient-qty').forEach(function (qtySpan) {
-        var li = qtySpan.closest('li');
-        var nameSpan = li && li.querySelector('.font-medium');
-        var qty = parseFloat(qtySpan.getAttribute('data-qty'));
-        var unit = qtySpan.getAttribute('data-unit') || '';
-        var name = nameSpan ? nameSpan.textContent.trim() : '';
-        if (name && !isNaN(qty)) {
-          ingredientData.push({ name: name, qty: qty, unit: unit });
-        }
-      });
-
       function escRegex(s) {
         return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       }
 
-      // Wrap ingredient quantities in step text with scalable spans.
+      // Build ingredient name+unit pairs from sidebar (post-grouping, longest first)
+      var ingredients = [];
+      document.querySelectorAll('#ingredients-list li').forEach(function (li) {
+        var nameEl = li.querySelector('.font-medium');
+        var qtyEl = li.querySelector('.ingredient-qty');
+        if (!nameEl || !qtyEl) return;
+        ingredients.push({ name: nameEl.textContent.trim(), unit: qtyEl.getAttribute('data-unit') || '' });
+      });
+      ingredients.sort(function (a, b) { return b.name.length - a.name.length; });
+
+      // Build cookware names (longest first)
+      var cookwares = [];
+      document.querySelectorAll('#cookware-list li .font-medium').forEach(function (el) {
+        cookwares.push(el.textContent.trim());
+      });
+      cookwares.sort(function (a, b) { return b.length - a.length; });
+
+      // Wrap ingredient + cookware mentions in step text with badge chips.
       // Called after escapeHtml so the text is safe; span tags are injected as real HTML.
       function annotateStep(html) {
-        ingredientData.forEach(function (ing) {
-          var qtyStr = String(ing.qty);
-          var qtyEsc = escRegex(qtyStr);
-          var span, re;
+        ingredients.forEach(function (ing) {
+          var nameEsc = escRegex(ing.name);
+          var re, repl;
           if (ing.unit) {
-            re = new RegExp('\\b' + qtyEsc + '\\s+' + escRegex(ing.unit) + '\\b', 'g');
-            span = '<span class="step-qty" data-qty="' + ing.qty + '" data-unit="' + ing.unit + '">' + qtyStr + ' ' + ing.unit + '</span>';
-            html = html.replace(re, span);
+            var unitEsc = escRegex(ing.unit);
+            re = new RegExp('(\\d+(?:\\.\\d+)?)\\s+(' + unitEsc + ')\\s+(' + nameEsc + ')', 'g');
+            repl = function (_, qty, unit, name) {
+              return '<span class="ingredient-badge"><span class="step-qty" data-qty="' + qty + '" data-unit="' + unit + '">' + qty + ' ' + unit + '</span> ' + name + '</span>';
+            };
           } else {
-            // No unit: match quantity only when immediately followed by the ingredient name
-            var firstWord = escRegex(ing.name.split(/\s+/)[0]);
-            re = new RegExp('\\b' + qtyEsc + '(?=\\s+' + firstWord + '\\b)', 'g');
-            span = '<span class="step-qty" data-qty="' + ing.qty + '" data-unit="">' + qtyStr + '</span>';
-            html = html.replace(re, span);
+            re = new RegExp('(\\d+(?:\\.\\d+)?)\\s+(' + nameEsc + ')(?=\\W|$)', 'g');
+            repl = function (_, qty, name) {
+              return '<span class="ingredient-badge"><span class="step-qty" data-qty="' + qty + '" data-unit="">' + qty + '</span> ' + name + '</span>';
+            };
           }
+          html = html.replace(re, repl);
         });
+
+        cookwares.forEach(function (name) {
+          var re = new RegExp('\\b(' + escRegex(name) + ')\\b', 'gi');
+          html = html.replace(re, '<span class="cookware-badge">$1</span>');
+        });
+
         return html;
       }
 
