@@ -18,7 +18,10 @@
       </nav>
 
       <div class="mb-8">
-        
+        <div class="mb-6 flex justify-center">
+        <img src="potato-leek-gratin.jpg" alt="Potato Leek Gratin"
+             loading="lazy" class="rounded-xl shadow-lg max-w-full h-auto max-h-[500px]">
+      </div>
 
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
           <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
@@ -63,6 +66,9 @@
           
           <span id="source-pill" data-source="https://cooking.nytimes.com/recipes/1013511-potato-leek-gratin" class="metadata-pill"></span>
           
+          
+          <span class="metadata-pill">📅 2025-12-07</span>
+          
         </div>
       </div>
 
@@ -73,7 +79,7 @@
         <div class="md:col-span-1">
           <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
             <h2 class="text-xl font-bold mb-4 text-orange-600">🥘 Ingredients</h2>
-            <ul class="space-y-3">
+            <ul id="ingredients-list" class="space-y-3">
               
               <li class="flex justify-between items-center bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg px-3 py-2">
                 <span class="font-medium">unsalted butter</span>
@@ -205,7 +211,7 @@
 
             
             <h2 class="text-xl font-bold mt-6 mb-4 text-green-600">🍳 Cookware</h2>
-            <ul class="space-y-2">
+            <ul id="cookware-list" class="space-y-2">
               
               <li class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg px-3 py-2">
                 <span class="font-medium">oven</span>
@@ -300,6 +306,35 @@
       }
     })();
 
+    // Collapse duplicate ingredients (same name + unit) by summing quantities
+    (function () {
+      var seen = {};
+      var toRemove = [];
+      document.querySelectorAll('#ingredients-list li').forEach(function (li) {
+        var nameEl = li.querySelector('.font-medium');
+        var qtyEl = li.querySelector('.ingredient-qty');
+        if (!nameEl || !qtyEl) return;
+        var name = nameEl.textContent.trim().toLowerCase();
+        var unit = (qtyEl.getAttribute('data-unit') || '').toLowerCase();
+        var qty = parseFloat(qtyEl.getAttribute('data-qty'));
+        var key = name + '\x00' + unit;
+        if (key in seen) {
+          if (!isNaN(qty)) seen[key].total += qty;
+          toRemove.push(li);
+        } else {
+          seen[key] = { qtyEl: qtyEl, total: isNaN(qty) ? null : qty, unit: unit };
+        }
+      });
+      Object.keys(seen).forEach(function (key) {
+        var entry = seen[key];
+        if (entry.total !== null) {
+          entry.qtyEl.setAttribute('data-qty', entry.total);
+          entry.qtyEl.textContent = entry.total + (entry.unit ? ' ' + entry.unit : '');
+        }
+      });
+      toRemove.forEach(function (li) { li.parentNode.removeChild(li); });
+    })();
+
     (function () {
       function escapeHtml(str) {
         return str
@@ -309,42 +344,53 @@
           .replace(/"/g, '&quot;');
       }
 
-      // Build ingredient data from already-rendered sidebar spans
-      var ingredientData = [];
-      document.querySelectorAll('.ingredient-qty').forEach(function (qtySpan) {
-        var li = qtySpan.closest('li');
-        var nameSpan = li && li.querySelector('.font-medium');
-        var qty = parseFloat(qtySpan.getAttribute('data-qty'));
-        var unit = qtySpan.getAttribute('data-unit') || '';
-        var name = nameSpan ? nameSpan.textContent.trim() : '';
-        if (name && !isNaN(qty)) {
-          ingredientData.push({ name: name, qty: qty, unit: unit });
-        }
-      });
-
       function escRegex(s) {
         return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       }
 
-      // Wrap ingredient quantities in step text with scalable spans.
+      // Build ingredient name+unit pairs from sidebar (post-grouping, longest first)
+      var ingredients = [];
+      document.querySelectorAll('#ingredients-list li').forEach(function (li) {
+        var nameEl = li.querySelector('.font-medium');
+        var qtyEl = li.querySelector('.ingredient-qty');
+        if (!nameEl || !qtyEl) return;
+        ingredients.push({ name: nameEl.textContent.trim(), unit: qtyEl.getAttribute('data-unit') || '' });
+      });
+      ingredients.sort(function (a, b) { return b.name.length - a.name.length; });
+
+      // Build cookware names (longest first)
+      var cookwares = [];
+      document.querySelectorAll('#cookware-list li .font-medium').forEach(function (el) {
+        cookwares.push(el.textContent.trim());
+      });
+      cookwares.sort(function (a, b) { return b.length - a.length; });
+
+      // Wrap ingredient + cookware mentions in step text with badge chips.
       // Called after escapeHtml so the text is safe; span tags are injected as real HTML.
       function annotateStep(html) {
-        ingredientData.forEach(function (ing) {
-          var qtyStr = String(ing.qty);
-          var qtyEsc = escRegex(qtyStr);
-          var span, re;
+        ingredients.forEach(function (ing) {
+          var nameEsc = escRegex(ing.name);
+          var re, repl;
           if (ing.unit) {
-            re = new RegExp('\\b' + qtyEsc + '\\s+' + escRegex(ing.unit) + '\\b', 'g');
-            span = '<span class="step-qty" data-qty="' + ing.qty + '" data-unit="' + ing.unit + '">' + qtyStr + ' ' + ing.unit + '</span>';
-            html = html.replace(re, span);
+            var unitEsc = escRegex(ing.unit);
+            re = new RegExp('(\\d+(?:\\.\\d+)?)\\s+(' + unitEsc + ')\\s+(' + nameEsc + ')', 'g');
+            repl = function (_, qty, unit, name) {
+              return '<span class="ingredient-badge"><span class="step-qty" data-qty="' + qty + '" data-unit="' + unit + '">' + qty + ' ' + unit + '</span> ' + name + '</span>';
+            };
           } else {
-            // No unit: match quantity only when immediately followed by the ingredient name
-            var firstWord = escRegex(ing.name.split(/\s+/)[0]);
-            re = new RegExp('\\b' + qtyEsc + '(?=\\s+' + firstWord + '\\b)', 'g');
-            span = '<span class="step-qty" data-qty="' + ing.qty + '" data-unit="">' + qtyStr + '</span>';
-            html = html.replace(re, span);
+            re = new RegExp('(\\d+(?:\\.\\d+)?)\\s+(' + nameEsc + ')(?=\\W|$)', 'g');
+            repl = function (_, qty, name) {
+              return '<span class="ingredient-badge"><span class="step-qty" data-qty="' + qty + '" data-unit="">' + qty + '</span> ' + name + '</span>';
+            };
           }
+          html = html.replace(re, repl);
         });
+
+        cookwares.forEach(function (name) {
+          var re = new RegExp('\\b(' + escRegex(name) + ')\\b', 'gi');
+          html = html.replace(re, '<span class="cookware-badge">$1</span>');
+        });
+
         return html;
       }
 
@@ -416,7 +462,7 @@
         const whole = Math.floor(val);
         const rem = val - whole;
         if (rem < 0.01) return String(whole);
-        const fracs = [[1,8],[1,4],[1,3],[3,8],[1,2],[5,8],[2,3],[3,4],[7,8]];
+        const fracs = [[1,8],[1,6],[1,4],[1,3],[3,8],[1,2],[5,8],[2,3],[3,4],[5,6],[7,8]];
         for (const [n, d] of fracs) {
           if (Math.abs(rem - n / d) < 0.025) {
             const f = n + '/' + d;
@@ -436,7 +482,13 @@
           const qty = parseFloat(el.getAttribute('data-qty'));
           if (isNaN(qty)) return;
           const unit = el.getAttribute('data-unit') || '';
-          el.textContent = formatQty(qty * factor) + (unit ? ' ' + unit : '');
+          const scaled = qty * factor;
+          const isPinchUnit = unit === 'tsp' || unit === 'teaspoon';
+          if (isPinchUnit && scaled > 0 && scaled < 0.13) {
+            el.textContent = 'pinch';
+          } else {
+            el.textContent = formatQty(scaled) + (unit ? ' ' + unit : '');
+          }
         });
       }
 

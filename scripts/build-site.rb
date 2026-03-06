@@ -52,6 +52,22 @@ recipe_files.each do |recipe_file|
   # Inject the correct title (template uses __TITLE__ placeholder when metadata.title is missing)
   html_output = html_output.gsub('__TITLE__', display_title) if html_output
 
+  # Inject recipe image if a local image exists and it's not an AI image
+  local_image_for_page = %w[jpg jpeg png webp].map { |ext| "#{filename}.#{ext}" }
+                                               .find { |f| File.exist?(File.join(RECIPES_DIR, f)) }
+  image_for_page = metadata['image'] || local_image_for_page
+  image_html = if image_for_page && !metadata['ai_image']
+    <<~IMG.strip
+      <div class="mb-6 flex justify-center">
+              <img src="#{image_for_page}" alt="#{display_title}"
+                   loading="lazy" class="rounded-xl shadow-lg max-w-full h-auto max-h-[500px]">
+            </div>
+    IMG
+  else
+    ''
+  end
+  html_output = html_output.gsub('<!-- __IMAGE_HTML__ -->', image_html) if html_output
+
   File.write(output_file, html_output || '')
   
   # Use frontmatter image, or fall back to a local image file

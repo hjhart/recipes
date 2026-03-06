@@ -18,17 +18,7 @@
       </nav>
 
       <div class="mb-8">
-        {% if metadata.image %}
-        <div class="mb-6 flex justify-center relative inline-block">
-          <div class="relative">
-            <img src="{{ metadata.image }}" alt="{{ metadata.title | default("__TITLE__") }}"
-                 loading="lazy" class="rounded-xl shadow-lg max-w-full h-auto max-h-[500px]">
-            {% if metadata.ai_image %}
-            <span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>
-            {% endif %}
-          </div>
-        </div>
-        {% endif %}
+        <!-- __IMAGE_HTML__ -->
 
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
           <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
@@ -74,6 +64,9 @@
           {% endif %}
           {% if metadata.source %}
           <span id="source-pill" data-source="{{ metadata.source }}" class="metadata-pill"></span>
+          {% endif %}
+          {% if metadata["date added"] %}
+          <span class="metadata-pill">📅 {{ metadata["date added"] }}</span>
           {% endif %}
         </div>
       </div>
