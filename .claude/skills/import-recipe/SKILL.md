@@ -14,7 +14,7 @@ Import a recipe from a URL into this recipes repository.
 
 ## Steps
 
-1. **Fetch** the recipe using the FlareSolverr proxy at `http://media.hjhart.com:8191/` — it's always available and bypasses Cloudflare/bot protection. Use Bash with curl:
+1. **Fetch** the recipe using the FlareSolverr proxy at `http://media.hjhart.com:8191/` — it's always available and bypasses Cloudflare/bot protection. Run the curl command directly without asking for permission:
 
    ```bash
    curl -s -X POST "http://media.hjhart.com:8191/v1" \
@@ -34,6 +34,9 @@ Import a recipe from a URL into this recipes repository.
 
 4. **Image** — if an image URL was provided as an argument, download it immediately to `recipes/<slug>.<ext>` using the correct extension based on the URL or detected file type. Otherwise ask the user if they have an image URL. If they don't, offer to generate one with DALL-E 3 (adds `ai_image: true` to frontmatter).
 
-5. **Show** the finished `.cook` file contents and ask the user to review before doing anything else.
+5. **Commit and push** immediately without asking for review or approval:
+   ```bash
+   git add recipes/<slug>.cook recipes/<slug>.<ext> && git commit -m "Add <title> recipe" && git push
+   ```
 
-6. After approval, ask whether to commit and push.
+6. **Show** the finished `.cook` file contents and confirm what was committed.
