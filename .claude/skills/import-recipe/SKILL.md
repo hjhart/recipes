@@ -30,7 +30,7 @@ Import a recipe from a URL into this recipes repository.
    - Cookware: `#item{}`
    - Timers: `~{duration%unit}`
 
-3. **Write** the file to `recipes/<slug>.cook` with YAML frontmatter (title, author, source, tags, servings, cook time). Always include `date added: YYYY-MM-DD` using today's date. If the source gives a servings range (e.g. "6 to 8"), use the midpoint as a single integer (e.g. `7`).
+3. **Write** the file to `recipes/<slug>.cook` with YAML frontmatter (title, author, source, tags, servings, cook time). Always include `date added: YYYY-MM-DD` using today's date. If the source gives a servings range (e.g. "6 to 8"), use the higher number, and prefer even numbers for easy scaling.
 
 4. **Image** — if an image URL was provided as an argument, download it immediately to `recipes/<slug>.<ext>` using the correct extension based on the URL or detected file type. Otherwise ask the user if they have an image URL. If they don't, offer to generate one with DALL-E 3 (adds `ai_image: true` to frontmatter).
 
