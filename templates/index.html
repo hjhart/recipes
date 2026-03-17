@@ -26,6 +26,14 @@
             🎲
           </button>
         </div>
+        <div class="flex flex-wrap justify-center gap-2 mt-3">
+          <button class="filter-chip px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200 bg-white text-gray-600 hover:border-orange-300 hover:text-orange-700 hover:bg-orange-50 transition-colors" data-tag="kid-friendly" onclick="toggleFilter(this, 'kid-friendly')">
+            👶 Kid-Friendly
+          </button>
+          <button class="filter-chip px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200 bg-white text-gray-600 hover:border-orange-300 hover:text-orange-700 hover:bg-orange-50 transition-colors" data-tag="britt's favorites" onclick="toggleFilter(this, &quot;britt&#39;s favorites&quot;)">
+            ⭐ Britt's Favorites
+          </button>
+        </div>
       </header>
 
       <main>
@@ -104,8 +112,6 @@
         noResults.classList.toggle('hidden', visible > 0);
       }
 
-      input.addEventListener('input', filter);
-
       const pad = function (n) { return String(n).padStart(3, '0'); };
 
       document.getElementById('random-btn').addEventListener('click', function () {
@@ -121,7 +127,34 @@
         input.value = tag;
         filter();
         input.focus();
+        syncChips();
       };
+
+      window.toggleFilter = function (btn, tag) {
+        if (input.value.trim().toLowerCase() === tag.toLowerCase()) {
+          input.value = '';
+        } else {
+          input.value = tag;
+        }
+        filter();
+        syncChips();
+        input.focus();
+      };
+
+      function syncChips() {
+        const q = input.value.trim().toLowerCase();
+        document.querySelectorAll('.filter-chip').forEach(function (chip) {
+          const active = q === chip.getAttribute('data-tag').toLowerCase();
+          chip.classList.toggle('bg-orange-100', active);
+          chip.classList.toggle('border-orange-400', active);
+          chip.classList.toggle('text-orange-700', active);
+          chip.classList.toggle('bg-white', !active);
+          chip.classList.toggle('border-gray-200', !active);
+          chip.classList.toggle('text-gray-600', !active);
+        });
+      }
+
+      input.addEventListener('input', function () { filter(); syncChips(); });
     })();
     </script>
   </body>
