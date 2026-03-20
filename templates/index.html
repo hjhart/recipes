@@ -33,6 +33,9 @@
           <button class="filter-chip px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200 bg-white text-gray-600 hover:border-orange-300 hover:text-orange-700 hover:bg-orange-50 transition-colors" data-tag="britt's favorites" onclick="toggleFilter(this, &quot;britt&#39;s favorites&quot;)">
             ⭐ Britt's Favorites
           </button>
+          <button class="filter-chip px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200 bg-white text-gray-600 hover:border-teal-300 hover:text-teal-700 hover:bg-teal-50 transition-colors" data-type="idea" onclick="toggleType(this, 'idea')">
+            💡 Quick Meals
+          </button>
         </div>
       </header>
 
@@ -101,24 +104,26 @@
       const noResults = document.getElementById('no-results');
       const cards = Array.from(grid.querySelectorAll('a[data-search]'));
 
+      let activeType = null;
+
       function filter() {
         const q = input.value.trim().toLowerCase();
         let visible = 0;
         cards.forEach(function (card) {
-          const match = !q || card.getAttribute('data-search').includes(q);
+          const textMatch = !q || card.getAttribute('data-search').includes(q);
+          const typeMatch = !activeType || card.getAttribute('data-type') === activeType;
+          const match = textMatch && typeMatch;
           card.style.display = match ? '' : 'none';
           if (match) visible++;
         });
         noResults.classList.toggle('hidden', visible > 0);
       }
 
-      const pad = function (n) { return String(n).padStart(3, '0'); };
-
       document.getElementById('random-btn').addEventListener('click', function () {
-        const n = cards.length;
-        const num = Math.floor(Math.random() * n) + 1;
-        input.value = pad(num);
-        filter();
+        const visible = cards.filter(function (c) { return c.style.display !== 'none'; });
+        if (visible.length === 0) return;
+        const pick = visible[Math.floor(Math.random() * visible.length)];
+        window.location.href = pick.getAttribute('href');
       });
 
       window.setTag = function (event, tag) {
@@ -141,13 +146,28 @@
         input.focus();
       };
 
+      window.toggleType = function (btn, type) {
+        activeType = activeType === type ? null : type;
+        filter();
+        syncChips();
+      };
+
       function syncChips() {
         const q = input.value.trim().toLowerCase();
-        document.querySelectorAll('.filter-chip').forEach(function (chip) {
+        document.querySelectorAll('.filter-chip[data-tag]').forEach(function (chip) {
           const active = q === chip.getAttribute('data-tag').toLowerCase();
           chip.classList.toggle('bg-orange-100', active);
           chip.classList.toggle('border-orange-400', active);
           chip.classList.toggle('text-orange-700', active);
+          chip.classList.toggle('bg-white', !active);
+          chip.classList.toggle('border-gray-200', !active);
+          chip.classList.toggle('text-gray-600', !active);
+        });
+        document.querySelectorAll('.filter-chip[data-type]').forEach(function (chip) {
+          const active = activeType === chip.getAttribute('data-type');
+          chip.classList.toggle('bg-teal-100', active);
+          chip.classList.toggle('border-teal-400', active);
+          chip.classList.toggle('text-teal-700', active);
           chip.classList.toggle('bg-white', !active);
           chip.classList.toggle('border-gray-200', !active);
           chip.classList.toggle('text-gray-600', !active);

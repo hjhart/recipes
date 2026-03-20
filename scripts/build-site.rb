@@ -84,7 +84,8 @@ recipe_files.each do |recipe_file|
     'servings' => metadata['servings'],
     'total_time' => metadata['cook time'] || metadata['time required'],
     'tags' => (metadata['tags'] || '').split(',').map(&:strip),
-    'date_added' => metadata['date added']
+    'date_added' => metadata['date added'],
+    'type' => metadata['type'] || 'recipe'
   }
 end
 
@@ -113,17 +114,26 @@ index_template = File.read(File.join(TEMPLATES_DIR, 'index.html'))
 # Simple template replacement (since we don't have Jinja2 in Ruby)
 # We'll build the recipe cards HTML
 recipe_cards = recipes_data.each_with_index.map do |recipe, i|
+  is_idea = recipe['type'] == 'idea'
   ai_badge_html = recipe['ai_image'] ? '<span class="absolute top-2 right-2 text-xs bg-black/50 text-white px-2 py-0.5 rounded-full">✨ AI image</span>' : ''
 
   image_html = if recipe['image']
+    overlay_color = is_idea ? 'from-teal-400/40' : 'from-orange-400/40'
     <<~IMG
       <div class="h-48 bg-gray-100 overflow-hidden relative">
           <img src="#{recipe['image']}" alt="#{recipe['title']}" loading="lazy" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
-          <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-orange-400/40 to-transparent pointer-events-none"></div>
+          <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b #{overlay_color} to-transparent pointer-events-none"></div>
           #{ai_badge_html}
       </div>
       <div class="p-5 flex-1">
     IMG
+  elsif is_idea
+    <<~PLACEHOLDER
+      <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
+          <span class="text-7xl">💡</span>
+      </div>
+      <div class="p-5 flex-1">
+    PLACEHOLDER
   else
     <<~PLACEHOLDER
       <div class="h-48 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center">
@@ -133,6 +143,7 @@ recipe_cards = recipes_data.each_with_index.map do |recipe, i|
     PLACEHOLDER
   end
 
+  idea_badge_html = is_idea ? '<span class="text-xs bg-teal-100 text-teal-700 border border-teal-200 px-2 py-0.5 rounded-full font-medium mb-2 inline-block">💡 Quick Meal</span>' : ''
   author_html = recipe['author'] ? "<p class=\"text-gray-500 text-sm italic mb-2\">by #{recipe['author']}</p>" : ""
 
   meta_parts = []
@@ -146,8 +157,9 @@ recipe_cards = recipes_data.each_with_index.map do |recipe, i|
   search_text = [recipe['title'], recipe['author'], tags.join(' '), (i + 1).to_s.rjust(3, '0')].compact.join(' ').downcase
 
   <<~HTML
-    <a href="#{recipe['filename']}.html" data-search="#{search_text}" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <a href="#{recipe['filename']}.html" data-search="#{search_text}" data-type="#{recipe['type']}" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
         #{image_html.strip}
+            #{idea_badge_html}
             <h2 class="font-bold text-lg text-gray-800 mb-1">#{recipe['title']}</h2>
             #{author_html}
             #{meta_html}
