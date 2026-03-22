@@ -99,6 +99,8 @@
     white-space: nowrap;
 }
 
+html { scroll-behavior: smooth; }
+
 /* Scroll buttons — visible at 800px wide (touch kiosk), hidden on larger screens */
 .scroll-btn {
     display: none !important;
@@ -114,6 +116,7 @@
     color: #374151;
     cursor: pointer;
     z-index: 50;
+    opacity: 0.5;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
 }
