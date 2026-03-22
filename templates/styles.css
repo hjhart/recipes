@@ -99,9 +99,9 @@
     white-space: nowrap;
 }
 
-/* Scroll buttons — only at exactly 800px wide (touch kiosk) */
+/* Scroll buttons — visible at 800px wide (touch kiosk), hidden on larger screens */
 .scroll-btn {
-    display: none;
+    display: none !important;
     position: fixed;
     right: 1rem;
     width: 56px;
@@ -126,7 +126,7 @@
 .scroll-btn-down { top: calc(1rem + 56px + 0.75rem); }
 
 @media (max-width: 801px) {
-    .scroll-btn { display: flex; align-items: center; justify-content: center; }
+    .scroll-btn { display: flex !important; align-items: center; justify-content: center; }
 }
 
 /* Print */
