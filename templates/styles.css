@@ -99,9 +99,40 @@
     white-space: nowrap;
 }
 
+/* Scroll buttons — only at exactly 800px wide (touch kiosk) */
+.scroll-btn {
+    display: none;
+    position: fixed;
+    right: 1rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 1.5rem;
+    color: #374151;
+    cursor: pointer;
+    z-index: 50;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.scroll-btn:active {
+    background: #f3f4f6;
+}
+
+.scroll-btn-up { top: 1rem; }
+.scroll-btn-down { top: calc(1rem + 56px + 0.75rem); }
+
+@media (max-width: 800px) {
+    .scroll-btn { display: flex; align-items: center; justify-content: center; }
+}
+
 /* Print */
 @media print {
     nav { display: none; }
     body { background: white; }
     .shadow-lg, .shadow-md { box-shadow: none; }
+    .scroll-btn { display: none; }
 }
