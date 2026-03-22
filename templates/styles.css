@@ -125,7 +125,7 @@
 .scroll-btn-up { top: 1rem; }
 .scroll-btn-down { top: calc(1rem + 56px + 0.75rem); }
 
-@media (max-width: 800px) {
+@media (max-width: 801px) {
     .scroll-btn { display: flex; align-items: center; justify-content: center; }
 }
 
