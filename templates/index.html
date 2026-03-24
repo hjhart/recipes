@@ -123,9 +123,8 @@
       }
 
       document.getElementById('random-btn').addEventListener('click', function () {
-        const visible = cards.filter(function (c) { return c.style.display !== 'none'; });
-        if (visible.length === 0) return;
-        const pick = visible[Math.floor(Math.random() * visible.length)];
+        if (cards.length === 0) return;
+        const pick = cards[Math.floor(Math.random() * cards.length)];
         input.value = pick.getAttribute('data-index');
         filter();
         input.blur();
