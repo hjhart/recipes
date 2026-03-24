@@ -181,7 +181,9 @@
       input.addEventListener('input', function () { filter(); syncChips(); });
     })();
     </script>
-    <button class="scroll-btn scroll-btn-up" aria-label="Scroll up" onclick="window.scrollBy({top:-150,behavior:'smooth'})">&#x25B2;</button>
-    <button class="scroll-btn scroll-btn-down" aria-label="Scroll down" onclick="window.scrollBy({top:150,behavior:'smooth'})">&#x25BC;</button>
+    <button class="scroll-btn scroll-btn-up" aria-label="Scroll up" onclick="window.scrollBy({top:-400,behavior:'smooth'})">&#x25B2;</button>
+    <button class="scroll-btn scroll-btn-down" aria-label="Scroll down" onclick="window.scrollBy({top:400,behavior:'smooth'})">&#x25BC;</button>
+    <button class="kiosk-fullscreen-btn" aria-label="Toggle fullscreen" onclick="var b=this;if(document.fullscreenElement){document.exitFullscreen().then(function(){b.textContent='⛶'})}else{document.documentElement.requestFullscreen().then(function(){b.textContent='⛶'})}">⛶</button>
+    <script>document.addEventListener('fullscreenchange',function(){var b=document.querySelector('.kiosk-fullscreen-btn');if(b)b.textContent=document.fullscreenElement?'✕':'⛶'});</script>
   </body>
 </html>
