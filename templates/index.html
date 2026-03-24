@@ -104,15 +104,18 @@
       const noResults = document.getElementById('no-results');
       const cards = Array.from(grid.querySelectorAll('a[data-search]'));
 
+      cards.forEach(function (card, i) { card.setAttribute('data-index', String(i + 1)); });
+
       let activeType = null;
 
       function filter() {
         const q = input.value.trim().toLowerCase();
+        const isIndex = /^\d+$/.test(q);
         let visible = 0;
         cards.forEach(function (card) {
-          const textMatch = !q || card.getAttribute('data-search').includes(q);
-          const typeMatch = !activeType || card.getAttribute('data-type') === activeType;
-          const match = textMatch && typeMatch;
+          const match = isIndex
+            ? card.getAttribute('data-index') === q
+            : (!q || card.getAttribute('data-search').includes(q)) && (!activeType || card.getAttribute('data-type') === activeType);
           card.style.display = match ? '' : 'none';
           if (match) visible++;
         });
@@ -123,7 +126,9 @@
         const visible = cards.filter(function (c) { return c.style.display !== 'none'; });
         if (visible.length === 0) return;
         const pick = visible[Math.floor(Math.random() * visible.length)];
-        window.location.href = pick.getAttribute('href');
+        input.value = pick.getAttribute('data-index');
+        filter();
+        input.blur();
       });
 
       window.setTag = function (event, tag) {
