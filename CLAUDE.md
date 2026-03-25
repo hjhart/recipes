@@ -60,31 +60,14 @@ Cooklang syntax: `@ingredient{quantity%unit}`, `#cookware{}`, `~{time%unit}`.
 ### Deployment
 Pushing to `main` triggers a GitHub Actions workflow (`.github/workflows/deploy.yml`) that installs Ruby + CookCLI, runs `build-site.rb`, and deploys `docs/` to GitHub Pages.
 
-## Importing from Notion Export
+## Importing a Recipe
 
-Recipes are stored in Notion and can be bulk-exported. The export lives at `notion-export/` (gitignored).
+**Important:** Never invent or reconstruct recipe content from memory. All ingredients and steps must come directly from the source URL. If the source URL cannot be fetched, skip the recipe entirely.
 
-### Export format
-Each recipe is a Markdown file at `notion-export/Recipes/<Recipe Title> <uuid>.md`. Images are often in a matching subdirectory `notion-export/Recipes/<Recipe Title>/` (same title, no UUID). The .md will reference them as relative paths like `![](Recipe%20Title/image.jpg)`. Always check this subdirectory first when looking for a recipe photo.
+### Steps to import a recipe
 
-The Markdown frontmatter properties to map to `.cook` frontmatter:
-| Notion field | `.cook` frontmatter key |
-|---|---|
-| (page title) | `title` |
-| `URL` | `source` |
-| `Tags` | `tags` (comma-separated, lowercase) |
-| `Time` | `cook time` or `time required` |
-| `Notes` | `notes` |
-| Author (from source page) | `author` |
-| Yield / servings (from ingredients) | `servings` |
-
-### Steps to import a recipe from Notion export
-
-**Important:** Never invent or reconstruct recipe content from memory. All ingredients and steps must come directly from the Notion export or the source URL. If a Notion file exists but contains no recipe steps (e.g. only a title, URL, and image — tagged "incomplete"), and the source URL cannot be fetched, **skip the recipe entirely** and leave it unchecked in the README.
-
-1. Find the `.md` file in `notion-export/Recipes/` by recipe name.
-2. Read the Notion Markdown to extract: title, source URL, tags, time, servings, author, notes, ingredients, and steps. If the Notion file has no ingredients or steps, fetch the source URL. If the source URL is also unreachable, skip this recipe.
-3. Convert the recipe body to **Cooklang format**:
+1. Fetch the source URL to extract: title, source URL, tags, time, servings, author, notes, ingredients, and steps.
+2. Convert the recipe body to **Cooklang format**:
    - Keep all ingredient names, quantities, and step wording exactly as written — do not paraphrase or change any wording.
    - Write each step as a prose paragraph (not a numbered list).
    - Mark ingredients inline using `@ingredient name{quantity%unit}` syntax. Use the exact name and quantity from the ingredient list. If a quantity has no unit (e.g. "2 eggs"), write `@eggs{2}`.
@@ -92,13 +75,12 @@ The Markdown frontmatter properties to map to `.cook` frontmatter:
    - Mark timers with `~{duration%unit}` (e.g. `~{15%minutes}`).
    - Do NOT include a separate "Ingredients" or "Directions" section header — ingredients are embedded inline in the steps.
    - Example: `Add @olive oil{2%tbsp} to a #skillet{} and heat over medium for ~{2%minutes}.`
-4. Write frontmatter using the field mapping above. Always include `title`. Use `tags` as a comma-separated lowercase string.
-5. Find or generate an image:
-   - **First, check for a local image in the Notion export subdirectory.** Each recipe may have a matching folder at `notion-export/Recipes/<Recipe Title>/` containing one or more image files (jpg, png, webp). The .md file will reference it with `![...](RecipeTitle/filename.ext)` — a relative path, not an http URL. Copy the first image found to `recipes/<slug>.<ext>` (preserving the original extension).
-   - **If no local image exists**, check whether the .md file contains an embedded `![](https://...)` URL and download it to `recipes/<slug>.jpg`.
-   - **If no image can be found at all**, generate one using DALL-E 3 via the `scripts/generate-images.rb` script pattern: call the OpenAI images API (key is in `.env` as `OPENAI_API_KEY`) with a prompt like `"Professional food photography. [dish description]. Appetizing, high quality, natural lighting."`, save the result to `recipes/<slug>.jpg`, and add `ai_image: true` to the recipe's frontmatter.
+3. Write frontmatter with: `title`, `source`, `tags` (comma-separated lowercase), `cook time`, `servings`, `author`, `notes` (as applicable).
+4. Find or generate an image:
+   - **First**, check if the source page has an image URL and download it to `recipes/<slug>.jpg`.
+   - **If no image can be found**, generate one using DALL-E 3 via the `scripts/generate-images.rb` script pattern: call the OpenAI images API (key is in `.env` as `OPENAI_API_KEY`) with a prompt like `"Professional food photography. [dish description]. Appetizing, high quality, natural lighting."`, save the result to `recipes/<slug>.jpg`, and add `ai_image: true` to the recipe's frontmatter.
    - Do NOT add an `image` field to the frontmatter — the build script auto-detects local images by matching `recipes/<slug>.<ext>` and copies them to `docs/`.
    - The `ai_image: true` frontmatter flag causes a "✨ AI image" badge to appear on the card and recipe page.
-6. Always include `servings` when it can be determined — check the Notion page, and if not listed there, fetch the source URL to find yield/servings.
-7. Name the output file `recipes/<kebab-case-title>.cook`.
+5. Always include `servings` when it can be determined.
+6. Name the output file `recipes/<kebab-case-title>.cook`.
 7. Show the user the result and ask for review before finalizing.
