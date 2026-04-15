@@ -175,9 +175,32 @@ html { scroll-behavior: smooth; }
 
 /* Print */
 @media print {
+    @page { size: landscape; margin: 0.4in; }
     nav { display: none; }
     body { background: white; }
     .shadow-lg, .shadow-md { box-shadow: none; }
     .scroll-btn { display: none; }
     .kiosk-fullscreen-btn { display: none !important; }
+
+    /* Keep everything on the page flowing without forced breaks */
+    .max-w-6xl { max-width: none; }
+    .py-8 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+    .mb-8, .mb-12, .mb-6 { margin-bottom: 0.5rem; }
+    .p-6 { padding: 0.75rem; }
+    .rounded-2xl, .rounded-xl, .rounded-lg { border-radius: 0.5rem; }
+
+    /* Avoid orphaned section headers / broken metadata */
+    h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+    .metadata-pill, #tags-container, #servings-scaler { page-break-inside: avoid; break-inside: avoid; }
+    .grid { page-break-before: avoid; break-before: avoid; }
+
+    /* Sticky sidebar breaks print layout */
+    .sticky { position: static !important; }
+
+    /* Keep two-column layout when printing landscape */
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; display: grid !important; }
+    .md\:col-span-1 { grid-column: span 1 / span 1 !important; }
+    .md\:col-span-2 { grid-column: span 2 / span 2 !important; }
+
+    ol li { page-break-inside: avoid; break-inside: avoid; }
 }
