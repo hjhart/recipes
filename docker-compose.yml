@@ -1,0 +1,18 @@
+services:
+  recipe-webhook:
+    build: .
+    container_name: recipe-webhook
+    restart: unless-stopped
+    ports:
+      - "192.168.50.2:9847:9847"
+    volumes:
+      - /home/james/workspace/recipes:/workspace/recipes
+      - /home/james/.claude:/root/.claude:ro
+      - /home/james/.config/gh:/root/.config/gh:ro
+      - /home/james/.gitconfig:/root/.gitconfig:ro
+      - /home/james/.recipe-webhook-token:/run/secrets/webhook-token:ro
+    env_file:
+      - .env
+    environment:
+      - PROJECT_DIR=/workspace/recipes
+      - TOKEN_FILE=/run/secrets/webhook-token

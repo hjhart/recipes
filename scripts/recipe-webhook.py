@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Webhook server for recipe imports triggered from Apple Reminders via Shortcuts.
-Listens on LAN IP port 9847. Accepts POST /import with JSON {"url": "...", "token": "..."}
+Accepts POST /import with JSON {"url": "...", "token": "..."}
 and runs `claude -p "/import-recipe <url>"` in the background.
 """
 
@@ -14,12 +14,12 @@ import threading
 import urllib.parse
 from datetime import datetime
 
-PORT = 9847
-BIND_HOST = "192.168.50.2"
-PROJECT_DIR = "/home/james/workspace/recipes"
-CLAUDE_BIN = "/home/james/.local/bin/claude"
+PORT = int(os.environ.get("WEBHOOK_PORT", "9847"))
+BIND_HOST = os.environ.get("BIND_HOST", "0.0.0.0")
+PROJECT_DIR = os.environ.get("PROJECT_DIR", "/home/james/workspace/recipes")
+CLAUDE_BIN = os.environ.get("CLAUDE_BIN", "/usr/local/bin/claude")
 LOG_FILE = os.path.join(PROJECT_DIR, "logs", "webhook.log")
-TOKEN_FILE = os.path.expanduser("~/.recipe-webhook-token")
+TOKEN_FILE = os.environ.get("TOKEN_FILE", os.path.expanduser("~/.recipe-webhook-token"))
 
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 
@@ -54,8 +54,7 @@ def is_valid_url(url: str) -> bool:
 def run_import(url: str):
     log.info(f"Starting import for: {url}")
     env = os.environ.copy()
-    env["PATH"] = f"/home/james/.local/bin:{env.get('PATH', '/usr/bin:/bin')}"
-    env["HOME"] = "/home/james"
+    env["HOME"] = os.path.expanduser("~")
 
     env_file = os.path.join(PROJECT_DIR, ".env")
     if os.path.exists(env_file):
