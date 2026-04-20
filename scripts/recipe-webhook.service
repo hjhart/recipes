@@ -1,0 +1,17 @@
+[Unit]
+Description=Recipe import webhook server
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=james
+WorkingDirectory=/home/james/workspace/recipes
+EnvironmentFile=-/home/james/workspace/recipes/.env
+Environment=HOME=/home/james
+ExecStart=/usr/bin/python3 /home/james/workspace/recipes/scripts/recipe-webhook.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
