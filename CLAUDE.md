@@ -21,6 +21,28 @@ This runs `cook import`, adds the source URL to frontmatter, and writes `recipes
 
 If `cook import` fails to parse a site, try prefixing the URL with `cook.md/` or use the cookifies tool at `https://cook.md/cookifies/new`.
 
+### Import a recipe from an Instagram URL
+
+For Instagram reels or posts, use the extractor repo at `~/workspace/instagram-recipe-extractor/`:
+
+```
+cd ~/workspace/instagram-recipe-extractor
+bin/extract "https://www.instagram.com/reel/..."
+```
+
+This uses `yt-dlp` with saved Instagram cookies (`cookies.txt` in that repo) to download the video and its caption. The caption is printed at the end — it usually contains the full recipe. If the caption is missing or incomplete, extract audio and transcribe with Google Speech:
+
+```
+# Extract audio as WAV
+ffmpeg -i videos/<datetime>/video.mp4 -ar 16000 -ac 1 /tmp/recipe.wav
+
+# Transcribe via Google Cloud Speech API
+GOOGLE_APPLICATION_CREDENTIALS=~/workspace/instagram-recipe-extractor/config/google-key.json \
+  ruby lib/transcribe.rb /tmp/recipe.wav
+```
+
+Use the caption or transcription as the source of truth for ingredients and steps when writing the `.cook` file. Note: cookies.txt may expire over time — if yt-dlp fails with an auth error, the user will need to refresh it.
+
 ### Build the static site
 ```
 ./scripts/build-site.rb
