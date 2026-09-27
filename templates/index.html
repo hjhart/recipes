@@ -21,7 +21,11 @@
             <input id="search" type="search" placeholder="Search recipes, tags, ingredients…"
                    class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-gray-700">
           </div>
-          <button id="random-btn" title="Random recipe"
+          <button id="sort-btn" title="Sort order"
+                  class="px-4 py-3 rounded-xl bg-white border border-gray-200 shadow-sm text-sm font-medium text-gray-600 hover:bg-orange-50 hover:border-orange-300 transition-colors whitespace-nowrap">
+            🕐 Recent
+          </button>
+          <button id="random-btn" title="Shuffle recipes"
                   class="px-4 py-3 rounded-xl bg-white border border-gray-200 shadow-sm text-xl hover:bg-orange-50 hover:border-orange-300 transition-colors">
             🎲
           </button>
@@ -122,12 +126,37 @@
         noResults.classList.toggle('hidden', visible > 0);
       }
 
+      // Sort
+      const sortBtn = document.getElementById('sort-btn');
+      const sortModes = [
+        { key: 'recent', label: '🕐 Recent', fn: function(a, b) { return (b.getAttribute('data-date') || '').localeCompare(a.getAttribute('data-date') || ''); } },
+        { key: 'alpha',  label: '🔤 A → Z',  fn: function(a, b) { return a.getAttribute('data-search').localeCompare(b.getAttribute('data-search')); } },
+      ];
+      let sortIndex = 0;
+
+      function applySort() {
+        const mode = sortModes[sortIndex];
+        sortBtn.textContent = mode.label;
+        const sorted = cards.slice().sort(mode.fn);
+        sorted.forEach(function(card) { grid.appendChild(card); });
+      }
+
+      sortBtn.addEventListener('click', function () {
+        sortIndex = (sortIndex + 1) % sortModes.length;
+        applySort();
+      });
+
+      // Shuffle (dice)
       document.getElementById('random-btn').addEventListener('click', function () {
         if (cards.length === 0) return;
-        const pick = cards[Math.floor(Math.random() * cards.length)];
-        input.value = pick.getAttribute('data-index');
+        input.value = '';
         filter();
-        input.blur();
+        const visible = cards.filter(function(c) { return c.style.display !== 'none'; });
+        for (var i = visible.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = visible[i]; visible[i] = visible[j]; visible[j] = tmp;
+        }
+        visible.forEach(function(card) { grid.appendChild(card); });
       });
 
       window.setTag = function (event, tag) {

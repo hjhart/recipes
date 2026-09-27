@@ -157,7 +157,7 @@ recipe_cards = recipes_data.each_with_index.map do |recipe, i|
   search_text = [recipe['title'], recipe['author'], tags.join(' '), (i + 1).to_s.rjust(3, '0')].compact.join(' ').downcase
 
   <<~HTML
-    <a href="#{recipe['filename']}.html" data-search="#{search_text}" data-type="#{recipe['type']}" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
+    <a href="#{recipe['filename']}.html" data-search="#{search_text}" data-type="#{recipe['type']}" data-date="#{recipe['date_added'] || ''}" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-[1.02] recipe-card flex flex-col">
         #{image_html.strip}
             #{idea_badge_html}
             <h2 class="font-bold text-lg text-gray-800 mb-1">#{recipe['title']}</h2>
