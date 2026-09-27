@@ -34,7 +34,8 @@ This downloads the video via yt-dlp (using saved cookies), extracts frames with 
 
 Two things to handle after the script runs:
 1. The generated file uses `>> key: value` metadata format — convert to YAML `---` frontmatter to match this collection's style.
-2. No image is generated — add one from the source or generate with DALL-E as described above.
+2. Always ensure `date added: YYYY-MM-DD` is present in the frontmatter — recipes without it sort to the bottom of the index and won't be visible.
+3. No image is generated — add one from the source or generate with DALL-E as described above.
 
 Note: `cookies.txt` may expire — if yt-dlp fails with an auth error, the user will need to re-export Instagram cookies from Firefox.
 
@@ -92,7 +93,7 @@ Pushing to `main` triggers a GitHub Actions workflow (`.github/workflows/deploy.
    - Mark timers with `~{duration%unit}` (e.g. `~{15%minutes}`).
    - Do NOT include a separate "Ingredients" or "Directions" section header — ingredients are embedded inline in the steps.
    - Example: `Add @olive oil{2%tbsp} to a #skillet{} and heat over medium for ~{2%minutes}.`
-3. Write frontmatter with: `title`, `source`, `tags` (comma-separated lowercase), `cook time`, `servings`, `author`, `notes` (as applicable).
+3. Write frontmatter with: `title`, `source`, `tags` (comma-separated lowercase), `cook time`, `servings`, `author`, `notes`, `date added: YYYY-MM-DD` (as applicable). **`date added` is required** — recipes without it sort to the bottom of the index.
 4. Find or generate an image:
    - **First**, check if the source page has an image URL and download it to `recipes/<slug>.jpg`.
    - **If no image can be found**, generate one using DALL-E 3 via the `scripts/generate-images.rb` script pattern: call the OpenAI images API (key is in `.env` as `OPENAI_API_KEY`) with a prompt like `"Professional food photography. [dish description]. Appetizing, high quality, natural lighting."`, save the result to `recipes/<slug>.jpg`, and add `ai_image: true` to the recipe's frontmatter.
