@@ -30,18 +30,13 @@ cd ~/workspace/instagram-recipe-extractor
 bin/extract "https://www.instagram.com/reel/..."
 ```
 
-This uses `yt-dlp` with saved Instagram cookies (`cookies.txt` in that repo) to download the video and its caption. The caption is printed at the end — it usually contains the full recipe. If the caption is missing or incomplete, extract audio and transcribe with Google Speech:
+This downloads the video via yt-dlp (using saved cookies), extracts frames with ffmpeg, then calls `bin/generate_recipe` which sends the frames + caption to GPT-4o vision and writes the `.cook` file directly to `~/workspace/recipes/recipes/<slug>.cook`. The script prints the output path on success.
 
-```
-# Extract audio as WAV
-ffmpeg -i videos/<datetime>/video.mp4 -ar 16000 -ac 1 /tmp/recipe.wav
+Two things to handle after the script runs:
+1. The generated file uses `>> key: value` metadata format — convert to YAML `---` frontmatter to match this collection's style.
+2. No image is generated — add one from the source or generate with DALL-E as described above.
 
-# Transcribe via Google Cloud Speech API
-GOOGLE_APPLICATION_CREDENTIALS=~/workspace/instagram-recipe-extractor/config/google-key.json \
-  ruby lib/transcribe.rb /tmp/recipe.wav
-```
-
-Use the caption or transcription as the source of truth for ingredients and steps when writing the `.cook` file. Note: cookies.txt may expire over time — if yt-dlp fails with an auth error, the user will need to refresh it.
+Note: `cookies.txt` may expire — if yt-dlp fails with an auth error, the user will need to re-export Instagram cookies from Firefox.
 
 ### Build the static site
 ```
