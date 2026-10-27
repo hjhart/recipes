@@ -155,10 +155,15 @@
       }
     })();
 
-    // Collapse duplicate ingredients (same name + unit) by summing quantities
+    // Collapse repeated mentions of an ingredient into one sidebar entry.
+    // Mentions without a quantity (e.g. "add more @Sriracha{}") are folded into
+    // the existing entry, and tsp/tbsp/cup amounts are converted and summed.
+    // Every unit seen is kept in data-units so step badges can still match.
     (function () {
-      var seen = {};
+      var TSP = { tsp: 1, tbsp: 3, cup: 48, cups: 48 };
+      var groups = {};
       var toRemove = [];
+
       document.querySelectorAll('#ingredients-list li').forEach(function (li) {
         var nameEl = li.querySelector('.font-medium');
         var qtyEl = li.querySelector('.ingredient-qty');
@@ -166,20 +171,47 @@
         var name = nameEl.textContent.trim().toLowerCase();
         var unit = (qtyEl.getAttribute('data-unit') || '').toLowerCase();
         var qty = parseFloat(qtyEl.getAttribute('data-qty'));
-        var key = name + '\x00' + unit;
-        if (key in seen) {
-          if (!isNaN(qty)) seen[key].total += qty;
-          toRemove.push(li);
+        var list = groups[name] = groups[name] || [];
+
+        if (list.length === 0) {
+          list.push({ qtyEl: qtyEl, qty: qty, unit: unit, units: unit ? [unit] : [] });
+          return;
+        }
+
+        toRemove.push(li);
+        if (isNaN(qty)) return; // quantity-less reference to an earlier mention
+
+        var target = null;
+        list.forEach(function (e) {
+          if (target) return;
+          if (isNaN(e.qty) || e.unit === unit || (e.unit in TSP && unit in TSP)) target = e;
+        });
+        if (!target) {
+          // Incompatible units (e.g. cups vs. cloves): keep as its own line
+          toRemove.pop();
+          list.push({ qtyEl: qtyEl, qty: qty, unit: unit, units: unit ? [unit] : [] });
+          return;
+        }
+        if (unit && target.units.indexOf(unit) < 0) target.units.push(unit);
+        if (isNaN(target.qty)) {
+          target.qty = qty; target.unit = unit;
+        } else if (target.unit === unit) {
+          target.qty += qty;
         } else {
-          seen[key] = { qtyEl: qtyEl, total: isNaN(qty) ? null : qty, unit: unit };
+          var tsp = target.qty * TSP[target.unit] + qty * TSP[unit];
+          target.unit = tsp % 3 === 0 ? 'tbsp' : 'tsp';
+          target.qty = tsp / TSP[target.unit];
         }
       });
-      Object.keys(seen).forEach(function (key) {
-        var entry = seen[key];
-        if (entry.total !== null) {
-          entry.qtyEl.setAttribute('data-qty', entry.total);
-          entry.qtyEl.textContent = entry.total + (entry.unit ? ' ' + entry.unit : '');
-        }
+
+      Object.keys(groups).forEach(function (name) {
+        groups[name].forEach(function (e) {
+          if (isNaN(e.qty)) return;
+          e.qtyEl.setAttribute('data-qty', e.qty);
+          e.qtyEl.setAttribute('data-unit', e.unit);
+          e.qtyEl.setAttribute('data-units', e.units.join('|'));
+          e.qtyEl.textContent = e.qty + (e.unit ? ' ' + e.unit : '');
+        });
       });
       toRemove.forEach(function (li) { li.parentNode.removeChild(li); });
     })();
@@ -203,7 +235,10 @@
         var nameEl = li.querySelector('.font-medium');
         var qtyEl = li.querySelector('.ingredient-qty');
         if (!nameEl || !qtyEl) return;
-        ingredients.push({ name: nameEl.textContent.trim(), unit: qtyEl.getAttribute('data-unit') || '' });
+        var units = (qtyEl.getAttribute('data-units') || qtyEl.getAttribute('data-unit') || '').split('|');
+        units.forEach(function (u) {
+          ingredients.push({ name: nameEl.textContent.trim(), unit: u });
+        });
       });
       ingredients.sort(function (a, b) { return b.name.length - a.name.length; });
 
