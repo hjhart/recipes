@@ -30,8 +30,10 @@ jobs:
           bundler-cache: true
 
       - name: Install Cooklang CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          curl -L https://github.com/cooklang/CookCLI/releases/latest/download/cook-x86_64-unknown-linux-gnu.tar.gz | tar xz
+          gh release download --repo cooklang/CookCLI --pattern 'cook-*-linux-x86_64-gnu.tar.gz' --output - | tar xz
           sudo mv cook /usr/local/bin/
           cook --version
 
