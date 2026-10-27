@@ -1,3 +1,5 @@
+![James' Recipes icon](recipe-icon.png)
+
 # James' Recipes!
 
 These recipes are formatted as cooklang recipes.
