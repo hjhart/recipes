@@ -85,20 +85,37 @@ jobs:
     needs: deploy
     if: ${{ success() && github.event_name == 'push' }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Send Pushover notification
         env:
           PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
           COMMITS_JSON: ${{ toJSON(github.event.commits.*.message) }}
+          ADDED_JSON: ${{ toJSON(github.event.commits.*.added) }}
         run: |
           # First line of each deployed commit message, truncated to Pushover's 1024-char limit
           message=$(echo "$COMMITS_JSON" | jq -r '.[] | "• " + split("\n")[0]' | head -c 1000)
+
+          # Link to the most recently added recipe that still exists, otherwise the site
+          url="$SITE_URL"
+          url_title="Open site"
+          for file in $(echo "$ADDED_JSON" | jq -r 'flatten | map(select(test("^recipes/[^/]+\\.cook$"))) | reverse | .[]'); do
+            [ -f "$file" ] || continue
+            slug=$(basename "$file" .cook)
+            title=$(sed -n 's/^title: *//p' "$file" | head -1)
+            url="${SITE_URL%/}/$slug.html"
+            url_title="Open ${title:-$slug}"
+            break
+          done
+
           curl -s \
             --form-string "token=$PUSHOVER_APP_TOKEN" \
             --form-string "user=$PUSHOVER_USER_KEY" \
             --form-string "title=Recipes deployed" \
             --form-string "message=$message" \
-            --form-string "url=$SITE_URL" \
-            --form-string "url_title=Open site" \
+            --form-string "url=$url" \
+            --form-string "url_title=$url_title" \
             https://api.pushover.net/1/messages.json
