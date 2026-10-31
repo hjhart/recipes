@@ -3,11 +3,13 @@
 
 require 'json'
 require 'fileutils'
+require 'cgi'
 
 # Configuration
 RECIPES_DIR = 'recipes'
 TEMPLATES_DIR = 'templates'
 OUTPUT_DIR = 'docs'
+SITE_URL = 'https://hjhart.github.io/recipes'
 
 # Clean and create output directories
 FileUtils.rm_rf(OUTPUT_DIR)
@@ -67,6 +69,20 @@ recipe_files.each do |recipe_file|
     ''
   end
   html_output = html_output.gsub('<!-- __IMAGE_HTML__ -->', image_html) if html_output
+
+  # Inject Open Graph tags so shared links show a rich preview (e.g. in iMessage)
+  og_tags = [
+    %(<meta property="og:type" content="article" />),
+    %(<meta property="og:title" content="#{CGI.escapeHTML(display_title)}" />),
+    %(<meta property="og:url" content="#{SITE_URL}/#{filename}.html" />)
+  ]
+  og_tags << %(<meta property="og:description" content="#{CGI.escapeHTML(metadata['notes'].to_s)}" />) if metadata['notes']
+  if image_for_page
+    og_image = image_for_page.start_with?('http') ? image_for_page : "#{SITE_URL}/#{image_for_page}"
+    og_tags << %(<meta property="og:image" content="#{CGI.escapeHTML(og_image)}" />)
+    og_tags << %(<meta name="twitter:card" content="summary_large_image" />)
+  end
+  html_output = html_output.gsub('<!-- __OG_TAGS__ -->', og_tags.join("\n    ")) if html_output
 
   File.write(output_file, html_output || '')
   
